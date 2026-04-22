@@ -1,0 +1,7 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": true,
+  "rewrites": [
+    { "source": "/:path*", "destination": "/site/www.le-guide-sante.org/:path*" }
+  ]
+}
