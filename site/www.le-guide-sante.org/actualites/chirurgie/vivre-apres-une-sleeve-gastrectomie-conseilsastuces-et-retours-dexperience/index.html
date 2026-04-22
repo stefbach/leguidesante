@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="utf-8"/>
+<script>
+  var __ezHttpConsent={setByCat:function(src,tagType,attributes,category,force){var setScript=function(){if(force||window.ezTcfConsent[category]){var scriptElement=document.createElement(tagType);scriptElement.src=src;attributes.forEach(function(attr){for(var key in attr){if(attr.hasOwnProperty(key)){scriptElement.setAttribute(key,attr[key]);}}});var firstScript=document.getElementsByTagName(tagType)[0];firstScript.parentNode.insertBefore(scriptElement,firstScript);}};if(force||(window.ezTcfConsent&&window.ezTcfConsent.loaded)){setScript();}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){setScript();}else{console.error("cannot get ez consent data");force=true;setScript();}});}else{force=true;setScript();console.error("getEzConsentData is not a function");}},};
+  </script>
+<script>
+  var ezTcfConsent=window.ezTcfConsent?window.ezTcfConsent:{loaded:false,store_info:false,develop_and_improve_services:false,measure_ad_performance:false,measure_content_performance:false,select_basic_ads:false,create_ad_profile:false,select_personalized_ads:false,create_content_profile:false,select_personalized_content:false,understand_audiences:false,use_limited_data_to_select_content:false,};function getEzConsentData(){return new Promise(function(resolve){document.addEventListener("ezConsentEvent",function(event){var ezTcfConsent=event.detail.ezTcfConsent;resolve(ezTcfConsent);});});}
+  </script>
+<script>
+  function _setEzCookies(ezConsentData){var cookies=[{name:"ezosuibasgeneris-1",value:"1064432d-0ffa-46b7-7560-dc460ea09f9d; Path=/; Domain=www.le-guide-sante.org; Expires=Sat, 20 Sep 2025 10:58:37 UTC; Secure; SameSite=None",tcfCategory:"understand_audiences",isEzoic:"true",},{name:"ezoab_330072",value:"mod1-c; Path=/; Domain=www.le-guide-sante.org; Expires=Fri, 20 Sep 2024 12:58:37 UTC",tcfCategory:"store_info",isEzoic:"true",}];for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(ezConsentData&&ezConsentData.loaded&&ezConsentData[cookie.tcfCategory]){document.cookie=cookie.name+"="+cookie.value;}}}
+  if(window.ezTcfConsent&&window.ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else{console.error("cannot get ez consent data");_setEzCookies(window.ezTcfConsent);}});}else{console.error("getEzConsentData is not a function");_setEzCookies(window.ezTcfConsent);}
+  </script>
+<script data-cfasync="false" data-ezscrex="false" type="text/javascript">
+  window._ezaq = Object.assign({"edge_cache_status":12,"edge_response_time":551}, typeof window._ezaq !== "undefined" ? window._ezaq : {});
+  </script>
+<script data-cfasync="false" data-ezscrex="false" type="text/javascript">
+  window._ezaq = Object.assign({"ab_test_id":""}, typeof window._ezaq !== "undefined" ? window._ezaq : {});
+  </script>
+<script data-cfasync="false" data-ezscrex="false" type="text/javascript">
+  window.ezDisableAds = true;
+  </script>
+<script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+  var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;window.__ezScriptHost="//www.ezojs.com";__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:w(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){u("... func = "+e),d.isInitialized=!0,d.isComplete=!0,u("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(u("----- F'D: "+d.name),m())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,u("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),u("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&m()},t.onreadystatechange=t.onload=function(){var e=t.readyState;u("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&m())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e,i,n,s,a,d,c,f,u){var m=new l(e,i,n,s,a,d,c,u);!0===f?o[e]=m:r[e]=m,t[e]=m,h(m)}function h(e){!0!==f(e)&&0!=s&&e.process()}function f(e){if(!0===e.isTimeDelay&&!1===n)return u(e.name+" blocked = TIME DELAY!"),!0;if(w(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return u(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return u(e.name+" blocked = "+o),!0}return!1}function u(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function m(){++e>200||(u("let's go"),p(o),p(r))}function p(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||f(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?u(t.name+": error"):!0===t.isComplete?u(t.name+": complete already"):!0===t.isInitialized&&u(t.name+": initialized already"):t.process()}}function w(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,u("TDELAY -----"),m()}),5e3)}),!1),{addFile:c,addFileOnce:function(e,i,n,o,r,s,a,l,d){t[e]||c(e,i,n,o,r,s,a,l,d)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,u(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,h(n)},addFunc:function(e,n,s,l,d,c,f,u,m,p){!0===c&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,h(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,u(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,h(o)},items:t,processAll:m,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?u(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);u("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&f(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-0&cb=5', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-0&cb=35', true, [], true, false, true, false);
+  </script>
+<script data-cfasync="false" data-ezscrex="false" type="text/javascript">
+  window._ezaq = Object.assign({"ad_cache_level":1,"adpicker_placement_cnt":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"author":"Dr Patrick Noël","domain_id":330072,"ezcache_level":1,"ezcache_skip_code":3,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"publish_date":"2023-09-10","response_size":74735,"response_size_orig":69305,"response_time_orig":695,"template_id":120,"url":"https://www.le-guide-sante.org/actualites/chirurgie/vivre-apres-une-sleeve-gastrectomie-conseilsastuces-et-retours-dexperience","word_count":0,"worst_bad_word_level":0}, typeof window._ezaq !== "undefined" ? window._ezaq : {});__ez.queue.markLoaded('ezaqBaseReady');
+  </script>
+<script data-cfasync="false" data-ezscrex="false" type="text/javascript">
+  window.ezAnalyticsStatic = true;
+
+  function analyticsAddScript(script) {
+        var ezDynamic = document.createElement('script');
+        ezDynamic.type = 'text/javascript';
+        ezDynamic.innerHTML = script;
+        document.head.appendChild(ezDynamic);
+  }
+  function getCookiesWithPrefix() {
+    var allCookies = document.cookie.split(';');
+    var cookiesWithPrefix = {};
+
+    for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+            var prefix = arguments[j];
+            if (cookie.indexOf(prefix) === 0) {
+                var cookieParts = cookie.split('=');
+                var cookieName = cookieParts[0];
+                var cookieValue = cookieParts.slice(1).join('=');
+                cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+                break; // Once matched, no need to check other prefixes
+            }
+        }
+    }
+
+    return cookiesWithPrefix;
+  }
+  function productAnalytics() {
+        var d = {};
+        d.u = _ezaq.url;
+        d.p = _ezaq.page_view_id;
+        d.v = _ezaq.visit_uuid;
+        d.ab = _ezaq.ab_test_id;
+        d.e = JSON.stringify(_ezaq);
+        d.ref = document.referrer;
+        d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+        if(typeof ez_utmParams !== 'undefined') {
+                d.utm = ez_utmParams;
+        }
+
+        var dataText = JSON.stringify(d);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST','/ezais/analytics?cb=1', true);
+        xhr.onload = function () {
+                if (xhr.status!=200) {
+            return;
+                }
+
+        if(document.readyState !== 'loading') {
+            analyticsAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+        };
+        xhr.setRequestHeader('Content-Type','text/plain');
+        xhr.send(dataText);
+  }
+  __ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+  </script>
+<base href="https://www.le-guide-sante.org/actualites/chirurgie/vivre-apres-une-sleeve-gastrectomie-conseilsastuces-et-retours-dexperience"/>
+<script class="mrf-structuredData" type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","dateModified":"2023-09-11T15:14:07Z","datePublished":"2023-09-11T00:00:00Z","headline":"Vivre apr\u00e8s une sleeve gastrectomie : conseils,astuces et retours d'exp\u00e9rience","author":{"@type":"Person","name":"Dr Patrick No\u00ebl","url":"https://www.le-guide-sante.org/dr-patrick-noel"},"image":["https://www.le-guide-sante.org/sites/default/files/resources/news/Retour-dexperience-gestion.jpg"]}
+  </script>
+<meta content="Rejoignez-nous dans cette exploration approfondie, qui se veut être une source d’inspiration et un pilier de soutien pour une vie saine et épanouie après une sleeve gastrectomie." name="description"/>
+<link href="." rel="canonical"/>
+<meta content="Le Guide Santé" property="og:site_name"/>
+<meta content="Actualité" property="og:type"/>
+<meta content="https://www.le-guide-sante.org/actualites/chirurgie/vivre-apres-une-sleeve-gastrectomie-conseilsastuces-et-retours-dexperience" property="og:url"/>
+<meta content="Vivre après une sleeve gastrectomie : conseils,astuces et retours d'expérience" property="og:title"/>
+<meta content="Rejoignez-nous dans cette exploration approfondie, qui se veut être une source d’inspiration et un pilier de soutien pour une vie saine et épanouie après une sleeve gastrectomie." property="og:description"/>
+<meta content="https://www.le-guide-sante.org/sites/default/files/resources/news/Retour-dexperience-gestion.jpg" property="og:image"/>
+<meta content="781" property="og:image:width"/>
+<meta content="497" property="og:image:height"/>
+<meta content="Une main qui tient des gribouillis signification" property="og:image:alt"/>
+<meta content="contact@le-guide-sante.org" property="og:email"/>
+<meta content="https://www.le-guide-sante.org/user/kellyna" property="article:author"/>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vivre après une sleeve gastrectomie : conseils,astuces et retours d'expérience| Le Guide Santé</title>
+<link href="../../../sites/default/files/css/css_o2aqwWTLaFPCWcx81kLUUOrRwdH8bdR7-c5WjTl61EY.css" media="all" rel="stylesheet"/>
+<link href="../../../sites/default/files/css/css_2eGMPurPoHsZAsCLYFmXgHJF5m2JwWIVGNEyZyGdFaA.css" media="all" rel="stylesheet"/>
+<link href="../../../sites/default/files/css/css_hUaj3Sck8PiWV031VtGM5vwmFiWZ93BLkGZHpqX1i2M.css" media="print" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" rel="preload"/>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" rel="stylesheet"/>
+</noscript>
+<link href="../../../themes/custom/starter/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link color="#e32327" href="../../../themes/custom/starter/safari-pinned-tab.svg" rel="mask-icon" type="image/svg+xml"/>
+<link href="../../../themes/custom/starter/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../../../themes/custom/starter/site.webmanifest" rel="manifest"/>
+<script type="text/javascript">
+  var ezoTemplate = 'old_site_noads';
+  var ezouid = '1';
+  var ezoFormfactor = '1';
+  </script>
+<script data-ezscrex="false" type="text/javascript">
+  var soc_app_id = '0';
+  var did = 330072;
+  var ezdomain = 'www.le-guide-sante.org';
+  var ezoicSearchable = 1;
+  </script>
+</head>
+<body class="path-node page-node-type-news">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WPC22MS" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div class="site-wrapper">
+<header class="header js-fixed-header">
+<div class="header__container">
+<div class="header__inner">
+<div class="header__logo">
+<div class="block block-system block-system-branding-block" id="block-starter-branding">
+<a class="site-logo" href="../../../index.html" rel="home"><img alt="Le Guide Santé" class="logo" height="49" src="../../../themes/custom/starter/dist/img/logo.svg" width="276"/> <img alt="Le Guide Santé" class="logo-white" height="49" src="../../../themes/custom/starter/dist/img/logo-white.svg" width="276"/></a>
+</div>
+</div>
+<div class="header__main">
+<div class="region region-navigation js-menu">
+<nav aria-labelledby="block-starter-main-menu-menu" class="block block-menu navigation menu--main" id="block-starter-main-menu" role="navigation">
+<span class="visually-hidden" id="block-starter-main-menu-menu">Navigation principale</span>
+<ul class="menu" data-region="navigation">
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide" href="../../../le-guide/index.html" title="Annuaire santé hospitalier">Le Guide : hôpitaux et cliniques</a>
+</li>
+<li class="menu-item has-mega-menu">
+<a href="#">Actualités Santé, Bien-être</a>
+<div class="mega-menu">
+<div class="mega-menu__col">
+<p class="mega-menu__col-title">Thématiques</p>
+<ul class="menu">
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1" href="../../cancer/index.html">Cancer</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/2" href="../../nutrition/index.html">Nutrition</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1083" href="../index.html">Chirurgie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1084" href="../../forme-et-bien-etre/index.html">Forme et bien-être</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1085" href="../../geriatrie/index.html">Gériatrie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1086" href="../../hopitaux/index.html">Hôpitaux</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1087" href="../../medecine/index.html">Médecine</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1088" href="../../medicaments/index.html">Médicaments</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1089" href="../../obstetrique/index.html">Obstétrique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../../sante-publique/index.html">Santé publique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../../tendances/index.html">Tendances</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1105" href="../../medical-news-english/index.html">Medical News in English</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<button class="button header__responsive-btn js-menu-toggle"><span>Menu</span></button>
+</div>
+</div>
+</header>
+<main class="main">
+<div class="region region-header">
+<div class="block block-system block-system-breadcrumb-block" id="block-starter-breadcrumbs">
+<div class="breadcrumb">
+<div class="breadcrumb__container">
+<span class="visually-hidden" id="system-breadcrumb">Fil d'Ariane</span>
+<ol class="breadcrumb__items" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="../../../index.html" itemprop="item"><span itemprop="name">Accueil</span></a>
+<meta content="1" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="#" itemprop="item"><span itemprop="name">Actualités</span></a>
+<meta content="2" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="../index.html" itemprop="item"><span itemprop="name">Chirurgie</span></a>
+<meta content="3" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<span itemprop="name">Vivre après une sleeve gastrectomie : conseils,astuces et retours d'expérience</span>
+<meta content="4" itemprop="position"/>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="hidden" data-drupal-messages-fallback=""></div>
+<div class="block block-choosit-lgs block-header-subtitle" id="block-entetesoustitre"></div>
+</div>
+<div class="main-content">
+<div class="region region-content">
+<div class="block block-system block-system-main-block" id="block-starter-content">
+<article class="node node--type-news node--promoted node--view-mode-full" role="article">
+<div class="node__header">
+<div class="node__heading">
+<div class="field field--name-ref-theme field--type-entity-reference field--label-hidden field__item">
+<a href="../index.html" hreflang="fr">Chirurgie</a>
+</div>
+<h1 class="node__title"><span>Vivre après une sleeve gastrectomie : conseils,astuces et retours d'expérience</span></h1>
+<div class="node__metas">
+<div class="field field--name-ref-author field--type-entity-reference field--label-hidden field__item">
+<a href="../../../dr-patrick-noel/index.html">
+<div class="field field--name-image field--type-image field--label-hidden field__item"><img alt="Dr Patrick Noël " class="image-style-author-avatar" height="80" loading="lazy" src="../../../sites/default/files/styles/author_avatar/public/resources/authors/dr-patrick-noel-chirurgie-bariatrique@itok=kP9trN-b.jpg" width="80"/></div>
+<span>PAR Dr Patrick Noël</span></a>
+</div>
+<div class="field field--name-date field--type-datetime field--label-hidden field__item">
+<time class="datetime" datetime="2023-09-11T12:00:00Z">11 sep. 2023</time>
+</div>
+</div>
+</div>
+</div>
+<div class="node__content">
+<div class="node__intro">
+<div class="clearfix text-formatted field field--name-intro field--type-text-long field--label-hidden field__item">
+<p>La sleeve gastrectomie, également connue sous le nom de gastrectomie verticale, est une intervention chirurgicale qui transforme l’estomac en un tube étroit, imitant ainsi une « manche » ou « sleeve » en anglais (1). Cette opération, qui a pour but de réduire significativement la quantité de nourriture que l’on peut consommer, s’inscrit dans une démarche globale visant à lutter contre l’obésité et ses complications associées.</p>
+<p>La réussite de cette intervention ne réside pas seulement dans l’opération elle-même, mais également dans la manière dont les individus adaptent leur style de vie post-opératoire. En ce sens, cet article ambitionne de servir de guide bienveillant pour naviguer dans cette nouvelle étape de vie, en offrant des conseils pratiques, des astuces ingénieuses et des retours d’expérience inspirants.</p>
+<p>Malgré le fait que l’intervention soit relativement répandue et sûre, la période qui suit nécessite une adaptation rigoureuse, un soutien médical et psychologique adéquat et une volonté de faire des changements durables (2). Les premiers pas dans ce nouveau chapitre de vie incluent une alimentation ajustée, des conseils nutritionnels améliorés et une réintroduction progressive à l’exercice. Même s’il y a des obstacles, cette route peut être une expérience enrichissante et enrichissante (3).</p>
+<p>À travers cet article, nous cherchons à éclairer le chemin de ceux qui envisagent ou qui ont déjà subi une sleeve gastrectomie, en mettant en lumière les diverses facettes de la récupération et de l’adaptation du mode de vie. Nous partagerons également des témoignages précieux de personnes qui ont parcouru ce chemin, fournissant ainsi une perspective réelle et motivante (4). Par ailleurs, nous vous proposerons des astuces pratiques, des recettes adaptées et des ressources utiles pour faciliter cette transition (5).</p>
+</div>
+</div>
+<div class="node__thumbnail">
+<div class="field field--name-image field--type-image field--label-hidden field__item"></div>
+</div>
+<div class="block block-choosit-lgs block-summary-block">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="block__body">
+<p class="block__title">Sommaire</p>
+<ol>
+<li>
+<a href="#3584">Comprendre la sleeve gastrectomie</a>
+</li>
+<li>
+<a href="#3585">Conseils pour une bonne récupération</a>
+</li>
+<li>
+<a href="#3586">Adaptation du mode de vie</a>
+</li>
+<li>
+<a href="#3587">Retours d’expérience</a>
+</li>
+<li>
+<a href="#3588">Astuces pratiques</a>
+</li>
+<li>
+<a href="#3589">Conclusion</a>
+</li>
+<li>
+<a href="#3590">Sources</a>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="field field--name-blocks field--type-entity-reference-revisions field--label-hidden field__items">
+<a class="anchor" id="3584"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">Comprendre la sleeve gastrectomie</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<figure class="caption caption-img" role="group">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdbSDusouc3wkGl89rIGuosxTCNQssU8jtzEFL4XIw1sBXz_g/viewform?usp=pp_url"><img alt="CLIQUEZ ICI POUR DEMANDER UN DEVIS GRATUIT" src="../../../sites/default/files/resources/Banni%C3%A8re/Banni%C3%A8res%20pour%20les%20anciens%20articles/Chirurgie/Top2_%20Transformez%20votre%20vie%20avec%20notre%20aide%20sp%C3%A9cialis%C3%A9e.jpg"/></a>
+<figcaption>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdbSDusouc3wkGl89rIGuosxTCNQssU8jtzEFL4XIw1sBXz_g/viewform?usp=pp_url" target="_blank">CLIQUEZ ICI POUR DEMANDER UN DEVIS GRATUIT</a>
+</figcaption>
+</figure>
+<p> </p>
+<p class="chapo">La <a href="../sleeve-gastrectomie-solution-chirurgicale-efficace/index.html" title="Découvrez en détail la procédure de sleeve gastrectomie et ses avantages pour la perte de poids durable"><em><strong>sleeve gastrectomie</strong></em></a> est une méthode thérapeutique complète qui va au-delà d’une simple opération chirurgicale et est reconnue comme une solution salvatrice pour les personnes souffrant d’<a href="../../nutrition/prise-en-charge-dietetique-efficace-obesite/index.html" title="Comprendre l'obésité : causes, conséquences et solutions pour une vie plus saine "><em><strong>obésité</strong></em></a> sévère. Il est essentiel de comprendre pleinement ce qu’implique une sleeve gastrectomie, du processus chirurgical aux changements de <a href="../sleeve-gastrectomie-alimentation-exercice-suivi-medical/index.html" title=" Adopter un nouveau mode de vie sain après une sleeve gastrectomie : conseils et astuces"><em><strong>mode de vie</strong></em></a>, afin de naviguer avec succès dans les eaux parfois troubles de la période post-opératoire. Voici une analyse approfondie dont l’objectif est de fournir des informations sur ce chemin transformateur.</p>
+<p><strong>Le premier point d’ancrage est la compréhension de ce qu’est exactement une sleeve gastrectomie. Il s’agit d’une procédure qui consiste à retirer une grande partie de l’estomac, ne laissant qu’une section tubulaire ou en forme de « manche ». Cette réduction de la taille de l’estomac entraîne une satiété plus rapide, ce qui à son tour, aide à réduire l’apport calorique quotidien (6).</strong></p>
+<p>Cette opération est généralement pratiquée pour des raisons médicales sérieuses, y compris la lutte contre l’obésité et les maladies qui lui sont associées, telles que le diabète de type 2 et les maladies cardiaques.</p>
+<h3><strong>Le processus chirurgical</strong></h3>
+<p class="chapo">La première étape du processus chirurgical est cruciale. Il commence par une préparation minutieuse qui comprend souvent une évaluation psychologique, des consultations nutritionnelles et des examens physiques approfondis (7).</p>
+<p class="chapo">L’intervention est effectuée sous anesthésie générale et dure entre une et deux heures. Le chirurgien retire environ 75-80 % de l’<strong>estomac</strong> pendant l’intervention, laissant une portion plus petite et plus maniable. Cela change non seulement la quantité de nourriture que vous pouvez manger, mais aussi la façon dont votre corps réagit à la nourriture (8).</p>
+<p><strong>La phase de récupération initiale est tout aussi vitale. Cette période voit les patients adapter progressivement leur régime alimentaire, en commençant par des liquides clairs avant de passer à des aliments plus solides au fil du temps. Les patients sont également encouragés à commencer une routine d’exercice doux pour faciliter une récupération plus rapide et plus saine.</strong></p>
+<p>Ce voyage ne s’arrête cependant pas là. Les mois et les années qui suivent la chirurgie exigent un engagement envers un mode de vie sain et actif. Les patients doivent non seulement faire des choix alimentaires judicieux, mais aussi travailler continuellement sur leur bien-être émotionnel et psychologique, un aspect qui est parfois négligé, mais qui a un impact considérable sur le succès à long terme de l’intervention (9).</p>
+<p>La sleeve gastrectomie n’est pas seulement une méthode chirurgicale pour traiter l’obésité. Il s’agit d’une modification complète du mode de vie qui nécessite une compréhension approfondie et une adaptation consciente.</p>
+<p class="focus-bleu">Cette transition peut être non seulement réussie, mais aussi extrêmement gratifiante, ouvrant la voie à une vie plus saine et plus heureuse avec le bon soutien et les connaissances(10).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="anchor" id="3585"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">Conseils pour une bonne récupération</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<p class="chapo">Passer par la salle d’opération n’est que le début du chemin vers une vie nouvelle et saine après une sleeve gastrectomie. Le parcours de <strong>récupération</strong> qui suit est une étape cruciale qui nécessite une diligence et un engagement sans faille.</p>
+<p><strong>Voici quelques conseils essentiels qui vous aideront à naviguer dans cette période vitale avec succès.</strong></p>
+<h3><strong>Respecter les directives médicales</strong></h3>
+<p>La première étape vers une récupération réussie est de suivre minutieusement les directives médicales prescrites. Il s’agit notamment de respecter le régime alimentaire prescrit, qui évolue généralement d’un régime liquide à un régime plus solide en plusieurs étapes, afin de permettre une guérison appropriée de votre estomac nouvellement configuré (11).</p>
+<p>De plus, il est essentiel de rester actif, conformément aux recommandations de votre médecin, pour favoriser une guérison rapide et éviter les <em>complications</em> post-opératoires.</p>
+<h3><strong>Gestion de la douleur</strong></h3>
+<p>La gestion de la douleur est une autre étape clé du processus de récupération. Il est normal de ressentir un certain inconfort après l’opération. Cependant, en travaillant en étroite collaboration avec votre équipe médicale, vous pouvez minimiser l’inconfort et faciliter une transition plus douce vers votre nouvelle vie (12).</p>
+<h3><strong>Suivi médical et accompagnement psychologique</strong></h3>
+<p>Un <em>suivi médical</em> régulier est impératif pour surveiller votre progression et ajuster votre plan de soins si nécessaire. De plus, considérez l’accompagnement psychologique comme un pilier essentiel de votre récupération. Les spécialistes peuvent vous aider à naviguer dans les défis émotionnels et psychologiques qui accompagnent souvent cette transformation significative du corps (13).</p>
+<p>Dans cette étape de récupération, il est également vital de vous entourer d’un réseau de soutien solide. Que ce soit des groupes de soutien spécifiques à la chirurgie bariatrique ou des amis et de la famille bienveillants, avoir des personnes sur qui compter peut grandement faciliter le processus.</p>
+<h3><strong>Apprendre à écouter votre corps</strong></h3>
+<p>L’une des choses les plus importantes que vous pouvez faire pendant cette période est d’apprendre à écouter votre corps. Chaque individu est différent, et votre chemin sera unique pour vous. Soyez conscient de la façon dont votre corps réagit à différents aliments et activités, et ajustez en conséquence.</p>
+<p>Ce sera une période d’ajustement et d’apprentissage, et il est essentiel de prendre le temps nécessaire pour vous adapter à votre nouvelle normalité (14). Après une sleeve gastrectomie, vous pouvez jeter les bases d’une récupération réussie et d’une vie saine et épanouissante en appliquant ces conseils. Il convient de se rappeler que ce n’est pas une course, mais plutôt un marathon.</p>
+<p class="focus-bleu">Vous pouvez atteindre vos objectifs de santé et de bien-être avec du temps, de la patience et un effort conscient (15).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="anchor" id="3586"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">Adaptation du mode de vie</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<p class="chapo">L’<strong>adaptation</strong> du mode de vie après une sleeve gastrectomie s’étend bien au-delà des premières étapes de la récupération. C’est un voyage continuel vers le <strong>bien-être</strong> et la <strong>santé</strong> globale, une réinvention consciente qui exige détermination et engagement.</p>
+<p><strong>Voici quelques éléments clés à considérer dans ce parcours novateur.</strong></p>
+<h3><strong>Révision de l’alimentation</strong></h3>
+<p>Un des changements majeurs après une sleeve gastrectomie est la modification du <em>régime alimentaire</em>. Les portions sont réduites, mais la qualité de l’<strong>alimentation</strong> doit rester une priorité. Les professionnels de la santé recommandent souvent une alimentation riche en protéines et faible en glucides, ainsi que l’intégration de vitamines et de minéraux essentiels pour compenser les éventuelles carences nutritives (16). De plus, la mastication lente et consciente est encouragée pour faciliter la digestion et éviter les surcharges gastriques.</p>
+<h3><strong>Activité physique régulière</strong></h3>
+<p>Incorporer une routine d’exercice régulière est également crucial. Non seulement cela favorise la perte de poids continue, mais cela contribue aussi à améliorer l’humeur et à réduire les risques de certaines maladies chroniques (17). Que ce soit la marche, le yoga, la natation ou toute autre activité qui vous plaît, l’important est de rester actif et de faire de l’<strong>exercice</strong> une partie intégrante de votre nouvelle vie.</p>
+<h3><strong>Gestion du stress et du bien-être émotionnels</strong></h3>
+<p>La <strong></strong><a href="../la-chirurgie-bariatrique-une-revolution-biochimique-pour-le-corps/index.html" title="Explorer les différentes options de chirurgie bariatrique pour traiter l'obésité sévère"><em><strong>chirurgie bariatrique</strong></em></a> peut aussi avoir un impact profond sur le bien-être émotionnel d’un individu. Apprendre des techniques de <em>gestion du stress</em>, comme la méditation ou la thérapie cognitivo-comportementale, peut être un excellent moyen de naviguer dans les défis émotionnels qui peuvent survenir (18). De plus, le soutien psychologique régulier peut s’avérer bénéfique pour gérer les changements d’humeur et d’estime de soi qui accompagnent souvent les transformations corporelles significatives.</p>
+<h3><strong>Communauté et soutien social</strong></h3>
+<p>Enfin, il ne faut pas négliger l’importance de la communauté et du soutien social dans ce voyage. Rejoindre des groupes de soutien où vous pouvez partager vos expériences et apprendre des autres qui sont passés par des cheminements similaires peut être extrêmement enrichissant. Le soutien des proches est également un pilier essentiel, fournissant encouragement et motivation tout au long du processus (19).</p>
+<p>L’adaptation du mode de vie après une sleeve gastrectomie est une tâche complexe qui implique des changements alimentaires, physiques et émotionnels. Cette transition peut devenir une occasion de rentrer dans une vie plus saine et plus épanouissante, pavée de nouvelles habitudes et de perspectives enrichissantes, avec un plan bien articulé et une attitude positive.</p>
+<p class="focus-bleu">En prenant ces mesures vitales, vous établissez les fondements d’une vie remplie de bien-être, de santé et de bonheur (20).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="anchor" id="3587"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">Retours d’expérience</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<figure class="caption caption-img" role="group">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdbSDusouc3wkGl89rIGuosxTCNQssU8jtzEFL4XIw1sBXz_g/viewform?usp=pp_url"></a>
+<figcaption>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdbSDusouc3wkGl89rIGuosxTCNQssU8jtzEFL4XIw1sBXz_g/viewform?usp=pp_url" target="_blank">CLIQUEZ ICI POUR DEMANDER UN DEVIS GRATUIT</a>
+</figcaption>
+</figure>
+<p> </p>
+<p class="chapo">Les retours d’expérience des patients jouent un rôle important dans le parcours de renaissance qui suit une sleeve gastrectomie en fournissant des éclairages réalistes et authentiques. Ces témoignages peuvent vous aider à mener cette aventure transformationnelle d’une manière informée et équilibrée.</p>
+<p><strong>Nous examinons ici quelques expériences quotidiennes partagées par ceux qui vous ont précédé.</strong></p>
+<h3><strong>Des défis physiques et émotionnels</strong></h3>
+<p>La plupart des individus témoignent de défis à la fois physiques et émotionnels après l’opération. La <em>réadaptation</em> à une nouvelle routine alimentaire et l’adaptation à un corps en constante évolution peuvent initialement s’avérer difficiles (21). Certains rapportent des fluctuations d’humeur et des moments d’incertitude. Cependant, avec le temps, beaucoup apprennent à embrasser ces changements, trouvant une joie renouvelée dans leur nouvelle vie.</p>
+<h3><strong>Des changements positifs à long terme</strong></h3>
+<p>Malgré les défis initiaux, de nombreux patients rapportent des changements positifs et durables. Ils citent des améliorations notables dans leur <em>qualité de vie</em>, y compris une mobilité accrue, une meilleure santé globale et un regain de confiance en soi (22). Ces retours d’expérience soulignent l’importance de la patience et de la persévérance dans le processus de réadaptation post-opératoire.</p>
+<p><strong>Des témoignages inspirants</strong></p>
+<p>Plusieurs témoignages mettent en lumière des histoires inspirantes de réussite personnelle. Certains parlent d’avoir retrouvé un amour pour des activités qu’ils avaient abandonnées, d’avoir développé une relation plus saine avec la nourriture, ou même d’avoir trouvé un nouveau sens à la vie (23). Ces histoires sont un puissant rappel du potentiel de <em>transformation</em> que peut offrir une sleeve gastrectomie, menant à une vie plus épanouissante et joyeuse.</p>
+<h3><strong>La valeur du soutien communautaire</strong></h3>
+<p>Beaucoup soulignent également la valeur inestimable du <strong>soutien</strong> communautaire. Les groupes de soutien, les forums en ligne et les communautés de patients peuvent devenir des ressources précieuses, offrant des conseils pratiques et du soutien émotionnel tout au long du parcours (24). En partageant leurs expériences et en écoutant celles des autres, les patients peuvent trouver du réconfort et de l’inspiration pour continuer leur propre voyage avec résilience et espoir.</p>
+<p>Les retours d’expérience démontrent clairement que, bien que le chemin puisse être semé d’obstacles, les récompenses potentielles sont considérables. Les histoires de réussite individuelle servent de phares lumineux pour ceux qui sont prêts à entreprendre ce voyage transformationnel.</p>
+<p class="focus-bleu">Les chances de renaissance et de renouveau sont à portée de main si vous êtes déterminé, soutenu et optimiste (25).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="anchor" id="3588"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">Astuces pratiques</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<p class="chapo">Naviguer à travers les nuances de la vie après une sleeve gastrectomie peut sembler une tâche monumentale, mais grâce à des astuces pratiques, ce voyage peut être nettement facilité.</p>
+<p><strong>Voici quelques conseils précieux pour aider à faire cette transition en douceur.</strong></p>
+<h3><strong>Planification des repas</strong></h3>
+<p>L’une des clés du succès post-opératoire est une planification minutieuse des repas. Non seulement cela aide à maintenir un régime alimentaire équilibré, mais cela permet aussi d’éviter les tentations impromptues qui peuvent entraver la progression (26). Des recherches indiquent que la tenue d’un journal alimentaire peut être un outil précieux pour suivre et ajuster vos habitudes alimentaires (27).</p>
+<h3><strong>Hydratation consciente</strong></h3>
+<p>L’<em>hydratation</em> est un aspect crucial de la récupération et du bien-être à long terme. Étant donné que l’estomac a une capacité réduite, il est conseillé de boire des liquides entre les repas plutôt que pendant, pour éviter de se sentir trop plein et inconfortable (28). De plus, il est recommandé d’opter pour des boissons non sucrées pour prévenir la prise de poids inutile.</p>
+<h3><strong>Activités physiques adaptées</strong></h3>
+<p>L’intégration d’activités physiques régulières dans votre routine peut non seulement aider à favoriser la <a href="../../nutrition/equilibre-alimentation-saine-maigrir/index.html" title="Stratégies efficaces pour une perte de poids durable après une chirurgie bariatrique"><em><strong>perte de poids,</strong></em></a> mais également améliorer l’humeur et la qualité de vie globale (29). Il est conseillé de choisir des exercices que vous appréciez, ce qui augmentera la probabilité de maintenir une routine régulière.</p>
+<h3><strong>Gestion du stress</strong></h3>
+<p>La chirurgie peut apporter son lot de stress et d’anxiété. Apprendre des techniques de gestion du stress, telles que la méditation ou le yoga, peut être une excellente manière de rester centré et équilibré au cours de cette période de transition (30).</p>
+<h3><strong>Support psychologique</strong></h3>
+<p>De plus, il est essentiel de demander un soutien psychologique si nécessaire. Obtenir de l’aide professionnelle peut être essentiel pour surmonter les difficultés émotionnelles, que ce soit à travers des groupes de soutien ou une thérapie individuelle (31).</p>
+<p>Vivre après une sleeve gastrectomie peut devenir une expérience positive et transformatrice si l’on adopte des stratégies pratiques et une approche proactive.</p>
+<p class="focus-bleu">Vous pouvez mener une vie plus saine et plus heureuse en prenant des mesures conscientes pour prendre soin de votre corps et de votre esprit.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="anchor" id="3589"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">Conclusion</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<p class="chapo">Le chemin qui suit une sleeve gastrectomie est parsemé de changements, de défis, mais aussi de renouveau et de possibilités infinies. À travers des conseils judicieux, des astuces pratiques et des <em>témoignages</em> poignants, nous avons exploré la multiplicité des facettes de ce voyage transformateur. Il est évident que le succès de cette entreprise ne repose pas uniquement sur une <em>intervention chirurgicale.</em></p>
+<p><strong>Elle nécessite une adaptation réfléchie du mode de vie, adoptant des habitudes alimentaires saines, une activité physique régulière et une gestion attentive du stress émotionnel. L’engagement à long terme à un mode de vie sain est un facteur clé de succès, comme souligné dans de nombreuses études (32).</strong></p>
+<p>Les retours d’expérience authentiques que nous avons partagés mettent en lumière non seulement les défis rencontrés, mais aussi les réussites remarquables qui peuvent être atteintes avec du temps, de l’effort, et le soutien d’une <em>communauté</em> empathique.</p>
+<p>Ces témoignages illustrent la puissance de la résilience humaine et l’incroyable potentiel de transformation que possède chaque individu après une sleeve gastrectomie (33).</p>
+<p>La voie vers une vie renouvelée après une sleeve gastrectomie est un voyage qui vaut la peine d’être entrepris, promettant non seulement une meilleure santé physique, mais aussi un épanouissement et une satisfaction personnelle grandissants.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="anchor" id="3590"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<p class="focus">Sources</p>
+<ol>
+<li>
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5399773/">NIH. (2016). Gastrointestinal Surgery for Severe Obesity. National Institute of Diabetes and Digestive and Kidney Diseases. Colles, S.L., &amp; Dixon, J.B. (2006). Eating behaviour and weight loss outcomes in bariatric surgery. Nutrition &amp; Dietetics, 63(4), 217-225.</a>
+</li>
+<li>Sarwer, D.B., et al. (2008). Psychiatric diagnoses and psychiatric treatment among bariatric surgery candidates. Obesity Surgery, 18(1), 14-22.</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/25938187/">Elkins, G., et al. (2017). Mindfulness and acceptance-based group therapy and traditional cognitive behavioral group therapy for social anxiety disorder: Mechanisms of change. Behaviour Research and Therapy, 108, 23-33.</a>
+</li>
+<li>Livhits, M., et al. (2011). Preoperative predictors of weight loss following bariatric surgery: systematic review. Obesity Surgery, 21(1), 70-89.</li>
+<li>Peterli, R., et al. (2018). Effect of Laparoscopic Sleeve Gastrectomy vs Laparoscopic Roux-en-Y Gastric Bypass on Weight Loss at 5 Years Among Patients With Morbid Obesity: The SM-BOSS Randomized Clinical Trial. JAMA, 319(3), 255-265.</li>
+<li>
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4743522/">Paul, L., et al. (2015). Preoperative Psychological Assessment of Bariatric Surgery Candidates: A Review of the Literature and Practical Suggestions. Frontiers in Psychiatry, 6, 175.</a>
+</li>
+<li>Rosenthal, R.J., et al. (2016). International Sleeve Gastrectomy Expert Panel Consensus Statement: best practice guidelines based on experience of &gt;12,000 cases. Surgery for Obesity and Related Diseases, 8(1), 8-19.</li>
+<li>Rutledge, T., et al. (2011). Depression as a Predictor of Poor Outcomes Among Patients With Non-Cardiac Chest Pain: A 5-Year Cohort Study. Psychosomatic Medicine, 73(1), 8-15.</li>
+<li>Brethauer, S.A., et al. (2013). Standardized outcomes reporting in metabolic and bariatric surgery. Surgery for Obesity and Related Diseases, 9(4), 489-506.</li>
+<li>Peacock, J.C., et al. (2014). Pain Management After Laparoscopic Gastric Bypass Surgery: An Analysis of Narcotic Use. Obesity Surgery, 24(8), 1300-1305.</li>
+<li>Karlsson, J., et al. (2007). Ten-year trends in health-related quality of life after surgical and conventional treatment for severe obesity: the SOS intervention study. International Journal of Obesity, 31(8), 1248-1261.</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/24189773/">Courcoulas, A., et al. (2018). Weight Change and Health Outcomes at 3 Years After Bariatric Surgery Among Individuals With Severe Obesity. JAMA, 310(22), 2416-2425</a>
+</li>
+<li>Mechanick, J.I., et al. (2013). Clinical Practice Guidelines for the Perioperative Nutritional, Metabolic, and Nonsurgical Support of the Bariatric Surgery Patient - 2013 Update: Cosponsored by American Association of Clinical Endocrinologists, The Obesity Society, and American Society for Metabolic &amp; Bariatric Surgery. Obesity, 21(S1), S1-S27.</li>
+<li>Colles, S.L., et al. (2008). Preoperative Weight Loss With a Very-Low-Energy Diet: Quantitation of Changes in Liver and Abdominal Fat by Serial Imaging. American Journal of Clinical Nutrition, 88(2), 343-352.</li>
+<li>Song, Z., et al. (2014). Support from Friends and Family in Losing Weight: Qualitative Analysis of Participants in a Diabetes Prevention Program. Family Medicine, 46(2), 102-108.</li>
+<li>van Hout, G.C., et al. (2008). Psychosocial Predictors of Success Following Bariatric Surgery. Obesity Surgery, 18(4), 417-425.</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/20947446/">Sarwer, D. B., et al. (2008). Changes in Quality of Life and Body Image After Gastric Bypass Surgery. Surgery for Obesity and Related Diseases, 4(6), 640-648.</a>
+</li>
+<li>van Nunen, A. M., et al. (2007). Quality of Life and Body Image After Laparoscopic Adjustable Gastric Banding. Obesity Surgery, 17(8), 1057-1064.</li>
+<li>Müller, A., et al. (2017). Changes in Social Support, Quality of Life, and Body Image Following Gastric Bypass Surgery. Surgery for Obesity and Related Diseases, 13(6), 991-998.</li>
+<li>Kushner, R.F., et al. (2017). Lifestyle Interventions for the Treatment of Class III Obesity: A Primary Target for Nutrition Medicine in the Obesity Epidemic. The American Journal of Clinical Nutrition, 91(1), 289S-292S.</li>
+<li>Foster, G.D., et al. (2005). A Randomized Trial of a Low-Carbohydrate Diet for Obesity. The New England Journal of Medicine, 353(20), 2082-2090.</li>
+<li>Mundi, M.S., et al. (2015). The Role of Meal Timing and Frequency in Weight Management. Obesity Surgery, 26(10), 2543-2549.</li>
+<li>Donnelly, J.E., et al. (2009). American College of Sports Medicine Position Stand. Appropriate Physical Activity Intervention Strategies for Weight Loss and Prevention of Weight Regain for Adults. Medicine and Science in Sports and Exercise, 41(2), 459-471.</li>
+<li>Cohen, B.E., et al. (2014). Psychological Stress and Disease (JAM Internal Medicine): A Wake-Up Call for the Health Care Community? The Journal of the American Medical Association, 174(11), 1811-1812.</li>
+<li>Kalarchian, M.A., et al. (2007). Psychiatric Disorders Among Bariatric Surgery Candidates: Relationship to Obesity and Functional Health Status. The American Journal of Psychiatry, 164(2), 328-334.</li>
+<li>Colles, S.L., Dixon, J.B., &amp; O'Brien, P.E. (2008). Hunger Control and Regular Physical Activity Facilitate Weight Loss After Laparoscopic Adjustable Gastric Banding. Obesity Surgery, 18(7), 833-840.</li>
+<li>Bocchieri, L.E., Meana, M., &amp; Fisher, B.L. (2002). A Review of Psychosocial Outcomes of Surgery for Morbid Obesity. Journal of Psychosomatic Research, 52(3), 155-165.</li>
+</ol>
+<p> </p>
+<figure class="caption caption-img" role="group">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdbSDusouc3wkGl89rIGuosxTCNQssU8jtzEFL4XIw1sBXz_g/viewform?usp=pp_url"></a>
+<figcaption>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdbSDusouc3wkGl89rIGuosxTCNQssU8jtzEFL4XIw1sBXz_g/viewform?usp=pp_url" target="_blank">CLIQUEZ ICI POUR DEMANDER UN DEVIS GRATUIT</a>
+</figcaption>
+</figure>
+<p> </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="node__footer">
+<div class="node__share">
+<div class="addthis addthis_toolbox">
+<span class="addthis__label">Partager</span>
+<div class="addthis__buttons">
+<a class="addthis__button addthis__button--twitter addthis_button_twitter" href="#"><svg class="icon icon-twitter">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-twitter"></use></svg></a> <a class="addthis__button addthis__button--facebook addthis_button_facebook" href="#"><svg class="icon icon-facebook">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-facebook"></use></svg></a> <a class="addthis__button addthis__button--email addthis_button_email" href="#"><svg class="icon icon-mail">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-mail"></use></svg></a>
+</div>
+</div>
+</div>
+<div class="node__related">
+<div class="node__related-container">
+<p class="node__related-title">Sur le même thème</p>
+<div class="views-element-container">
+<div class="view view-news view-id-news view-display-id-block_other_news_same_theme js-view-dom-id-396343c252a195b4d5131afb4d7418ae748f3168c9545828e695c8908a00f02b">
+<div class="view-content">
+<div class="views-row">
+<article class="card card--news-list node node--type-news node--promoted node--sticky node--view-mode-list" role="article">
+<div class="card__inner">
+<div class="card__thumb">
+<div class="field field--name-image field--type-image field--label-hidden field__item"></div>
+</div>
+<div class="card__content">
+<div class="card__meta">
+<div class="field field--name-ref-theme field--type-entity-reference field--label-hidden field__item">
+<a href="../index.html" hreflang="fr">Chirurgie</a>
+</div>
+</div>
+<a class="card__link" href="../traitement-medicamenteux-post-sleeve-gastrectomie-un-suivi-essentiel-pour-maintenir-les-benefices/index.html">
+<h3 class="card__title">Traitement médicamenteux post-sleeve gastrectomie : un suivi essentiel pour maintenir les bénéfices à long terme</h3></a>
+<div class="card__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<p>Traitement médicamenteux post-sleeve : suivi crucial pour maintenir la perte de poids à long terme après chirurgie bariatrique.</p>
+</div>
+</div>
+<div class="card__footer">
+<span class="author"></span>
+<div class="field field--name-ref-author field--type-entity-reference field--label-hidden field__item">
+<span class="author">Par <a href="../../../dr-patrick-noel/index.html"><span>Dr Patrick Noël</span></a></span>
+</div>
+<span class="date"></span>
+<div class="field field--name-date field--type-datetime field--label-hidden field__item">
+<span class="date"><time class="datetime" datetime="2024-08-30T12:00:00Z">30 aoû. 2024</time></span>
+</div>
+<span class="date"></span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="views-row">
+<article class="card card--news-list node node--type-news node--promoted node--sticky node--view-mode-list" role="article">
+<div class="card__inner">
+<div class="card__thumb">
+<div class="field field--name-image field--type-image field--label-hidden field__item"></div>
+</div>
+<div class="card__content">
+<div class="card__meta">
+<div class="field field--name-ref-theme field--type-entity-reference field--label-hidden field__item">
+<a href="../index.html" hreflang="fr">Chirurgie</a>
+</div>
+</div>
+<a class="card__link" href="../combiner-sleeve-gastrectomie-et-traitement-medicamenteux-pour-une-prise-en-charge-globale-de/index.html">
+<h3 class="card__title">Combiner sleeve gastrectomie et traitement médicamenteux pour une prise en charge globale de l'obésité</h3></a>
+<div class="card__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<p>Stratégie combinée : sleeve gastrectomie et médicaments pour une gestion optimale et durable de l'obésité sévère.</p>
+</div>
+</div>
+<div class="card__footer">
+<span class="author"></span>
+<div class="field field--name-ref-author field--type-entity-reference field--label-hidden field__item">
+<span class="author">Par <a href="../../../dr-patrick-noel/index.html"><span>Dr Patrick Noël</span></a></span>
+</div>
+<span class="date"></span>
+<div class="field field--name-date field--type-datetime field--label-hidden field__item">
+<span class="date"><time class="datetime" datetime="2024-08-28T12:00:00Z">28 aoû. 2024</time></span>
+</div>
+<span class="date"></span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="views-row">
+<article class="card card--news-list node node--type-news node--promoted node--sticky node--view-mode-list" role="article">
+<div class="card__inner">
+<div class="card__thumb">
+<div class="field field--name-image field--type-image field--label-hidden field__item"></div>
+</div>
+<div class="card__content">
+<div class="card__meta">
+<div class="field field--name-ref-theme field--type-entity-reference field--label-hidden field__item">
+<a href="../index.html" hreflang="fr">Chirurgie</a>
+</div>
+</div>
+<a class="card__link" href="../sleeve-gastrectomie-et-inhibiteurs-de-la-lipase-une-association-pour-limiter-labsorption-des/index.html">
+<h3 class="card__title">Sleeve gastrectomie et inhibiteurs de la lipase : une association pour limiter l'absorption des graisses</h3></a>
+<div class="card__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<p>Découvrez comment l'association sleeve gastrectomie et inhibiteurs de lipase optimise la perte de poids en limitant l'absorption des graisses.</p>
+</div>
+</div>
+<div class="card__footer">
+<span class="author"></span>
+<div class="field field--name-ref-author field--type-entity-reference field--label-hidden field__item">
+<span class="author">Par <a href="../../../dr-patrick-noel/index.html"><span>Dr Patrick Noël</span></a></span>
+</div>
+<span class="date"></span>
+<div class="field field--name-date field--type-datetime field--label-hidden field__item">
+<span class="date"><time class="datetime" datetime="2024-08-28T12:00:00Z">28 aoû. 2024</time></span>
+</div>
+<span class="date"></span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="views-row">
+<article class="card card--news-list node node--type-news node--promoted node--sticky node--view-mode-list" role="article">
+<div class="card__inner">
+<div class="card__thumb">
+<div class="field field--name-image field--type-image field--label-hidden field__item"></div>
+</div>
+<div class="card__content">
+<div class="card__meta">
+<div class="field field--name-ref-theme field--type-entity-reference field--label-hidden field__item">
+<a href="../index.html" hreflang="fr">Chirurgie</a>
+</div>
+</div>
+<a class="card__link" href="../traitement-medicamenteux-pre-operatoire-optimiser-les-resultats-de-la-sleeve-gastrectomie/index.html">
+<h3 class="card__title">Traitement médicamenteux pré-opératoire : optimiser les résultats de la sleeve gastrectomie</h3></a>
+<div class="card__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<p>Découvrez comment le traitement médicamenteux pré-opératoire peut améliorer les résultats de votre sleeve gastrectomie pour une perte de poids optimale.</p>
+</div>
+</div>
+<div class="card__footer">
+<span class="author"></span>
+<div class="field field--name-ref-author field--type-entity-reference field--label-hidden field__item">
+<span class="author">Par <a href="../../../dr-patrick-noel/index.html"><span>Dr Patrick Noël</span></a></span>
+</div>
+<span class="date"></span>
+<div class="field field--name-date field--type-datetime field--label-hidden field__item">
+<span class="date"><time class="datetime" datetime="2024-08-23T12:00:00Z">23 aoû. 2024</time></span>
+</div>
+<span class="date"></span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</article>
+</div>
+<div class="block block-choosit-lgs block-most-read-articles" id="block-articleslespluslus">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="block__heading">
+<h2 class="block__title">Articles les plus lus</h2>
+</div>
+<div class="block__body">
+<ul>
+<li>
+<a href="../chirurgie-bariatrique-options-traitement-innovations/index.html"><span>1</span>
+<h3>Chirurgie bariatrique : options de traitement, innovations, et prise en charge du patient</h3></a>
+</li>
+<li>
+<a href="../ballons-gastriques-avantages-inconvenients/index.html"><span>2</span>
+<h3>La bataille des ballons gastriques : examiner les avantages et les inconvénients des options de ballon gastrique</h3></a>
+</li>
+<li>
+<a href="../../medecine/sleeve-endoscopique-une-technique-innovante/index.html"><span>3</span>
+<h3>Sleeve endoscopique : une technique d’endoscopie bariatrique innovante pour les patients en situation d’obésité modérée à sévère</h3></a>
+</li>
+<li>
+<a href="../diabete-gastrectomie-sleeve-bypass/index.html"><span>4</span>
+<h3>Comparaison de la rémission du diabète de type 2 entre la gastrectomie en sleeve et le bypass gastrique</h3></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="block block-choosit-lgs block-hospital-guide" id="block-leguidedeshopitauxetcliniques">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="block__heading">
+<p class="block__title">Le guide des hôpitaux et cliniques de France.</p>
+<p>Recherchez parmi les 1335 établissements</p>
+</div>
+<div class="block__body">
+<a class="button" href="../../../le-guide/index.html">Rechercher un établissement de santé</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<section class="prefooter">
+<div class="prefooter__container">
+<div class="region region-prefooter">
+<div class="block block-choosit-lgs block-newsletter-social-links" id="block-newsletteretreseauxsociaux">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="newsletter">
+<p class="block__title">Pour être informé des actualités du Guide Santé</p>
+<a class="button button--ghost" href="../../../form/newsletter/index.html">Je m'abonne à la newsletter</a>
+</div>
+<div class="social-links">
+<p class="block__title">Nous suivre</p>
+<ul class="social">
+<li>
+<a aria-label="Twitter" href="https://x.com/docleguidesante" rel="noopener" target="_blank"><svg class="icon icon-twitter">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-twitter"></use></svg></a>
+</li>
+<li>
+<a aria-label="Facebook" href="https://www.facebook.com/leguidesante.org/" rel="noopener" target="_blank"><svg class="icon icon-facebook">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-facebook"></use></svg></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="footernav">
+<div class="footernav__container">
+<div class="region region-footernav">
+<nav aria-labelledby="block-leguidehopitauxetcliniques-menu" class="block block-menu navigation menu--guide-footer" id="block-leguidehopitauxetcliniques" role="navigation">
+<span id="block-leguidehopitauxetcliniques-menu">Le Guide : hôpitaux et cliniques</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide" href="../../../le-guide/index.html">Rechercher un établissement</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions" href="../../../le-guide/par-regions/index.html">Par régions</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions/par-departements" href="../../../le-guide/par-regions/par-departements/index.html">Par départements</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions/par-departements/par-villes" href="../../../le-guide/par-regions/par-departements/par-villes/index.html">Par villes</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1064" href="../../../le-guide/ile-de-france/paris/index.html">Hôpital Paris</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1014" href="../../../le-guide/auvergne-rhone-alpes/rhone/lyon/index.html">Hôpital Lyon</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1030" href="../../../le-guide/provence-alpes-cote-dazur/bouches-du-rhone/marseille/index.html">Hôpital Marseille</a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="block-actualitessantebienetre-menu" class="block block-menu navigation menu--news-footer" id="block-actualitessantebienetre" role="navigation">
+<span id="block-actualitessantebienetre-menu">Actualités Santé, Bien-être</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1" href="../../cancer/index.html">Cancer</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1105" href="../../medical-news-english/index.html">Medical News in English</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1083" href="../index.html">Chirurgie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1084" href="../../forme-et-bien-etre/index.html">Forme et bien-être</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1085" href="../../geriatrie/index.html">Gériatrie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1086" href="../../hopitaux/index.html">Hôpitaux</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1087" href="../../medecine/index.html">Médecine</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1088" href="../../medicaments/index.html">Médicaments</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1089" href="../../obstetrique/index.html">Obstétrique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../../sante-publique/index.html">Santé publique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/2" href="../../nutrition/index.html">Nutrition</a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="block-apropos-menu" class="block block-menu navigation menu--about" id="block-apropos" role="navigation">
+<span id="block-apropos-menu">A propos</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1431" href="../../../qui-sommes-nous/index.html">Qui sommes nous ?</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1386" href="../../../comite-de-redaction-du-guide-sante/index.html">Comité de rédaction</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1387" href="../../../comite-scientifique-et-experts-medicaux-ou-scientifiques/index.html">Comité scientifiques et experts</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1433" href="../../../contact-presse/index.html">Contact Presse</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1576" href="../../../glossaire/index.html">Glossaire</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="webform/signalement_d_une_erreur" href="../../../form/signalement-d-une-erreur/index.html">Signalement</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</section>
+<footer class="footer" role="contentinfo">
+<div class="footer__container">
+<div class="region region-footer">
+<span class="footer__copyright">© Le Guide Santé</span>
+<div class="footer__legal">
+<nav aria-labelledby="block-starter-footer-menu" class="block block-menu navigation menu--footer" id="block-starter-footer" role="navigation">
+<span class="visually-hidden" id="block-starter-footer-menu">Menu Pied de page</span>
+<ul class="menu" data-region="footer">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1432" href="../../../mentions-legales-et-cgu/index.html">Mentions légales</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="responsive-menu">
+<div class="responsive-menu__backdrop js-menu-backdrop"></div>
+<div class="responsive-menu__content">
+<ul class="vertical menu drilldown js-responsive-menu" data-back="Retour"></ul>
+</div>
+</div>
+<script data-drupal-selector="drupal-settings-json" type="application/json">
+  {"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1814","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"fr"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_environment":false},"tagIds":["GTM-WPC22MS"]},"gtag":{"tagId":"","consentMode":true,"otherIds":[],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"choosit_addthis\/addthis,core\/normalize,filter\/caption,google_tag\/gtag,google_tag\/gtag.ajax,google_tag\/gtm,paragraphs\/drupal.paragraphs.unpublished,starter\/global,starterkit\/base,starterkit\/messages,starterkit\/node,system\/base,views\/views.module","theme":"starter","theme_token":null},"ajaxTrustedUrl":[],"user":{"uid":0,"permissionsHash":"630f18be6ad6a4fe65bb35d32325d392eb59045512a4b2a10d8fdcb9b01fbdcc"}}
+  </script>
+<script src="../../../sites/default/files/js/js_aqnCxKRn0CDh4OkHhqZxx4EUR7fwo2y0KP3hXK9OlOk.js"></script>
+<script src="../../../modules/contrib/google_tag/js/gtm@sc2s6l.js"></script>
+<script src="../../../sites/default/files/js/js_aqnCxKRn0CDh4OkHhqZxx4EUR7fwo2y0KP3hXK9OlOk.js"></script>
+<script data-cfasync="false">
+
+  function _emitEzConsentEvent(){var customEvent=new CustomEvent("ezConsentEvent",{detail:{ezTcfConsent:window.ezTcfConsent},bubbles:true,cancelable:true,});document.dispatchEvent(customEvent);}
+  (function(window,document){function _setAllEzConsentTrue(){window.ezTcfConsent.loaded=true;window.ezTcfConsent.store_info=true;window.ezTcfConsent.develop_and_improve_services=true;window.ezTcfConsent.measure_ad_performance=true;window.ezTcfConsent.measure_content_performance=true;window.ezTcfConsent.select_basic_ads=true;window.ezTcfConsent.create_ad_profile=true;window.ezTcfConsent.select_personalized_ads=true;window.ezTcfConsent.create_content_profile=true;window.ezTcfConsent.select_personalized_content=true;window.ezTcfConsent.understand_audiences=true;window.ezTcfConsent.use_limited_data_to_select_content=true;window.ezTcfConsent.select_personalized_content=true;}
+  function _clearEzConsentCookie(){document.cookie="ezCMPCookieConsent=tcf2;Domain=.le-guide-sante.org;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";}
+  _clearEzConsentCookie();if(typeof window.__tcfapi!=="undefined"){window.ezgconsent=false;var amazonHasRun=false;function _ezAllowed(tcdata,purpose){return(tcdata.purpose.consents[purpose]||tcdata.purpose.legitimateInterests[purpose]);}
+  function _reloadAds(){if(typeof window.ezorefgsl==="function"&&typeof window.ezslots==="object"){if(typeof __ezapsFetchBids=="function"&&amazonHasRun===false){ezapsFetchBids(__ezaps);if(typeof __ezapsVideo!="undefined"){ezapsFetchBids(__ezapsVideo,"video");}
+  amazonHasRun=true;}
+  var slots=[];for(var i=0;i<window.ezslots.length;i++){if(window[window.ezslots[i]]&&typeof window[window.ezslots[i]]==="object"){slots.push(window[window.ezslots[i]]);}else{setTimeout(_reloadAds,100);return false;}}
+  for(var i=0;i<slots.length;i++){window.ezorefgsl(slots[i]);}}else if(!window.ezadtimeoutset){window.ezadtimeoutset=true;setTimeout(_reloadAds,100);}}
+  function _handleConsentDecision(tcdata){window.ezTcfConsent.loaded=true;if(!tcdata.vendor.consents["347"]&&!tcdata.vendor.legitimateInterests["347"]){window._emitEzConsentEvent();return;}
+  window.ezTcfConsent.store_info=_ezAllowed(tcdata,"1");window.ezTcfConsent.develop_and_improve_services=_ezAllowed(tcdata,"10");window.ezTcfConsent.measure_content_performance=_ezAllowed(tcdata,"8");window.ezTcfConsent.select_basic_ads=_ezAllowed(tcdata,"2");window.ezTcfConsent.create_ad_profile=_ezAllowed(tcdata,"3");window.ezTcfConsent.select_personalized_ads=_ezAllowed(tcdata,"4");window.ezTcfConsent.create_content_profile=_ezAllowed(tcdata,"5");window.ezTcfConsent.measure_ad_performance=_ezAllowed(tcdata,"7");window.ezTcfConsent.use_limited_data_to_select_content=_ezAllowed(tcdata,"11");window.ezTcfConsent.select_personalized_content=_ezAllowed(tcdata,"6");window.ezTcfConsent.understand_audiences=_ezAllowed(tcdata,"9");window._emitEzConsentEvent();}
+  function _handleGoogleConsentV2(tcdata){if(!tcdata||!tcdata.purpose||!tcdata.purpose.consents){return;}
+  var googConsentV2={};if(tcdata.purpose.consents[1]){googConsentV2.ad_storage='granted';googConsentV2.analytics_storage='granted';}
+  if(tcdata.purpose.consents[3]&&tcdata.purpose.consents[4]){googConsentV2.ad_personalization='granted';}
+  if(tcdata.purpose.consents[1]&&tcdata.purpose.consents[7]){googConsentV2.ad_user_data='granted';}
+  if(googConsentV2.analytics_storage=='denied'){gtag('set','url_passthrough',true);}
+  gtag('consent','update',googConsentV2);}
+  __tcfapi("addEventListener",2,function(tcdata,success){if(!success||!tcdata){window._emitEzConsentEvent();return;}
+  if(!tcdata.gdprApplies){_setAllEzConsentTrue();window._emitEzConsentEvent();return;}
+  if(tcdata.eventStatus==="useractioncomplete"||tcdata.eventStatus==="tcloaded"){if(typeof gtag!='undefined'){_handleGoogleConsentV2(tcdata);}
+  _handleConsentDecision(tcdata);if(tcdata.purpose.consents["1"]===true&&tcdata.vendor.consents["755"]!==false){window.ezgconsent=true;(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;_reloadAds();}else{_reloadAds();}
+  if(window.__ezconsent){__ezconsent.setEzoicConsentSettings(ezConsentCategories);}
+  __tcfapi("removeEventListener",2,function(success){return null;},tcdata.listenerId);if(!(tcdata.purpose.consents["1"]===true&&_ezAllowed(tcdata,"2")&&_ezAllowed(tcdata,"3")&&_ezAllowed(tcdata,"4"))){if(typeof __ez=="object"&&typeof __ez.bit=="object"&&typeof window["_ezaq"]=="object"&&typeof window["_ezaq"]["page_view_id"]=="string"){__ez.bit.AddAndFire(window["_ezaq"]["page_view_id"],[new __ezDotData("non_personalized_ads",true),]);}}}});}else{_setAllEzConsentTrue();window._emitEzConsentEvent();}})(window,document);
+  </script>
+<script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"6f64f15c991f46c985b1c28fb08922bc","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' defer="" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"></script>
+</body>
+</html>

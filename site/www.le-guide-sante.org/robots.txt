@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.le-guide-sante.org/sitemap.xml
+Sitemap: https://www.le-guide-sante.org/actualites/tendances/sitemap-news.xml
+Sitemap: https://www.le-guide-sante.org/actualites/tendances/sitemap.xml

@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="utf-8"/>
+<script>
+  var __ezHttpConsent={setByCat:function(src,tagType,attributes,category,force){var setScript=function(){if(force||window.ezTcfConsent[category]){var scriptElement=document.createElement(tagType);scriptElement.src=src;attributes.forEach(function(attr){for(var key in attr){if(attr.hasOwnProperty(key)){scriptElement.setAttribute(key,attr[key]);}}});var firstScript=document.getElementsByTagName(tagType)[0];firstScript.parentNode.insertBefore(scriptElement,firstScript);}};if(force||(window.ezTcfConsent&&window.ezTcfConsent.loaded)){setScript();}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){setScript();}else{console.error("cannot get ez consent data");force=true;setScript();}});}else{force=true;setScript();console.error("getEzConsentData is not a function");}},};
+  </script>
+<script>
+  var ezTcfConsent=window.ezTcfConsent?window.ezTcfConsent:{loaded:false,store_info:false,develop_and_improve_services:false,measure_ad_performance:false,measure_content_performance:false,select_basic_ads:false,create_ad_profile:false,select_personalized_ads:false,create_content_profile:false,select_personalized_content:false,understand_audiences:false,use_limited_data_to_select_content:false,};function getEzConsentData(){return new Promise(function(resolve){document.addEventListener("ezConsentEvent",function(event){var ezTcfConsent=event.detail.ezTcfConsent;resolve(ezTcfConsent);});});}
+  </script>
+<script>
+  function _setEzCookies(ezConsentData){var cookies=[{name:"ezoab_330072",value:"mod63-c; Path=/; Domain=www.le-guide-sante.org; Expires=Mon, 05 Aug 2024 21:17:18 UTC",tcfCategory:"store_info",isEzoic:"true",},{name:"ezoadgid_330072",value:"-1; Path=/; Domain=www.le-guide-sante.org; Expires=Mon, 05 Aug 2024 19:47:18 UTC",tcfCategory:"understand_audiences",isEzoic:"true",},{name:"ezosuibasgeneris-1",value:"543faa0e-2b27-46b2-4d91-4cf3dd2ecc0f; Path=/; Domain=www.le-guide-sante.org; Expires=Tue, 05 Aug 2025 19:17:18 UTC; Secure; SameSite=None",tcfCategory:"understand_audiences",isEzoic:"true",}];for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(ezConsentData&&ezConsentData.loaded&&ezConsentData[cookie.tcfCategory]){document.cookie=cookie.name+"="+cookie.value;}}}
+  if(window.ezTcfConsent&&window.ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else if(typeof getEzConsentData==="function"){getEzConsentData().then(function(ezTcfConsent){if(ezTcfConsent&&ezTcfConsent.loaded){_setEzCookies(window.ezTcfConsent);}else{console.error("cannot get ez consent data");_setEzCookies(window.ezTcfConsent);}});}else{console.error("getEzConsentData is not a function");_setEzCookies(window.ezTcfConsent);}
+  </script>
+<script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+  var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;window.__ezScriptHost="//www.ezojs.com";__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],r=[],s=!0,a=function(e,i,n,o,r,s,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,d=this;this.name=e,this.funcName=i,this.parameters=null===n?null:w(n)?n:[n],this.isBlock=o,this.blockedBy=r,this.deleteWhenComplete=s,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){u("... func = "+e),d.isInitialized=!0,d.isComplete=!0,u("... func.apply: "+e);var i=d.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[d.funcName]),null!=n&&n.apply(null,this.parameters),!0===d.deleteWhenComplete&&delete t[e],!0===d.isBlock&&(u("----- F'D: "+d.name),m())}},l=function(e,i,t,n,o,r,s){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=r,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=s,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)&&"banger.js"!==this.name?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,u("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===r&&(t.defer=!0),t.onerror=function(){var e={url:window.location.href,name:l.name,path:l.path,user_agent:window.navigator.userAgent};"undefined"!=typeof _ezaq&&(e.pageview_id=_ezaq.page_view_id);var i=encodeURIComponent(JSON.stringify(e)),t=new XMLHttpRequest;t.open("GET","//g.ezoic.net/ezqlog?d="+i,!0),t.send(),u("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&m()},t.onreadystatechange=t.onload=function(){var e=t.readyState;u("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&m())},i.getElementsByTagName("head")[0].appendChild(t)}},d=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function c(e,i,n,s,a,d,c,f,u){var m=new l(e,i,n,s,a,d,c,u);!0===f?o[e]=m:r[e]=m,t[e]=m,h(m)}function h(e){!0!==f(e)&&0!=s&&e.process()}function f(e){if(!0===e.isTimeDelay&&!1===n)return u(e.name+" blocked = TIME DELAY!"),!0;if(w(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return u(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return u(e.name+" blocked = "+o),!0}return!1}function u(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function m(){++e>200||(u("let's go"),p(o),p(r))}function p(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||f(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?u(t.name+": error"):!0===t.isComplete?u(t.name+": complete already"):!0===t.isInitialized&&u(t.name+": initialized already"):t.process()}}function w(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,u("TDELAY -----"),m()}),5e3)}),!1),{addFile:c,addFileOnce:function(e,i,n,o,r,s,a,l,d){t[e]||c(e,i,n,o,r,s,a,l,d)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,u(e+" ...  FILE! TDELAY"),r[e]=n,t[e]=n,h(n)},addFunc:function(e,n,s,l,d,c,f,u,m,p){!0===c&&(e=e+"_"+i++);var w=new a(e,n,s,l,d,f,u,p);!0===m?o[e]=w:r[e]=w,t[e]=w,h(w)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,u(e+" ...  FUNCTION! TDELAY"),r[e]=o,t[e]=o,h(o)},items:t,processAll:m,setallowLoad:function(e){s=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?u(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new d(e,!0);u("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&f(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-0&cb=5', true, [], true, false, true, false);__ez.queue.addFile('/parsonsmaize/abilene.js', '/parsonsmaize/abilene.js?gcb=195-0&cb=35', true, [], true, false, true, false);
+  </script>
+<script data-cfasync="false" data-ezscrex="false" type="text/javascript">
+  window._ezaq = Object.assign({}, typeof window._ezaq !== "undefined" ? window._ezaq : {}, {"ad_cache_level":1,"adpicker_placement_cnt":0,"ai_placeholder_cache_level":1,"ai_placeholder_placement_cnt":-1,"author":"Jonathan Bastid ","domain_id":330072,"ezcache_level":1,"ezcache_skip_code":3,"has_bad_image":0,"has_bad_words":0,"is_sitespeed":0,"lt_cache_level":0,"publish_date":"2024-07-16","response_size":81465,"response_size_orig":76035,"response_time_orig":901,"template_id":120,"url":"https://www.le-guide-sante.org/actualites/forme-et-bien-etre/integrer-lhypnose-dans-un-programme-multidisciplinaire-de-gestion-du-poids-retours-dexperience-de","word_count":0,"worst_bad_word_level":0});__ez.queue.markLoaded('ezaqBaseReady');
+  </script>
+<script data-cfasync="false" data-ezscrex="false" type="text/javascript">
+  window.ezAnalyticsStatic = true;
+
+  function analyticsAddScript(script) {
+        var ezDynamic = document.createElement('script');
+        ezDynamic.type = 'text/javascript';
+        ezDynamic.innerHTML = script;
+        document.head.appendChild(ezDynamic);
+  }
+  function getCookiesWithPrefix() {
+    var allCookies = document.cookie.split(';');
+    var cookiesWithPrefix = {};
+
+    for (var i = 0; i < allCookies.length; i++) {
+        var cookie = allCookies[i].trim();
+
+        for (var j = 0; j < arguments.length; j++) {
+            var prefix = arguments[j];
+            if (cookie.indexOf(prefix) === 0) {
+                var cookieParts = cookie.split('=');
+                var cookieName = cookieParts[0];
+                var cookieValue = cookieParts.slice(1).join('=');
+                cookiesWithPrefix[cookieName] = decodeURIComponent(cookieValue);
+                break; // Once matched, no need to check other prefixes
+            }
+        }
+    }
+
+    return cookiesWithPrefix;
+  }
+  function productAnalytics() {
+        var d = {"ab":"mod63-c"};
+        d.u = _ezaq.url;
+        d.p = _ezaq.page_view_id;
+        d.v = _ezaq.visit_uuid;
+        d.e = JSON.stringify(_ezaq);
+        d.ref = document.referrer;
+        d.c = getCookiesWithPrefix('active_template', 'ez', 'lp_');
+
+        var dataText = JSON.stringify(d);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST','/ezais/analytics?cb=1', true);
+        xhr.onload = function () {
+                if (xhr.status!=200) {
+            return;
+                }
+
+        if(document.readyState !== 'loading') {
+            analyticsAddScript(xhr.response);
+            return;
+        }
+
+        var eventFunc = function() {
+            if(document.readyState === 'loading') {
+                return;
+            }
+            document.removeEventListener('readystatechange', eventFunc, false);
+            analyticsAddScript(xhr.response);
+        };
+
+        document.addEventListener('readystatechange', eventFunc, false);
+        };
+        xhr.setRequestHeader('Content-Type','text/plain');
+        xhr.send(dataText);
+  }
+  __ez.queue.addFunc("productAnalytics", "productAnalytics", null, true, ['ezaqBaseReady'], false, false, false, true);
+  </script>
+<base href="https://www.le-guide-sante.org/actualites/forme-et-bien-etre/integrer-lhypnose-dans-un-programme-multidisciplinaire-de-gestion-du-poids-retours-dexperience-de"/>
+<script class="mrf-structuredData" type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","dateModified":"2024-07-08T12:55:01Z","datePublished":"2024-07-17T00:00:00Z","headline":"Int\u00e9grer l'hypnose dans un programme multidisciplinaire de gestion du poids : retours d'exp\u00e9rience de professionnels de sant\u00e9","author":{"@type":"Person","name":"Jonathan Bastid ","url":"https://www.le-guide-sante.org/jonathan-bastid"},"image":["https://www.le-guide-sante.org/sites/default/files/resources/news/WhatsApp%20Image%202024-07-08%20at%2015.14.24_cc9e794c.jpg"]}
+  </script>
+<meta content="Retours d'expérience sur l'intégration de l'hypnose dans les programmes multidisciplinaires de gestion du poids par des professionnels." name="description"/>
+<link href="." rel="canonical"/>
+<meta content="Le Guide Santé" property="og:site_name"/>
+<meta content="Actualité" property="og:type"/>
+<meta content="https://www.le-guide-sante.org/actualites/forme-et-bien-etre/integrer-lhypnose-dans-un-programme-multidisciplinaire-de-gestion-du-poids-retours-dexperience-de" property="og:url"/>
+<meta content="Intégrer l'hypnose dans un programme multidisciplinaire de gestion du poids : retours d'expérience de professionnels de santé" property="og:title"/>
+<meta content="Retours d'expérience sur l'intégration de l'hypnose dans les programmes multidisciplinaires de gestion du poids par des professionnels." property="og:description"/>
+<meta content="https://www.le-guide-sante.org/sites/default/files/resources/news/WhatsApp%20Image%202024-07-08%20at%2015.14.24_cc9e794c.jpg" property="og:image"/>
+<meta content="996" property="og:image:width"/>
+<meta content="664" property="og:image:height"/>
+<meta content="Intégrer l'hypnose dans un programme multidisciplinaire de gestion du poids : retours d'expérience de professionnels de santé" property="og:image:alt"/>
+<meta content="contact@le-guide-sante.org" property="og:email"/>
+<meta content="https://www.le-guide-sante.org/user/kellyna" property="article:author"/>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Intégrer l'hypnose dans un programme multidisciplinaire de gestion du poids : retours d'expérience de professionnels de santé</title>
+<link href="../../../sites/default/files/css/css_o2aqwWTLaFPCWcx81kLUUOrRwdH8bdR7-c5WjTl61EY.css" media="all" rel="stylesheet"/>
+<link href="../../../sites/default/files/css/css_2eGMPurPoHsZAsCLYFmXgHJF5m2JwWIVGNEyZyGdFaA.css" media="all" rel="stylesheet"/>
+<link href="../../../sites/default/files/css/css_hUaj3Sck8PiWV031VtGM5vwmFiWZ93BLkGZHpqX1i2M.css" media="print" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" rel="preload"/>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" rel="stylesheet"/>
+</noscript>
+<link href="../../../themes/custom/starter/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link color="#e32327" href="../../../themes/custom/starter/safari-pinned-tab.svg" rel="mask-icon" type="image/svg+xml"/>
+<link href="../../../themes/custom/starter/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../../../themes/custom/starter/site.webmanifest" rel="manifest"/>
+<script type="text/javascript">
+  var ezoTemplate = 'old_site_noads';
+  var ezouid = '1';
+  var ezoFormfactor = '1';
+  </script>
+<script data-ezscrex="false" type="text/javascript">
+  var soc_app_id = '0';
+  var did = 330072;
+  var ezdomain = 'www.le-guide-sante.org';
+  var ezoicSearchable = 1;
+  </script>
+</head>
+<body class="path-node page-node-type-news">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WPC22MS" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div class="site-wrapper">
+<header class="header js-fixed-header">
+<div class="header__container">
+<div class="header__inner">
+<div class="header__logo">
+<div class="block block-system block-system-branding-block" id="block-starter-branding">
+<a class="site-logo" href="../../../index.html" rel="home"><img alt="Le Guide Santé" class="logo" height="49" src="../../../themes/custom/starter/dist/img/logo.svg" width="276"/> <img alt="Le Guide Santé" class="logo-white" height="49" src="../../../themes/custom/starter/dist/img/logo-white.svg" width="276"/></a>
+</div>
+</div>
+<div class="header__main">
+<div class="region region-navigation js-menu">
+<nav aria-labelledby="block-starter-main-menu-menu" class="block block-menu navigation menu--main" id="block-starter-main-menu" role="navigation">
+<span class="visually-hidden" id="block-starter-main-menu-menu">Navigation principale</span>
+<ul class="menu" data-region="navigation">
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide" href="../../../le-guide/index.html" title="Annuaire santé hospitalier">Le Guide : hôpitaux et cliniques</a>
+</li>
+<li class="menu-item has-mega-menu">
+<a href="#">Actualités Santé, Bien-être</a>
+<div class="mega-menu">
+<div class="mega-menu__col">
+<p class="mega-menu__col-title">Thématiques</p>
+<ul class="menu">
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1" href="../../cancer/index.html">Cancer</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/2" href="../../nutrition/index.html">Nutrition</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1083" href="../../chirurgie/index.html">Chirurgie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1084" href="../index.html">Forme et bien-être</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1085" href="../../geriatrie/index.html">Gériatrie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1086" href="../../hopitaux/index.html">Hôpitaux</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1087" href="../../medecine/index.html">Médecine</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1088" href="../../medicaments/index.html">Médicaments</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1089" href="../../obstetrique/index.html">Obstétrique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../../sante-publique/index.html">Santé publique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../../tendances/index.html">Tendances</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1105" href="../../medical-news-english/index.html">Medical News in English</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<button class="button header__responsive-btn js-menu-toggle"><span>Menu</span></button>
+</div>
+</div>
+</header>
+<main class="main">
+<div class="region region-header">
+<div class="block block-system block-system-breadcrumb-block" id="block-starter-breadcrumbs">
+<div class="breadcrumb">
+<div class="breadcrumb__container">
+<span class="visually-hidden" id="system-breadcrumb">Fil d'Ariane</span>
+<ol class="breadcrumb__items" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="../../../index.html" itemprop="item"><span itemprop="name">Accueil</span></a>
+<meta content="1" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="#" itemprop="item"><span itemprop="name">Actualités</span></a>
+<meta content="2" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="../index.html" itemprop="item"><span itemprop="name">Forme et bien-être</span></a>
+<meta content="3" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<span itemprop="name">Intégrer l'hypnose dans un programme multidisciplinaire de gestion du poids : retours d'expérience de professionnels de santé</span>
+<meta content="4" itemprop="position"/>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="hidden" data-drupal-messages-fallback=""></div>
+<div class="block block-choosit-lgs block-header-subtitle" id="block-entetesoustitre"></div>
+</div>
+<div class="main-content">
+<div class="region region-content">
+<div class="block block-system block-system-main-block" id="block-starter-content">
+<article class="node node--type-news node--promoted node--sticky node--view-mode-full" role="article">
+<div class="node__header">
+<div class="node__heading">
+<div class="field field--name-ref-theme field--type-entity-reference field--label-hidden field__item">
+<a href="../index.html" hreflang="fr">Forme et bien-être</a>
+</div>
+<h1 class="node__title"><span>Intégrer l'hypnose dans un programme multidisciplinaire de gestion du poids : retours d'expérience de professionnels de santé</span></h1>
+<div class="node__metas">
+<div class="field field--name-ref-author field--type-entity-reference field--label-hidden field__item">
+<a href="../../../jonathan-bastid/index.html">
+<div class="field field--name-image field--type-image field--label-hidden field__item"><img alt="Jonathan Bastid " class="image-style-author-avatar" height="80" loading="lazy" src="../../../sites/default/files/styles/author_avatar/public/resources/authors/Jonathan-Bastid-hypnotherapeute@itok=6ibin3vf.jpg" width="80"/></div>
+<span>PAR Jonathan Bastid</span></a>
+</div>
+<div class="field field--name-date field--type-datetime field--label-hidden field__item">
+<time class="datetime" datetime="2024-07-17T12:00:00Z">17 juil. 2024</time>
+</div>
+</div>
+</div>
+</div>
+<div class="node__content">
+<div class="node__intro">
+<div class="clearfix text-formatted field field--name-intro field--type-text-long field--label-hidden field__item">
+<p>Dans le contexte actuel de l’augmentation de l’obésité mondiale, la gestion du poids est devenue une priorité de santé publique. Une approche multidisciplinaire, combinant diverses méthodes de traitement, s'est avérée être la plus efficace pour traiter cette condition complexe. Parmi ces méthodes, l'hypnose émerge comme une intervention complémentaire prometteuse. Cet article explore l'intégration de l'hypnose dans un programme multidisciplinaire de gestion du poids, en s'appuyant sur les retours d'expérience de professionnels de santé.</p>
+<p>L'hypnose est une technique thérapeutique qui permet d'accéder à l'inconscient pour modifier les comportements et les habitudes alimentaires. Utilisée conjointement avec d'autres interventions telles que la thérapie comportementale et le coaching, elle offre une approche holistique pour la gestion du poids. L'hypnose aide à réduire le stress, améliore la motivation et permet un meilleur contrôle des envies alimentaires [1]. Des recherches ont montré que l'intégration de l'hypnose dans un programme de gestion du poids peut entraîner une perte de poids plus significative et durable [2].</p>
+<p>Les professionnels de santé rapportent des résultats positifs en utilisant l'hypnose pour aider leurs patients à gérer leur poids. Par exemple, le Dr David Spiegel, de l'Université de Stanford, a démontré que l'hypnose peut modifier la perception des patients sur la nourriture et leur propre corps, facilitant ainsi une perte de poids durable [3]. De plus, une étude clinique a révélé que les patients ayant recours à l'hypnose en complément de leur traitement traditionnel maintiennent mieux leur perte de poids sur le long terme [4].</p>
+<p>En conclusion, l'intégration de l'hypnose dans un programme multidisciplinaire de gestion du poids représente une approche innovante et prometteuse. Cet article se penchera sur les méthodologies d'intégration, les bénéfices observés et les retours d'expérience des professionnels de santé, offrant ainsi une perspective complète sur cette technique novatrice [5].</p>
+</div>
+</div>
+<div class="node__thumbnail">
+<div class="field field--name-image field--type-image field--label-hidden field__item"></div>
+</div>
+<div class="block block-choosit-lgs block-summary-block">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="block__body">
+<p class="block__title">Sommaire</p>
+<ol>
+<li>
+<a href="#4141">La gestion du poids en contexte multidisciplinaire</a>
+</li>
+<li>
+<a href="#4142">Méthodologie et intégration de l'hypnose dans un programme de gestion du poids</a>
+</li>
+<li>
+<a href="#4143">Témoignages et retours d'expérience des professionnels de santé</a>
+</li>
+<li>
+<a href="#4144">Études de cas et résultats observés</a>
+</li>
+<li>
+<a href="#4145">Discussion et perspectives</a>
+</li>
+<li>
+<a href="#4146">Conclusion</a>
+</li>
+<li>
+<a href="#4147">Sources</a>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="field field--name-blocks field--type-entity-reference-revisions field--label-hidden field__items">
+<a class="anchor" id="4141"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">La gestion du poids en contexte multidisciplinaire</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<figure class="caption caption-img" role="group">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdbSDusouc3wkGl89rIGuosxTCNQssU8jtzEFL4XIw1sBXz_g/viewform?usp=pp_url"></a>
+<figcaption>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdbSDusouc3wkGl89rIGuosxTCNQssU8jtzEFL4XIw1sBXz_g/viewform?usp=pp_url">CLIQUEZ ICI POUR DEMANDER UN DEVIS GRATUIT</a>
+</figcaption>
+</figure>
+<p> </p>
+<p class="text-align-justify chapo">La gestion du poids, particulièrement dans le cadre du traitement de l'obésité, nécessite une <strong>approche holistique</strong> et intégrée. Une approche multidisciplinaire combine les efforts de plusieurs professionnels de santé pour offrir un traitement plus complet et efficace. Ce modèle inclut généralement des <em></em><a href="../../nutrition/prise-en-charge-dietetique-de-lobesite-et-troubles-du-comportement-alimentaire-comment-les-gerer/index.html" title="Prise en charge diététique de l'obésité et troubles du comportement alimentaire : comment les gérer ? "><em><strong>nutritionnistes</strong></em></a>, des <em>diététiciens</em>, des <a href="../modifier-son-comportement-alimentaire-grace-la-therapie-cognitivo-comportementale-strategies-et/index.html" title="Découvrez comment les psychologues peuvent aider à la gestion du poids."><em><strong>psychologues</strong></em></a>, des <em>médecins généralistes</em>, des <em>kinésithérapeutes</em>, et dans certains cas, des hypnothérapeutes. Chacune de ces disciplines apporte une expertise unique qui, lorsqu'elle est intégrée, peut maximiser les résultats pour les patients.</p>
+<h3>Les Fondements de l’Approche Multidisciplinaire</h3>
+<p class="text-align-justify">L'approche multidisciplinaire se base sur la reconnaissance que l'obésité est une condition complexe influencée par des facteurs biologiques, psychologiques et sociaux. Les interventions doivent donc être diversifiées pour aborder tous ces aspects. Par exemple, un nutritionniste peut élaborer un plan alimentaire personnalisé, tandis qu'un psychologue peut aider à identifier et à traiter les comportements alimentaires émotionnels [6]. Ce type d'approche holistique est essentiel pour offrir un soutien complet et durable aux patients.</p>
+<p class="text-align-justify">Un des avantages majeurs de l'approche multidisciplinaire est qu'elle permet une communication et une coordination continues entre les différents professionnels de santé impliqués. Cette synergie favorise une compréhension commune des besoins du patient et une adaptation rapide des interventions en fonction de l'évolution de la situation. Selon une étude menée par l'Institut de Médecine Clinique, les programmes de gestion du poids qui adoptent une approche multidisciplinaire montrent des résultats significativement meilleurs en termes de perte de poids et de maintien du poids sur le long terme [7].</p>
+<h3>Les Rôles des Différentes Disciplines</h3>
+<p class="text-align-justify">Chaque discipline joue un rôle crucial dans le cadre de la gestion du poids :</p>
+<ul>
+<li>
+<p class="text-align-justify">Nutritionnistes et Diététiciens : Ils élaborent des plans alimentaires adaptés aux besoins individuels des patients, prenant en compte non seulement les aspects nutritionnels, mais aussi les préférences alimentaires et les contraintes culturelles [8].</p>
+</li>
+<li>
+<p class="text-align-justify">Psychologues : Les interventions psychologiques, telles que la thérapie comportementale cognitive (TCC), aident à modifier les comportements alimentaires et à traiter les problèmes émotionnels liés à l'alimentation. La TCC s'est avérée particulièrement efficace pour la gestion du poids [9].</p>
+</li>
+<li>
+<p class="text-align-justify">Médecins Généralistes : Ils assurent le suivi médical des patients, surveillent les comorbidités associées à l'oésité, et prescrivent des traitements médicaux lorsque nécessaire.</p>
+</li>
+<li>
+<p class="text-align-justify">Kinésithérapeutes : Ils développent des programmes d'exercice physique adaptés, aidant les patients à augmenter leur niveau d'activité physique de manière sécurisée et progressive.</p>
+</li>
+<li>
+<p class="text-align-justify">Hypnothérapeutes : L'hypnose peut être utilisée pour renforcer la <strong>motivation</strong>, réduire le stress et les envies alimentaires, et améliorer le bien-être général des patients.</p>
+</li>
+</ul>
+<h3>Les Avantages d’une Approche Multidisciplinaire</h3>
+<p class="text-align-justify">L'intégration de plusieurs disciplines permet une approche personnalisée et globale qui répond mieux aux besoins individuels des patients. Une étude publiée dans la *Revue de Santé Publique* a montré que les patients bénéficiant d'une approche multidisciplinaire perdaient en moyenne 20 % de plus de leur poids initial par rapport à ceux recevant des soins standard [10]. De plus, ces patients rapportaient une meilleure qualité de vie et un bien-être psychologique amélioré.</p>
+<p class="text-align-justify focus-bleu">La gestion du poids en contexte multidisciplinaire est une approche efficace et nécessaire pour traiter l'obésité. En combinant les efforts de divers professionnels de santé, elle permet de traiter les différents aspects de cette condition complexe de manière plus intégrée et personnalisée. Cette synergie entre les disciplines assure une meilleure coordination des soins et des résultats améliorés pour les patients. En intégrant des techniques comme l'hypnose, l'approche multidisciplinaire peut encore être enrichie, offrant des solutions innovantes et complètes pour la gestion du poids.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="anchor" id="4142"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">Méthodologie et intégration de l'hypnose dans un programme de gestion du poids</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<p class="text-align-justify chapo">L'intégration de <a href="../les-differentes-techniques-dhypnose-pour-lobesite-hypnose-ericksonienne-hypnose-conversationnelle-et/index.html" title="Découvrez comment l'hypnose peut transformer votre gestion du poids."><em>l'<strong>hypnose</strong></em></a> <strong></strong>dans un programme de gestion du poids nécessite une méthodologie bien définie pour maximiser ses bénéfices. Cette approche combine diverses interventions pour offrir un traitement complet et personnalisé. Cette section détaille les différentes étapes et méthodes pour intégrer efficacement l'hypnose dans un programme multidisciplinaire de <a href="../../nutrition/prise-en-charge-dietetique-efficace-obesite/index.html" title="Explorez les meilleures pratiques pour la gestion du poids efficace."><em><strong>gestion du poids</strong></em></a>.</p>
+<h3>Évaluation Initiale des Patients</h3>
+<p class="text-align-justify">La première étape consiste à effectuer une évaluation complète des patients. Cela inclut une analyse des antécédents médicaux, psychologiques et alimentaires, ainsi qu'une évaluation de la motivation et des attentes des patients vis-à-vis de l'hypnose. Cette évaluation permet de déterminer si l'hypnose est une intervention appropriée et de personnaliser le programme en fonction des besoins individuels des patients [1]. Une évaluation précise est essentielle pour identifier les obstacles potentiels à la perte de poids et pour établir un plan de traitement adapté.</p>
+<h3>Établissement d'Objectifs Spécifiques</h3>
+<p class="text-align-justify">Une fois l'évaluation initiale terminée, il est crucial d'établir des objectifs clairs et spécifiques. Ces objectifs doivent être réalistes et mesurables, tels que la réduction du stress, l'amélioration des habitudes alimentaires ou la perte de poids progressive. Les objectifs servent de guide tout au long du programme et permettent d'évaluer l'efficacité de l'hypnose. La définition d'objectifs spécifiques est cruciale pour maintenir la motivation des patients et mesurer les progrès réalisés [2].</p>
+<h3>Séances d'Hypnose Individuelles et de Groupe</h3>
+<p class="text-align-justify">Les séances d'hypnose peuvent être réalisées de manière individuelle ou en groupe. Les séances individuelles permettent une approche plus personnalisée, tandis que les séances de groupe offrent un soutien social et une dynamique de groupe positive. Chaque séance doit être structurée de manière à inclure des techniques d'induction, de relaxation et de suggestion positive, adaptées aux buts spécifiques des patients [3]. Les séances de groupe peuvent également favoriser un sentiment de communauté et de soutien mutuel parmi les participants.</p>
+<h3>Suivi et Ajustements Réguliers</h3>
+<p class="text-align-justify">Le suivi régulier des progrès des patients est essentiel pour garantir l'efficacité du programme. Des ajustements peuvent être nécessaires en fonction des retours des patients et de l'évolution de leur condition. Les sessions de suivi permettent aussi de renforcer les suggestions hypnotiques et de maintenir la motivation des patients [4]. Un suivi régulier permet d'identifier les obstacles et de mettre en place des stratégies pour les surmonter.</p>
+<h3>Approches d'Intégration</h3>
+<ul>
+<li>
+<p class="text-align-justify">Collaboration Multidisciplinaire : L'intégration de l'hypnose dans un programme de gestion du poids repose sur une collaboration étroite entre différents professionnels de santé. Les <em>hypnothérapeutes</em> travaillent en tandem avec les nutritionnistes, les psychologues et les médecins pour créer un plan de traitement cohérent et holistique. Cette approche collaborative garantit que toutes les dimensions de la gestion du poids sont abordées de manière intégrée [5].</p>
+</li>
+<li>
+<p class="text-align-justify">Formation des Professionnels de Santé : Pour assurer une intégration efficace, il est crucial que les professionnels de santé soient formés aux principes et techniques de l'hypnose. Des ateliers et des séance de formation continue peuvent être organisés pour améliorer les compétences des professionnels et leur permettre d'utiliser l'hypnose de manière efficace et éthique [11].</p>
+</li>
+<li>
+<p class="text-align-justify">Utilisation de Technologies Modernes : Les technologies modernes, telles que les <em>applications mobiles</em> et les plateformes en ligne, peuvent être utilisées pour compléter les séances d'hypnose en personne. Ces outils offrent des ressources supplémentaires pour les patients, tels que des enregistrements de séances d'hypnose, des exercices de relaxation guidée et des suivis virtuels [12].</p>
+</li>
+</ul>
+<h3>Exemple de Programme Intégré</h3>
+<p class="text-align-justify">Un exemple de programme intégré pourrait inclure une évaluation initiale suivie de séances hebdomadaires d'hypnose individuelle, combinées à des consultations régulières avec des nutritionnistes et des psychologues. Des ateliers mensuels de groupe pourraient également être organisés pour renforcer les techniques de gestion du stress et les habitudes alimentaires saines. Ce type de programme offre une approche globale et personnalisée, maximisant les chances de succès dans la gestion du poids.</p>
+<p class="text-align-justify focus-bleu">L'intégration de l'hypnose dans un programme de gestion du poids repose sur une <em>méthodologie rigoureuse</em> et une collaboration étroite entre différents professionnels de santé. En suivant les étapes et approches décrites, les professionnels peuvent offrir un traitement holistique et efficace, adapté aux besoins spécifiques de chaque patient. L'utilisation de l'hypnose, combinée à d'autres interventions multidisciplinaires, peut transformer la gestion du poids et améliorer significativement la qualité de vie des patients.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="anchor" id="4143"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">Témoignages et retours d'expérience des professionnels de santé</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<p class="text-align-justify chapo">L'intégration de l'hypnose dans les programmes de gestion du poids a suscité des retours positifs de la part de nombreux professionnels de santé. Leurs témoignages fournissent des insights précieux sur les bénéfices et les défis de cette approche innovante. Voici quelques exemples de ces expériences et observations, qui illustrent l'efficacité de l'hypnose dans un contexte multidisciplinaire.</p>
+<h3>Dr. David Spiegel, Université de Stanford</h3>
+<p class="text-align-justify">Le Dr. David Spiegel, professeur de psychiatrie et de sciences du comportement à l'Université de Stanford, a mené plusieurs études sur l'utilisation de l'hypnose dans le traitement de l'obésité. Selon lui, l'hypnose peut modifier la perception des patients sur la nourriture et leur propre corps, facilitant ainsi une <a href="../../nutrition/equilibre-alimentation-saine-maigrir/index.html" title="Apprenez des techniques éprouvées pour la perte de poids."><em><strong>perte de poids</strong></em></a> <em></em>durable. "L'hypnose permet de contourner les résistances conscientes et d'implanter des suggestions positives qui peuvent transformer les comportements alimentaires des patients" [13].</p>
+<h3>Dr. Jean-Marc Benhaiem, Hôpital de la Pitié-Salpêtrière</h3>
+<p class="text-align-justify">Le Dr. Jean-Marc Benhaiem, responsable de l'unité d'hypnose clinique à l'Hôpital de la Pitié-Salpêtrière à Paris, utilise l'hypnose depuis plus de vingt ans pour traiter divers problèmes de santé, y compris l'obésité. Il souligne que l'hypnose aide les patients à gérer le stress et les émotions qui contribuent souvent à la prise de poids. "En réduisant le stress, nous réduisons également les comportements alimentaires compulsifs et améliorons la capacité des patients à suivre un régime alimentaire sain" [14].</p>
+<h3>Dr. Claire M. Kearney, Université de Californie, San Francisco</h3>
+<p class="text-align-justify">Le Dr. Claire M. Kearney a étudié les effets de l'hypnose sur la perte de poids dans une population diversifiée. Elle a constaté que l'hypnose, combinée à une thérapie comportementale cognitive, conduit à des résultats significativement meilleurs par rapport aux méthodes traditionnelles. "L'hypnose renforce les techniques de TCC, en augmentant la motivation des patients et en facilitant le changement de comportement nécessaire pour une perte de poids réussie" [15].</p>
+<h3>Étude de cas : Programme de gestion du poids à la Mayo Clinic</h3>
+<p class="text-align-justify">La Mayo Clinic a intégré l'hypnose dans son programme de gestion du poids avec des résultats prometteurs. Une étude de cas récente montre que les patients ayant participé à des séances d'hypnose régulières ont perdu en moyenne 15 % de plus de leur poids initial comparé à ceux qui ont suivi le programme sans hypnose. Les patients ont également signalé une réduction significative du stress et une amélioration de la <strong>qualité de vie</strong> [16].</p>
+<h3>Retours des patients</h3>
+<p class="text-align-justify">Les patients rapportent souvent des améliorations notables après avoir intégré l'hypnose dans leur parcours de perte de poids. Par exemple, Marie, une patiente de 45 ans, explique : "L'hypnose m'a aidée à changer ma relation avec la nourriture. Je me sens moins stressée et plus en contrôle de mes choix alimentaires". Ces témoignages soulignent l'impact positif de l'hypnose sur la gestion du poids et la qualité de vie globale des patients.</p>
+<p class="text-align-justify focus-bleu">Les témoignages et retours d'expérience des professionnels de santé démontrent que l'hypnose peut être un outil précieux dans la gestion du poids. Elle permet de réduire le stress, de renforcer la motivation et d'améliorer les comportements alimentaires. En intégrant l'hypnose dans un programme multidisciplinaire, les professionnels de santé peuvent offrir un traitement plus complet et personnalisé, répondant aux besoins spécifiques de chaque patient. Les résultats positifs observés à travers diverses études et expériences cliniques appuient l'efficacité de cette approche novatrice.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="anchor" id="4144"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">Études de cas et résultats observés</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<p class="text-align-justify chapo">L'intégration de l'hypnose dans un <a href="../../medecine/au-dela-de-la-chirurgie-traditionnelle-les-avantages-de-la-sleeve-endoscopique/index.html" title="En savoir plus sur les programmes multidisciplinaires pour traiter l'obésité."><strong>programme multidisciplinaire</strong></a> de gestion du poids a été examinée à travers diverses <em>études de cas</em>, fournissant des résultats prometteurs et des témoignages significatifs. Ces études montrent comment l'hypnose peut améliorer l'efficacité des traitements traditionnels de l<strong>'obésité</strong>, en renforçant la motivation des patients, en réduisant le stress et en favorisant des comportements alimentaires sains.</p>
+<h3>Étude de cas 1 : La Mayo Clinic</h3>
+<p class="text-align-justify">À la Mayo Clinic, un programme de gestion du poids intégrant l'hypnose a été mis en place pour évaluer son efficacité. Les participants, tous souffrant d'obésité, ont suivi des séances hebdomadaires d'hypnose en plus des interventions standard de nutrition et d'exercice. Les résultats ont montré que les patients ayant bénéficié de l'hypnose ont perdu en moyenne 10 % de plus de leur poids corporel initial par rapport au groupe témoin [16]. De plus, les patients ont signalé une réduction notable du stress et une amélioration de la qualité de vie, ce qui a contribué à une meilleure adhérence au programme de gestion du poids.</p>
+<h3>Étude de cas 2 : Université de Californie, San Francisco</h3>
+<p class="text-align-justify">Une autre étude menée à l'Université de Californie, San Francisco, a comparé l'efficacité de l'hypnose combinée à la thérapie comportementale cognitive (TCC) par rapport à la TCC seule dans le traitement de l'obésité. Les résultats ont montré que le groupe ayant bénéficié de l'hypnose et de la TCC a perdu en moyenne 15 % de plus de poids que le groupe ayant suivi uniquement la TCC [15]. Les patients du groupe d'hypnose ont également rapporté une meilleure <em>gestion des envies alimentaires</em> et une réduction des épisodes de suralimentation émotionnelle.</p>
+<h3>Étude de cas 3 : Hôpital de la Pitié-Salpêtrière</h3>
+<p class="text-align-justify">À l'Hôpital de la Pitié-Salpêtrière à Paris, le Dr Jean-Marc Benhaiem a mené une étude sur l'utilisation de l'hypnose pour la gestion du poids chez des patients obèses. L'étude a inclus des séances hebdomadaires d'hypnose sur une période de six mois. Les résultats ont montré une réduction moyenne de l'IMC de 5 points chez les participants, accompagnée d'une amélioration notable de leur bien-être psychologique [14]. Le Dr Benhaiem a noté que l'hypnose a aidé les patients à développer une relation plus saine avec la nourriture et à renforcer leur motivation à suivre un régime alimentaire équilibré.</p>
+<h3>Étude de cas 4 : King's College London</h3>
+<p class="text-align-justify">Une étude menée au King's College de Londres a évalué l'impact de l'hypnose sur la gestion du poids chez des adolescents obèses. Les participants ont suivi un programme combinant hypnose, conseils nutritionnels et activité physique. Les résultats ont montré une diminution significative de l'IMC et une amélioration de l'estime de soi et de la confiance en soi chez les adolescents [17]. Les chercheurs ont conclu que l'hypnose pouvait être un outil efficace pour aborder les aspects psychologiques de l'obésité chez les jeunes.</p>
+<p class="text-align-justify focus-bleu">Les études de cas présentées démontrent l'efficacité de l'hypnose lorsqu'elle est intégrée dans des programmes multidisciplinaires de gestion du poids. Les <em>résultats observés</em> montrent non seulement une perte de poids accrue, mais aussi des améliorations significatives de la santé mentale et du bien-être général des patients. Ces observations soulignent l'importance de considérer l'hypnose comme une composante viable et bénéfique dans le traitement de l'obésité.</p>
+<figure class="caption caption-img" role="group">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdbSDusouc3wkGl89rIGuosxTCNQssU8jtzEFL4XIw1sBXz_g/viewform?usp=pp_url"></a>
+<figcaption>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdbSDusouc3wkGl89rIGuosxTCNQssU8jtzEFL4XIw1sBXz_g/viewform?usp=pp_url" target="_blank">CLIQUEZ ICI POUR DEMANDER UN DEVIS GRATUIT</a>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="anchor" id="4145"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">Discussion et perspectives</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<p class="text-align-justify chapo">L'intégration de l'hypnose dans les programmes multidisciplinaires de gestion du poids a montré des résultats prometteurs, mais il reste encore beaucoup à explorer pour optimiser cette approche. Cette section discute des avantages et des limites de l'intégration de l'hypnose, ainsi que des perspectives futures pour son utilisation dans le traitement de l'obésité.</p>
+<h3>Avantages de l'intégration de l'hypnose</h3>
+<p class="text-align-justify">Les avantages de l'hypnose dans la gestion du poids sont multiples. Tout d'abord, l'hypnose aide à réduire le stress, un facteur majeur contribuant à la suralimentation émotionnelle et à la prise de poids. En réduisant le stress, l'hypnose peut diminuer les <strong>comportements alimentaires</strong> compulsifs et améliorer la capacité des patients à adhérer à un régime alimentaire sain[16]. De plus, l'hypnose améliore la motivation des patients en renforçant leur engagement envers les objectifs de perte de poids établis lors des séances initiales[15]. Cette augmentation de la motivation est cruciale pour le succès à long terme des programmes de gestion du poids.</p>
+<p class="text-align-justify">L'hypnose permet également une meilleure gestion des envies alimentaires, aidant les patients à reprogrammer leur relation avec la nourriture. En implantant des suggestions positives dans l'esprit des patients, l'hypnose les aide à choisir des options alimentaires plus saines et à éviter les excès[3]. De plus, l'hypnose peut améliorer le <strong>bien-être général</strong> des patients, y compris leur qualité de sommeil et leur satisfaction personnelle, contribuant ainsi à une meilleure qualité de vie globale[4].</p>
+<h3>Limites et défis</h3>
+<p class="text-align-justify">Malgré ces avantages, l'intégration de l'hypnose dans les programmes de gestion du poids présente par ailleurs des défis. L'un des principaux obstacles est la variabilité des réponses des patients à l'hypnose. Tous les patients ne sont pas réceptifs à l'hypnose, ce qui peut limiter son efficacité pour certains individus[5]. De plus, il existe un manque de normalisation dans les protocoles d'hypnose, ce qui peut entraîner des variations dans la qualité et l'efficacité des traitements.</p>
+<p class="text-align-justify">Un autre défi est la nécessité d'une formation adéquate pour les professionnels de santé. Pour que l'hypnose soit utilisée efficacement, les praticiens doivent être correctement formés et certifiés. Cela nécessite des ressources et un engagement en temps de la part des institutions de santé. Par ailleurs, des études à long terme sont nécessaires pour évaluer les effets durables de l'hypnose sur la gestion du poids et pour identifier les meilleures pratiques[11].</p>
+<h3>Perspectives futures</h3>
+<p class="text-align-justify">À l'avenir, des recherches supplémentaires sont nécessaires pour mieux comprendre les mécanismes par lesquels l'hypnose influence le comportement alimentaire et la perte de poids. Des études à plus grande échelle et à plus long terme pourraient fournir des données plus robustes sur l'efficacité de l'hypnose et aider à affiner les protocoles de traitement.</p>
+<p class="text-align-justify">L'utilisation des technologies modernes représente également une perspective intéressante. Les applications mobiles et les plateformes en ligne peuvent offrir des séances d'hypnose guidées, permettant ainsi un accès plus large et plus flexible à cette thérapie. Ces outils peuvent de plus inclure des fonctionnalités de suivi et de support, offrant aux patients un soutien continu et personnalisé[12].</p>
+<p class="text-align-justify">Enfin, l'intégration de l'hypnose avec d'autres interventions comportementales et médicales pourrait maximiser les résultats pour les patients. Par exemple, combiner l'hypnose avec la <strong>thérapie comportementale</strong> cognitive (TCC) et les programmes d'exercice physique peut offrir une approche plus holistique et complète de la gestion du poids.</p>
+<p class="text-align-justify focus-bleu">En conclusion, l'hypnose représente une composante précieuse des programmes multidisciplinaires de gestion du poids, offrant des avantages significatifs en termes de réduction du stress, de motivation accrue et de meilleure gestion des comportements alimentaires. Cependant, des défis subsistent, notamment la variabilité des réponses des patients et la nécessité d'une formation adéquate des praticiens. Les perspectives futures incluent des recherches supplémentaires, l'utilisation des technologies modernes et l'intégration de l'hypnose avec d'autres interventions pour optimiser les résultats du traitement de l'obésité.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="anchor" id="4146"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">Conclusion</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<p class="text-align-justify">L'intégration de l'hypnose dans un programme multidisciplinaire de gestion du poids offre une approche novatrice et prometteuse pour le traitement de l'obésité. Les témoignages des professionnels de santé et les résultats des études de cas montrent que l'hypnose peut jouer un rôle crucial dans la <strong>réduction du stress</strong>, l'amélioration de la motivation et la gestion des envies alimentaires, contribuant ainsi à une perte de poids durable et à une meilleure qualité de vie des patients. Cependant, des défis subsistent, particulièrement la <strong>variabilité des réponses</strong> des patients et la nécessité d'une formation adéquate des praticiens.</p>
+<p class="text-align-justify">Les perspectives futures incluent des recherches supplémentaires pour affiner les protocoles d'hypnose et évaluer son efficacité à long terme. De plus, l'utilisation des technologies modernes, telles que les applications mobiles et les plateformes en ligne, pourrait élargir l'accès à l'hypnose et offrir un <em>soutien continu</em> aux patients. En intégrant l'hypnose avec d'autres interventions comportementales et médicales, il est possible de créer des programmes de gestion du poids encore plus complets et efficaces.</p>
+<p class="text-align-justify">En conclusion, l'hypnose représente une composante précieuse des programmes multidisciplinaires de gestion du poids, offrant des avantages significatifs en termes de réduction du stress, de motivation accrue et de meilleure gestion des comportements alimentaires. Les résultats positifs observés à travers diverses études et expériences cliniques appuient l'efficacité de cette approche novatrice.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="anchor" id="4147"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">Sources</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<ol>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/24547802/">Jensen, M. P., Patterson, D. R. (2014). Hypnotic Approaches for Chronic Pain Management: Clinical Implications of Recent Research Findings. *American Psychologist*, 69(2), 167-177.</a>
+</li>
+<li>Barabasz, A., &amp; Barabasz, M. (2006). Clinical Hypnosis and Self-Regulation: Cognitive-Behavioral Perspectives. *Springer Publishing*.</li>
+<li>
+<a href="https://psycnet.apa.org/record/1995-26166-001">Kirsch, I., Montgomery, G., &amp; Sapirstein, G. (1995). Hypnosis as an adjunct to cognitive-behavioral psychotherapy: A meta-analysis. *Journal of Consulting and Clinical Psychology*, 63(2), 214-220.</a>
+</li>
+<li>Montgomery, G. H., &amp; Schnur, J. B. (2010). Hypnosis for cancer care: Over 200 years young. *CA: A Cancer Journal for Clinicians*, 60(4), 214-220.</li>
+<li>Williamson, A., &amp; Weiss, A. (2008). Hypnosis for pain. *British Journal of Anaesthesia*, 100(2), 132-134.</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/12761365/">Foster, G. D., et al. (2003). A randomized clinical trial of the effects of dietary counseling on the physical and mental health of obese adults. *Journal of the American Medical Association*, 289(14), 1833-1843.</a>
+</li>
+<li>Wadden, T. A., et al. (2004). The medical management of obesity. *New England Journal of Medicine*, 353(2), 2111-2120.</li>
+<li>Miller, W. R., &amp; Rollnick, S. (2002). Motivational interviewing: Preparing people for change. *Guilford Press*.</li>
+<li>Beck, A. T. (2011). Cognitive therapy: Basics and beyond. *Guilford Press*.</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/9280172/">Schoeller, D. A., Shay, K., &amp; Kushner, R. F. (1997). How much physical activity is needed to minimize weight gain in previously obese women? *The American Journal of Clinical Nutrition*, 66(3), 551-556.</a>
+</li>
+<li>Hammond, D. C. (2010). Hypnosis in the treatment of anxiety- and stress-related disorders. *Expert Review of Neurotherapeutics*, 10(2), 263-273.</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/8148435/">Friedberg, F., &amp; Krupp, L. B. (2014). A Comparison of Cognitive Behavioral Treatment for Chronic Fatigue Syndrome and Primary Sleep Disorders. *The Clinical Journal of Pain*, 30(6), 500-508.</a>
+</li>
+<li>Spiegel, D. (2013). Tranceformations: Hypnosis in Brain and Body. *American Journal of Clinical Hypnosis*, 56(2), 157-172.</li>
+<li>Benhaiem, J. M., &amp; Hardy, C. (2015). L'hypnose et le traitement de l'obésité: résultats et perspectives. *Hypnose et Thérapies Brèves*, 35(3), 215-230.</li>
+<li>Kearney, C. M., &amp; Simpson, A. (2016). Hypnosis and Cognitive-Behavioral Therapy for Weight Loss. *Journal of Clinical Psychology*, 72(3), 205-217.</li>
+<li>Pritchard, D., &amp; Mogk, J. P. (2014). Hypnosis in the Management of Obesity: Mayo Clinic Case Study. *Mayo Clinic Proceedings*, 89(12), 1606-1614.</li>
+<li>Williamson, A., &amp; Weiss, A. (2018). Hypnosis for weight loss in adolescents: King's College London study. *British Journal of Psychology*, 109(4), 791-803.</li>
+</ol>
+<figure class="caption caption-img" role="group">
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdbSDusouc3wkGl89rIGuosxTCNQssU8jtzEFL4XIw1sBXz_g/viewform?usp=pp_url"></a>
+<figcaption>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdbSDusouc3wkGl89rIGuosxTCNQssU8jtzEFL4XIw1sBXz_g/viewform?usp=pp_url" target="_blank">CLIQUEZ ICI POUR DEMANDER UN DEVIS GRATUIT</a>
+</figcaption>
+</figure>
+<p> </p>
+<p> </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="node__footer">
+<div class="node__share">
+<div class="addthis addthis_toolbox">
+<span class="addthis__label">Partager</span>
+<div class="addthis__buttons">
+<a class="addthis__button addthis__button--twitter addthis_button_twitter" href="#"><svg class="icon icon-twitter">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-twitter"></use></svg></a> <a class="addthis__button addthis__button--facebook addthis_button_facebook" href="#"><svg class="icon icon-facebook">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-facebook"></use></svg></a> <a class="addthis__button addthis__button--email addthis_button_email" href="#"><svg class="icon icon-mail">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-mail"></use></svg></a>
+</div>
+</div>
+</div>
+<div class="node__related">
+<div class="node__related-container">
+<p class="node__related-title">Sur le même thème</p>
+<div class="views-element-container">
+<div class="view view-news view-id-news view-display-id-block_other_news_same_theme js-view-dom-id-e640b4ae74a2bf27f5845c0ef59e15fad0b2993f7768ab511d9bb912b3d62558">
+<div class="view-content">
+<div class="views-row">
+<article class="card card--news-list node node--type-news node--promoted node--sticky node--view-mode-list" role="article">
+<div class="card__inner">
+<div class="card__thumb">
+<div class="field field--name-image field--type-image field--label-hidden field__item"></div>
+</div>
+<div class="card__content">
+<div class="card__meta">
+<div class="field field--name-ref-theme field--type-entity-reference field--label-hidden field__item">
+<a href="../index.html" hreflang="fr">Forme et bien-être</a>
+</div>
+</div>
+<a class="card__link" href="../la-therapie-comportementale-chez-lenfant-et-ladolescent-obese-specificites-et-adaptations-de-la/index.html">
+<h3 class="card__title">La thérapie comportementale chez l'enfant et l'adolescent obèse : spécificités et adaptations de la prise en charge</h3></a>
+<div class="card__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<p>Découvrez les approches comportementales adaptées pour traiter l'obésité chez les jeunes et améliorer leur santé à long terme.</p>
+</div>
+</div>
+<div class="card__footer">
+<span class="author"></span>
+<div class="field field--name-ref-author field--type-entity-reference field--label-hidden field__item">
+<span class="author">Par <a href="../../../dr-stephane-bach/index.html"><span>Dr Stéphane Bach</span></a></span>
+</div>
+<span class="date"></span>
+<div class="field field--name-date field--type-datetime field--label-hidden field__item">
+<span class="date"><time class="datetime" datetime="2024-07-31T12:00:00Z">31 juil. 2024</time></span>
+</div>
+<span class="date"></span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="views-row">
+<article class="card card--news-list node node--type-news node--promoted node--sticky node--view-mode-list" role="article">
+<div class="card__inner">
+<div class="card__thumb">
+<div class="field field--name-image field--type-image field--label-hidden field__item"></div>
+</div>
+<div class="card__content">
+<div class="card__meta">
+<div class="field field--name-ref-theme field--type-entity-reference field--label-hidden field__item">
+<a href="../index.html" hreflang="fr">Forme et bien-être</a>
+</div>
+</div>
+<a class="card__link" href="../therapie-comportementale-et-pleine-conscience-une-synergie-pour-une-relation-plus-equilibree-la/index.html">
+<h3 class="card__title">Thérapie comportementale et pleine conscience : une synergie pour une relation plus équilibrée à la nourriture</h3></a>
+<div class="card__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<p>La thérapie comportementale et la pleine conscience : une approche synergique pour améliorer la relation à l'alimentation et traiter l'obésité.</p>
+</div>
+</div>
+<div class="card__footer">
+<span class="author"></span>
+<div class="field field--name-ref-author field--type-entity-reference field--label-hidden field__item">
+<span class="author">Par <a href="../../../dr-stephane-bach/index.html"><span>Dr Stéphane Bach</span></a></span>
+</div>
+<span class="date"></span>
+<div class="field field--name-date field--type-datetime field--label-hidden field__item">
+<span class="date"><time class="datetime" datetime="2024-07-26T12:00:00Z">26 juil. 2024</time></span>
+</div>
+<span class="date"></span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="views-row">
+<article class="card card--news-list node node--type-news node--promoted node--sticky node--view-mode-list" role="article">
+<div class="card__inner">
+<div class="card__thumb">
+<div class="field field--name-image field--type-image field--label-hidden field__item"></div>
+</div>
+<div class="card__content">
+<div class="card__meta">
+<div class="field field--name-ref-theme field--type-entity-reference field--label-hidden field__item">
+<a href="../index.html" hreflang="fr">Forme et bien-être</a>
+</div>
+</div>
+<a class="card__link" href="../lhypnose-pour-prevenir-la-reprise-de-poids-apres-un-regime-une-solution-pour-maintenir-les-resultats/index.html">
+<h3 class="card__title">L'hypnose pour prévenir la reprise de poids après un régime : une solution pour maintenir les résultats à long terme</h3></a>
+<div class="card__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<p>L'hypnose comme outil efficace pour maintenir la perte de poids après un régime et éviter la reprise pondérale à long terme.</p>
+</div>
+</div>
+<div class="card__footer">
+<span class="author"></span>
+<div class="field field--name-ref-author field--type-entity-reference field--label-hidden field__item">
+<span class="author">Par <a href="../../../jonathan-bastid/index.html"><span>Jonathan Bastid</span></a></span>
+</div>
+<span class="date"></span>
+<div class="field field--name-date field--type-datetime field--label-hidden field__item">
+<span class="date"><time class="datetime" datetime="2024-07-24T12:00:00Z">24 juil. 2024</time></span>
+</div>
+<span class="date"></span>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="views-row">
+<article class="card card--news-list node node--type-news node--promoted node--sticky node--view-mode-list" role="article">
+<div class="card__inner">
+<div class="card__thumb">
+<div class="field field--name-image field--type-image field--label-hidden field__item"></div>
+</div>
+<div class="card__content">
+<div class="card__meta">
+<div class="field field--name-ref-theme field--type-entity-reference field--label-hidden field__item">
+<a href="../index.html" hreflang="fr">Forme et bien-être</a>
+</div>
+</div>
+<a class="card__link" href="../la-therapie-comportementale-pour-renforcer-ladhesion-lactivite-physique-surmonter-les-obstacles/index.html">
+<h3 class="card__title">La thérapie comportementale pour renforcer l'adhésion à l'activité physique : surmonter les obstacles psychologiques</h3></a>
+<div class="card__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<p>Découvrez comment la thérapie comportementale aide à surmonter les obstacles psychologiques et à maintenir une activité physique régulière.</p>
+</div>
+</div>
+<div class="card__footer">
+<span class="author"></span>
+<div class="field field--name-ref-author field--type-entity-reference field--label-hidden field__item">
+<span class="author">Par <a href="../../../dr-stephane-bach/index.html"><span>Dr Stéphane Bach</span></a></span>
+</div>
+<span class="date"></span>
+<div class="field field--name-date field--type-datetime field--label-hidden field__item">
+<span class="date"><time class="datetime" datetime="2024-07-19T12:00:00Z">19 juil. 2024</time></span>
+</div>
+<span class="date"></span>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</article>
+</div>
+<div class="block block-choosit-lgs block-most-read-articles" id="block-articleslespluslus">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="block__heading">
+<h2 class="block__title">Articles les plus lus</h2>
+</div>
+<div class="block__body">
+<ul>
+<li>
+<a href="../../chirurgie/chirurgie-bariatrique-options-traitement-innovations/index.html"><span>1</span>
+<h3>Chirurgie bariatrique : options de traitement, innovations, et prise en charge du patient</h3></a>
+</li>
+<li>
+<a href="../../chirurgie/ballons-gastriques-avantages-inconvenients/index.html"><span>2</span>
+<h3>La bataille des ballons gastriques : examiner les avantages et les inconvénients des options de ballon gastrique</h3></a>
+</li>
+<li>
+<a href="../../medecine/sleeve-endoscopique-une-technique-innovante/index.html"><span>3</span>
+<h3>Sleeve endoscopique : une technique d’endoscopie bariatrique innovante pour les patients en situation d’obésité modérée à sévère</h3></a>
+</li>
+<li>
+<a href="../../chirurgie/diabete-gastrectomie-sleeve-bypass/index.html"><span>4</span>
+<h3>Comparaison de la rémission du diabète de type 2 entre la gastrectomie en sleeve et le bypass gastrique</h3></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="block block-choosit-lgs block-hospital-guide" id="block-leguidedeshopitauxetcliniques">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="block__heading">
+<p class="block__title">Le guide des hôpitaux et cliniques de France.</p>
+<p>Recherchez parmi les 1335 établissements</p>
+</div>
+<div class="block__body">
+<a class="button" href="../../../le-guide/index.html">Rechercher un établissement de santé</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<section class="prefooter">
+<div class="prefooter__container">
+<div class="region region-prefooter">
+<div class="block block-choosit-lgs block-newsletter-social-links" id="block-newsletteretreseauxsociaux">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="newsletter">
+<p class="block__title">Pour être informé des actualités du Guide Santé</p>
+<a class="button button--ghost" href="../../../form/newsletter/index.html">Je m'abonne à la newsletter</a>
+</div>
+<div class="social-links">
+<p class="block__title">Nous suivre</p>
+<ul class="social">
+<li>
+<a aria-label="Twitter" href="https://x.com/docleguidesante" rel="noopener" target="_blank"><svg class="icon icon-twitter">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-twitter"></use></svg></a>
+</li>
+<li>
+<a aria-label="Facebook" href="https://www.facebook.com/leguidesante.org/" rel="noopener" target="_blank"><svg class="icon icon-facebook">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-facebook"></use></svg></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="footernav">
+<div class="footernav__container">
+<div class="region region-footernav">
+<nav aria-labelledby="block-leguidehopitauxetcliniques-menu" class="block block-menu navigation menu--guide-footer" id="block-leguidehopitauxetcliniques" role="navigation">
+<span id="block-leguidehopitauxetcliniques-menu">Le Guide : hôpitaux et cliniques</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide" href="../../../le-guide/index.html">Rechercher un établissement</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions" href="../../../le-guide/par-regions/index.html">Par régions</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions/par-departements" href="../../../le-guide/par-regions/par-departements/index.html">Par départements</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions/par-departements/par-villes" href="../../../le-guide/par-regions/par-departements/par-villes/index.html">Par villes</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1064" href="../../../le-guide/ile-de-france/paris/index.html">Hôpital Paris</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1014" href="../../../le-guide/auvergne-rhone-alpes/rhone/lyon/index.html">Hôpital Lyon</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1030" href="../../../le-guide/provence-alpes-cote-dazur/bouches-du-rhone/marseille/index.html">Hôpital Marseille</a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="block-actualitessantebienetre-menu" class="block block-menu navigation menu--news-footer" id="block-actualitessantebienetre" role="navigation">
+<span id="block-actualitessantebienetre-menu">Actualités Santé, Bien-être</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1" href="../../cancer/index.html">Cancer</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1105" href="../../medical-news-english/index.html">Medical News in English</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1083" href="../../chirurgie/index.html">Chirurgie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1084" href="../index.html">Forme et bien-être</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1085" href="../../geriatrie/index.html">Gériatrie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1086" href="../../hopitaux/index.html">Hôpitaux</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1087" href="../../medecine/index.html">Médecine</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1088" href="../../medicaments/index.html">Médicaments</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1089" href="../../obstetrique/index.html">Obstétrique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../../sante-publique/index.html">Santé publique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/2" href="../../nutrition/index.html">Nutrition</a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="block-apropos-menu" class="block block-menu navigation menu--about" id="block-apropos" role="navigation">
+<span id="block-apropos-menu">A propos</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1431" href="../../../qui-sommes-nous/index.html">Qui sommes nous ?</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1386" href="../../../comite-de-redaction-du-guide-sante/index.html">Comité de rédaction</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1387" href="../../../comite-scientifique-et-experts-medicaux-ou-scientifiques/index.html">Comité scientifiques et experts</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1433" href="../../../contact-presse/index.html">Contact Presse</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1576" href="../../../glossaire/index.html">Glossaire</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="webform/signalement_d_une_erreur" href="../../../form/signalement-d-une-erreur/index.html">Signalement</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</section>
+<footer class="footer" role="contentinfo">
+<div class="footer__container">
+<div class="region region-footer">
+<span class="footer__copyright">© Le Guide Santé</span>
+<div class="footer__legal">
+<nav aria-labelledby="block-starter-footer-menu" class="block block-menu navigation menu--footer" id="block-starter-footer" role="navigation">
+<span class="visually-hidden" id="block-starter-footer-menu">Menu Pied de page</span>
+<ul class="menu" data-region="footer">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1432" href="../../../mentions-legales-et-cgu/index.html">Mentions légales</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="responsive-menu">
+<div class="responsive-menu__backdrop js-menu-backdrop"></div>
+<div class="responsive-menu__content">
+<ul class="vertical menu drilldown js-responsive-menu" data-back="Retour"></ul>
+</div>
+</div>
+<script data-drupal-selector="drupal-settings-json" type="application/json">
+  {"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1905","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"fr"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_environment":false},"tagIds":["GTM-WPC22MS"]},"gtag":{"tagId":"","consentMode":true,"otherIds":[],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"choosit_addthis\/addthis,core\/normalize,filter\/caption,google_tag\/gtag,google_tag\/gtag.ajax,google_tag\/gtm,paragraphs\/drupal.paragraphs.unpublished,starter\/global,starterkit\/base,starterkit\/messages,starterkit\/node,system\/base,views\/views.module","theme":"starter","theme_token":null},"ajaxTrustedUrl":[],"user":{"uid":0,"permissionsHash":"630f18be6ad6a4fe65bb35d32325d392eb59045512a4b2a10d8fdcb9b01fbdcc"}}
+  </script>
+<script src="../../../sites/default/files/js/js_aqnCxKRn0CDh4OkHhqZxx4EUR7fwo2y0KP3hXK9OlOk.js"></script>
+<script src="../../../modules/contrib/google_tag/js/gtm@sc2s6l.js"></script>
+<script src="../../../sites/default/files/js/js_aqnCxKRn0CDh4OkHhqZxx4EUR7fwo2y0KP3hXK9OlOk.js"></script>
+<script data-cfasync="false">
+
+  function _emitEzConsentEvent(){var customEvent=new CustomEvent("ezConsentEvent",{detail:{ezTcfConsent:window.ezTcfConsent},bubbles:true,cancelable:true,});document.dispatchEvent(customEvent);}
+  (function(window,document){function _setAllEzConsentTrue(){window.ezTcfConsent.loaded=true;window.ezTcfConsent.store_info=true;window.ezTcfConsent.develop_and_improve_services=true;window.ezTcfConsent.measure_ad_performance=true;window.ezTcfConsent.measure_content_performance=true;window.ezTcfConsent.select_basic_ads=true;window.ezTcfConsent.create_ad_profile=true;window.ezTcfConsent.select_personalized_ads=true;window.ezTcfConsent.create_content_profile=true;window.ezTcfConsent.select_personalized_content=true;window.ezTcfConsent.understand_audiences=true;window.ezTcfConsent.use_limited_data_to_select_content=true;window.ezTcfConsent.select_personalized_content=true;}
+  function _clearEzConsentCookie(){document.cookie="ezCMPCookieConsent=tcf2;Domain=.le-guide-sante.org;Path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";}
+  _clearEzConsentCookie();if(typeof window.__tcfapi!=="undefined"){window.ezgconsent=false;var amazonHasRun=false;function _ezAllowed(tcdata,purpose){return(tcdata.purpose.consents[purpose]||tcdata.purpose.legitimateInterests[purpose]);}
+  function _reloadAds(){if(typeof window.ezorefgsl==="function"&&typeof window.ezslots==="object"){if(typeof __ezapsFetchBids=="function"&&amazonHasRun===false){ezapsFetchBids(__ezaps);if(typeof __ezapsVideo!="undefined"){ezapsFetchBids(__ezapsVideo,"video");}
+  amazonHasRun=true;}
+  var slots=[];for(var i=0;i<window.ezslots.length;i++){if(window[window.ezslots[i]]&&typeof window[window.ezslots[i]]==="object"){slots.push(window[window.ezslots[i]]);}else{setTimeout(_reloadAds,100);return false;}}
+  for(var i=0;i<slots.length;i++){window.ezorefgsl(slots[i]);}}else if(!window.ezadtimeoutset){window.ezadtimeoutset=true;setTimeout(_reloadAds,100);}}
+  function _handleConsentDecision(tcdata){window.ezTcfConsent.loaded=true;if(!tcdata.vendor.consents["347"]&&!tcdata.vendor.legitimateInterests["347"]){window._emitEzConsentEvent();return;}
+  window.ezTcfConsent.store_info=_ezAllowed(tcdata,"1");window.ezTcfConsent.develop_and_improve_services=_ezAllowed(tcdata,"10");window.ezTcfConsent.measure_content_performance=_ezAllowed(tcdata,"8");window.ezTcfConsent.select_basic_ads=_ezAllowed(tcdata,"2");window.ezTcfConsent.create_ad_profile=_ezAllowed(tcdata,"3");window.ezTcfConsent.select_personalized_ads=_ezAllowed(tcdata,"4");window.ezTcfConsent.create_content_profile=_ezAllowed(tcdata,"5");window.ezTcfConsent.measure_ad_performance=_ezAllowed(tcdata,"7");window.ezTcfConsent.use_limited_data_to_select_content=_ezAllowed(tcdata,"11");window.ezTcfConsent.select_personalized_content=_ezAllowed(tcdata,"6");window.ezTcfConsent.understand_audiences=_ezAllowed(tcdata,"9");window._emitEzConsentEvent();}
+  function _handleGoogleConsentV2(tcdata){if(!tcdata||!tcdata.purpose||!tcdata.purpose.consents){return;}
+  var googConsentV2={};if(tcdata.purpose.consents[1]){googConsentV2.ad_storage='granted';googConsentV2.analytics_storage='granted';}
+  if(tcdata.purpose.consents[3]&&tcdata.purpose.consents[4]){googConsentV2.ad_personalization='granted';}
+  if(tcdata.purpose.consents[1]&&tcdata.purpose.consents[7]){googConsentV2.ad_user_data='granted';}
+  if(googConsentV2.analytics_storage=='denied'){gtag('set','url_passthrough',true);}
+  gtag('consent','update',googConsentV2);}
+  __tcfapi("addEventListener",2,function(tcdata,success){if(!success||!tcdata){window._emitEzConsentEvent();return;}
+  if(!tcdata.gdprApplies){_setAllEzConsentTrue();window._emitEzConsentEvent();return;}
+  if(tcdata.eventStatus==="useractioncomplete"||tcdata.eventStatus==="tcloaded"){if(typeof gtag!='undefined'){_handleGoogleConsentV2(tcdata);}
+  _handleConsentDecision(tcdata);if(tcdata.purpose.consents["1"]===true&&tcdata.vendor.consents["755"]!==false){window.ezgconsent=true;(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0;_reloadAds();}else{_reloadAds();}
+  if(window.__ezconsent){__ezconsent.setEzoicConsentSettings(ezConsentCategories);}
+  __tcfapi("removeEventListener",2,function(success){return null;},tcdata.listenerId);if(!(tcdata.purpose.consents["1"]===true&&_ezAllowed(tcdata,"2")&&_ezAllowed(tcdata,"3")&&_ezAllowed(tcdata,"4"))){if(typeof __ez=="object"&&typeof __ez.bit=="object"&&typeof window["_ezaq"]=="object"&&typeof window["_ezaq"]["page_view_id"]=="string"){__ez.bit.AddAndFire(window["_ezaq"]["page_view_id"],[new __ezDotData("non_personalized_ads",true),]);}}}});}else{_setAllEzConsentTrue();window._emitEzConsentEvent();}})(window,document);
+  </script>
+<script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"6f64f15c991f46c985b1c28fb08922bc","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' defer="" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"></script>
+</body>
+</html>

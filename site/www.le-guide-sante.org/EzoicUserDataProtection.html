@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>User Data Protection</title>
+<script crossorigin="anonymous" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script crossorigin="anonymous" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<link href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+<script charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="utilcave_com/ezoic-loading.js"></script>
+<script>
+        var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+        function init() {
+            canvas = document.getElementById("canvas");
+            anim_container = document.getElementById("animation_container");
+            dom_overlay_container = document.getElementById("dom_overlay_container");
+            var comp=AdobeAn.getComposition("870441C99E5744BB99AF0BCFD662F717");
+            var lib=comp.getLibrary();
+            handleComplete({},comp);
+        }
+        function handleComplete(evt,comp) {
+            
+            var lib=comp.getLibrary();
+            var ss=comp.getSpriteSheet();
+            exportRoot = new lib.progressanimation3();
+            stage = new lib.Stage(canvas);
+            
+            fnStartAnimation = function() {
+                stage.addChild(exportRoot);
+                createjs.Ticker.setFPS(lib.properties.fps);
+                createjs.Ticker.addEventListener("tick", stage);
+            }
+            
+            function makeResponsive(isResp, respDim, isScale, scaleType) {
+                var lastW, lastH, lastS=1;
+                window.addEventListener('resize', resizeCanvas);
+                resizeCanvas();
+                function resizeCanvas() {
+                    var w = lib.properties.width, h = lib.properties.height;
+                    var iw = window.innerWidth, ih=window.innerHeight;
+                    var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;
+                    if(isResp) {
+                        if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {
+                            sRatio = lastS;
+                        }
+                        else if(!isScale) {
+                            if(iw<w || ih<h)
+                                sRatio = Math.min(xRatio, yRatio);
+                        }
+                        else if(scaleType==1) {
+                            sRatio = Math.min(xRatio, yRatio);
+                        }
+                        else if(scaleType==2) {
+                            sRatio = Math.max(xRatio, yRatio);
+                        }
+                    }
+                    canvas.width = w*pRatio*sRatio;
+                    canvas.height = h*pRatio*sRatio;
+                    canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';
+                    canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+                    stage.scaleX = pRatio*sRatio;
+                    stage.scaleY = pRatio*sRatio;
+                    lastW = iw; lastH = ih; lastS = sRatio;
+                    stage.tickOnUpdate = false;
+                    stage.update();
+                    stage.tickOnUpdate = true;
+                }
+            }
+            makeResponsive(false,'both',false,1);
+            AdobeAn.compositionLoaded(lib.properties.id);
+            fnStartAnimation();
+        }
+  </script>
+<style>
+        .bg-dark-ezoic{
+            background-color: rgb(64,61,57);
+        }
+        .view-data-link, .delete-data-link{
+            margin-bottom:0px;
+            vertical-align: middle;
+             
+        }
+        .link-boxes{
+             
+            vertical-align: middle;
+            border: 1px solid rgba(94,94,94,1);
+            box-shadow: -1px 1px rgba(94,94,94,1);
+        }
+        .link-boxes:hover{
+             
+            border: 1px solid rgba(94,94,94,1);
+            box-shadow: 0px 0px;
+            background-color: rgba(189,189,189,1);
+            cursor: pointer;
+        }
+        .alert{
+            display:none;
+            margin-bottom: 32px;
+        }
+        .siteRow{
+            margin-bottom: 32px !important;
+        }
+        .btn-secondary{
+            background-color: rgb(64,61,57);
+            border-color: rgb(64,61,57);
+        }
+        .active, .btn-secondary:hover{
+            background-color: #919191 !important;
+        }
+        .loading-screen{
+            position: fixed;
+            background-color: rgba(255,255,255,0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            z-index: 10000;
+        }
+        .table-container{
+            overflow: scroll !important;
+        }
+  </style>
+</head>
+<body>
+<div class="loading-screen">
+<div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:200px; height:200px">
+<canvas height="200" id="canvas" style="position: absolute; display: block; background-color: rgba(255, 255, 255, 0); width: 200px; height: 200px;" width="200"></canvas>
+</div>
+<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:200px; height:200px; position: absolute; left: 0px; top: 0px; display: block;"></div>
+</div>
+<div class="container">
+<header class="blog-header py-3">
+<div class="row flex-nowrap justify-content-between align-items-center">
+<div class="col-4 pt-1"><img alt="Ezoic Logo" src="https://40cupx20bt643wowwz361l9h-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ezoic-google.png"/></div>
+</div>
+</header>
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark-ezoic">
+<div class="col-sm-12 px-0">
+<h1 class="display-3 font-italic">Personal Data Protection</h1>
+<div class="col-md-6 px-0">
+<p class="lead my-3">Ezoic improves your internet experiences by storing some basic information about your browsing history. On this page you can view and delete the information our system uses to optimize your web browsing interactions.</p>
+</div>
+</div>
+</div>
+<div class="alert alert-success text-center info-removed-alert" role="alert">
+<strong>Your information was successfully removed!</strong>
+</div>
+<div class="alert alert-success text-center no-info-stored-alert" role="alert">
+<strong>We don't have any information stored about this user.</strong>
+</div>
+<div class="alert alert-success text-center no-info-stored-alert-delete" role="alert">
+<strong>Nothing to delete, we don't have any information stored about this user.</strong>
+</div>
+<div class="alert alert-warning text-center error-alert" role="alert">
+<strong>There was an error requesting the data, please try again.</strong>
+</div>
+<div class="row mb-2 siteRow">
+<div class="col-md-6">
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+<label class="btn btn-secondary disabled2"><input autocomplete="off" disabled="" id="0" name="options" type="radio"/></label> <label class="btn btn-secondary active domain-value-here"><input autocomplete="off" checked="" id="1" name="options" type="radio" value="330072"/> This Site</label> <label class="btn btn-secondary"><input autocomplete="off" id="2" name="options" type="radio" value="0"/> All Ezoic Sites</label> <label class="btn btn-secondary disabled2"><input autocomplete="off" id="0" name="options" type="radio"/></label>
+</div>
+</div>
+</div>
+<div class="row mb-2">
+<div class="col-md-6">
+<div class="card flex-md-row mb-4 box-shadow h-md-250">
+<div class="card-body d-flex flex-column align-items-center link-boxes view-data-box">
+<h3 class="view-data-link pt-0">View Your Data</h3>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card flex-md-row mb-4 box-shadow h-md-250">
+<div class="card-body d-flex flex-column align-items-center link-boxes delete-data-box">
+<h3 class="delete-data-link pt-0">Delete Your Data</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal" role="dialog" tabindex="-1">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">We Received Your Data Request</h5><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button>
+</div>
+<div class="modal-body">
+<p>We help make the internet a better place for a lot of people every day, so please be patient as we process your request.</p>
+<p><a class="data-request-link" href="" target="_blank">Your results will be available within the next 48 hours on this link. You can check this link any time to see the status of your request.</a></p>
+</div>
+<div class="modal-footer">
+<button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+    $( document ).ready(function() {
+        init();
+        $('#canvas').width('200px');
+        $('#canvas').height('200px');
+        Loading(false);
+        var table = $('.history-table').DataTable({
+            
+            
+            
+            
+            
+        });
+        HideTable();
+        
+        
+        var userId = GetCookie('ezosuigeneris');
+
+        $('.delete-data-box').click(function(){
+            Loading(true);
+            DismissAlerts();
+            ClearTable(table);
+            if(typeof userId !== "undefined"){
+                DeleteCookie('ezosuigeneris');
+                userId = GetCookie('ezosuigeneris');
+                DeleteTable();
+                $('.info-removed-alert').show();
+                Loading(false);
+            }else{
+                $('.no-info-stored-alert-delete').show();
+                Loading(false);
+            }
+        });
+        $('.view-data-box').click(function(){
+            Loading(true);
+            DismissAlerts();
+            ClearTable(table);
+            if(typeof userId !== "undefined"){
+                var domainId = $('.active').find('input').val();
+                if(typeof domainId == "undefined"){
+                    domainId = $('.domain-value-here').find('input').val();
+                }
+                $.ajax({
+                    method: "POST",
+                    url: "./ezoicUserDataProtection/dataRequest",
+                    contentType: "application/x-www-form-urlencoded",
+                    data: {
+                        DomainId: domainId,
+                        UniversalId: userId
+                    }
+                })
+                        .done(function( result ) {
+                            var successfulRequest = result.Uuid.Valid;
+                            if(successfulRequest){
+                                var uuid = result.Uuid.String;
+                                var requestHash = result.RequestHash;
+                                var url = location.protocol + '//' + location.host + location.pathname;
+                                var resultsURL = url + '?uuid=' + uuid + '&reqhash=' + requestHash;
+                                $('.data-request-link').attr("href", resultsURL);
+                                $('.modal').modal();
+                                Loading(false);
+                            }
+
+                        })
+                        .fail(function(){
+                            $('.error-alert').show();
+                            Loading(false);
+                        });
+            }else{
+                $('.no-info-stored-alert').show();
+                Loading(false);
+            }
+        });
+
+        $('.btn-secondary').click(function(e){
+            if( $(e.target).hasClass('btn-secondary') && !$(e.target).hasClass('disabled2') ){
+                $('.btn-secondary').removeClass('active');
+                $(e.target).addClass('active');
+            }
+        });
+    });
+    function Loading(load){
+        if(load){
+            $('.loading-screen').show();
+        }else{
+            $('.loading-screen').hide();
+        }
+    }
+    function GetDateFromIso(ISODate){
+        date = new Date(ISODate);
+        var monthNames = ["January", "February", "March","April", "May", "June", "July","August", "September", "October","November", "December"];
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+        return monthNames[monthIndex] + ' ' + year;
+    }
+    function ShowTable(){
+        $('.table-container').show();
+    }
+    function HideTable(){
+        $('.table-container').hide();
+    }
+    function ClearTable(table){
+        table.clear().draw();
+    }
+    function DeleteTable(){
+        $('.history-table').remove();
+    }
+    function DismissAlerts(){
+        $(".alert").each(function(index, element){
+            if ($(element).css("display") === "block"){
+                $(element).hide();
+            }
+        })
+    }
+    function TestGenerateCookie() {  
+        var parts = window.location.hostname.split('.');
+        var domain = "";
+        for (var i = 1; i < parts.length; i++) {
+            domain += "." + parts[i];
+        }
+        document.cookie = "ezosuigeneris=Placeholder; domain=" + domain
+    }
+    function DeleteCookie(name) {  
+        var parts = window.location.hostname.split('.');
+        var domain = "";
+        for (var i = 1; i < parts.length; i++) {
+            domain += "." + parts[i];  
+        }
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; domain=' + domain;
+    }
+    function GetCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+  </script>
+<script async="" onload="__ezcl.handle(true);" src="utilcave_com/inc/ezcl@cb=4.webp" type="text/javascript"></script>
+<script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"6f64f15c991f46c985b1c28fb08922bc","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' defer="" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"></script>
+</body>
+</html>

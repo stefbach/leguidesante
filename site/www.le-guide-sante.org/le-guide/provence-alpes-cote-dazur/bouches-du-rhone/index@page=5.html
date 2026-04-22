@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="utf-8"/>
+<script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+  var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;__ez.queue=(function(){var count=0,incr=0,items=[],timeDelayFired=false,hpItems=[],lpItems=[],allowLoad=true;var obj={func:function(name,funcName,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError){var self=this;this.name=name;this.funcName=funcName;this.parameters=parameters===null?null:(parameters instanceof Array)?parameters:[parameters];this.isBlock=isBlock;this.blockedBy=blockedBy;this.deleteWhenComplete=deleteWhenComplete;this.isError=false;this.isComplete=false;this.isInitialized=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){log("... func = "+name);self.isInitialized=true;self.isComplete=true;log("... func.apply: "+name);var funcs=self.funcName.split('.');var func=null;if(funcs.length>3){}else if(funcs.length===3){func=window[funcs[0]][funcs[1]][funcs[2]];}else if(funcs.length===2){func=window[funcs[0]][funcs[1]];}else{func=window[self.funcName];}
+  if(typeof func!=='undefined'&&func!==null){func.apply(null,this.parameters);}
+  if(self.deleteWhenComplete===true)delete items[name];if(self.isBlock===true){log("----- F'D: "+self.name);processAll();}}},file:function(name,path,isBlock,blockedBy,async,defer,proceedIfError){var self=this;this.name=name;this.path=path;this.async=async;this.defer=defer;this.isBlock=isBlock;this.blockedBy=blockedBy;this.isInitialized=false;this.isError=false;this.isComplete=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){self.isInitialized=true;log("... file = "+name);var scr=document.createElement('script');scr.src=path;if(async===true)scr.async=true;else if(defer===true)scr.defer=true;scr.onerror=function(){log("----- ERR'D: "+self.name);self.isError=true;if(self.isBlock===true){processAll();}};scr.onreadystatechange=scr.onload=function(){var state=scr.readyState;log("----- F'D: "+self.name);if((!state||/loaded|complete/.test(state))){self.isComplete=true;if(self.isBlock===true){processAll();}}};document.getElementsByTagName('head')[0].appendChild(scr);}},fileLoaded:function(name,isComplete){this.name=name;this.path="";this.async=false;this.defer=false;this.isBlock=false;this.blockedBy=[];this.isInitialized=true;this.isError=false;this.isComplete=isComplete;this.proceedIfError=false;this.isTimeDelay=false;this.process=function(){};}};function init(){window.addEventListener("load",function(){setTimeout(function(){timeDelayFired=true;log('TDELAY -----');processAll();},5000);},false);}
+  function addFile(name,path,isBlock,blockedBy,async,defer,proceedIfError,priority){var item=new obj.file(name,path,isBlock,blockedBy,async,defer,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+  items[name]=item;checkIfBlocked(item);}
+  function setallowLoad(settobool){allowLoad=settobool}
+  function addFunc(name,func,parameters,isBlock,blockedBy,autoInc,deleteWhenComplete,proceedIfError,priority){if(autoInc===true)name=name+"_"+incr++;var item=new obj.func(name,func,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+  items[name]=item;checkIfBlocked(item);}
+  function addTimeDelayFile(name,path){var item=new obj.file(name,path,false,[],false,false,true);item.isTimeDelay=true;log(name+' ... '+' FILE! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+  function addTimeDelayFunc(name,func,parameters){var item=new obj.func(name,func,parameters,false,[],true,true);item.isTimeDelay=true;log(name+' ... '+' FUNCTION! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+  function checkIfBlocked(item){if(isBlocked(item)===true||allowLoad==false)return;item.process();}
+  function isBlocked(item){if(item.isTimeDelay===true&&timeDelayFired===false){log(item.name+" blocked = TIME DELAY!");return true;}
+  if(item.blockedBy instanceof Array){for(var i=0;i<item.blockedBy.length;i++){var block=item.blockedBy[i];if(items.hasOwnProperty(block)===false){log(item.name+" blocked = "+block);return true;}else if(item.proceedIfError===true&&items[block].isError===true){return false;}else if(items[block].isComplete===false){log(item.name+" blocked = "+block);return true;}}}
+  return false;}
+  function markLoaded(filename){if(!filename||0===filename.length){return;}
+  if(filename in items){var item=items[filename];if(item.isComplete===true){log(item.name+' '+filename+': error loaded duplicate')}else{item.isComplete=true;item.isInitialized=true;}}else{items[filename]=new obj.fileLoaded(filename,true);}
+  log("markLoaded dummyfile: "+items[filename].name);}
+  function logWhatsBlocked(){for(var i in items){if(items.hasOwnProperty(i)===false)continue;var item=items[i];isBlocked(item)}}
+  function log(msg){var href=window.location.href;var reg=new RegExp('[?&]ezq=([^&#]*)','i');var string=reg.exec(href);var res=string?string[1]:null;if(res==="1")console.debug(msg);}
+  function processAll(){count++;if(count>200)return;log("let's go");processItems(hpItems);processItems(lpItems);}
+  function processItems(list){for(var i in list){if(list.hasOwnProperty(i)===false)continue;var item=list[i];if(item.isComplete===true||isBlocked(item)||item.isInitialized===true||item.isError===true){if(item.isError===true){log(item.name+': error')}else if(item.isComplete===true){log(item.name+': complete already')}else if(item.isInitialized===true){log(item.name+': initialized already')}}else{item.process();}}}
+  init();return{addFile:addFile,addDelayFile:addTimeDelayFile,addFunc:addFunc,addDelayFunc:addTimeDelayFunc,items:items,processAll:processAll,setallowLoad:setallowLoad,markLoaded:markLoaded,logWhatsBlocked:logWhatsBlocked,};})();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-0&cb=1', false, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/memphis.js', '/detroitchicago/memphis.js?gcb=195-0&cb=14', false, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/minneapolis.js', '/detroitchicago/minneapolis.js?gcb=195-0&cb=3', false, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/rochester.js', '/detroitchicago/rochester.js?gcb=195-0&cb=12', false, ['/detroitchicago/memphis.js','/detroitchicago/minneapolis.js'], true, false, true, false);__ez.vep=(function(){var pixels=[],pxURL="/detroitchicago/grapefruit.gif";function AddPixel(vID,pixelData){if(__ez.dot.isDefined(vID)&&__ez.dot.isValid(pixelData)){pixels.push({type:'video',video_impression_id:vID,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(pixelData)});}}
+  function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender"){return;}
+  if(__ez.dot.isDefined(pixels)&&pixels.length>0){while(pixels.length>0){var j=5;if(j>pixels.length){j=pixels.length;}
+  var pushPixels=pixels.splice(0,j);var pixelURL=__ez.dot.getURL(pxURL)+"?orig="+(__ez.template.isOrig===true?1:0)+"&v="+btoa(JSON.stringify(pushPixels));__ez.dot.Fire(pixelURL);}}
+  pixels=[];}
+  return{Add:AddPixel,Fire:Fire};})();
+  </script>
+<script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+  __ez.pel=(function(){var pixels=[],pxURL="/porpoiseant/army.gif";function AddAndFirePixel(adSlot,pixelData){AddPixel(adSlot,pixelData,0,0,0,0,0);Fire();}
+  function AddAndFireOrigPixel(adSlot,pixelData){AddPixel(adSlot,pixelData,0,0,0,0,0,true);Fire();}
+  function GetCurrentPixels(){return pixels;}
+  function AddPixel(adSlot,pixelData,revenue,est_revenue,bid_floor_filled,bid_floor_prev,stat_source_id,isOrig){if(!__ez.dot.isDefined(adSlot)||__ez.dot.isAnyDefined(adSlot.getSlotElementId,adSlot.ElementId)==false){return;}
+  var ad_position_id=parseInt(__ez.dot.getTargeting(adSlot,'ap'));var impId=__ez.dot.getSlotIID(adSlot),adUnit=__ez.dot.getAdUnit(adSlot,isOrig);var compId=parseInt(__ez.dot.getTargeting(adSlot,"compid"));var lineItemId=0;var creativeId=0;var ezimData=getEzimData(adSlot);if(typeof ezimData=='object'){if(ezimData.creative_id!==undefined){creativeId=ezimData.creative_id;}
+  if(ezimData.line_item_id!==undefined){lineItemId=ezimData.line_item_id;}}
+  if(__ez.dot.isDefined(impId,adUnit)&&__ez.dot.isValid(pixelData)){pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),revenue:revenue,est_revenue:est_revenue,ad_position:ad_position_id,ad_size:"",bid_floor_filled:bid_floor_filled,bid_floor_prev:bid_floor_prev,stat_source_id:stat_source_id,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:compId,line_item_id:lineItemId,creative_id:creativeId,data:__ez.dot.dataToStr(pixelData),is_orig:isOrig||__ez.template.isOrig,});}}
+  function AddPixelById(impFullId,pixelData,isOrig){var vals=impFullId.split('/');if(__ez.dot.isDefined(impFullId)&&vals.length===3&&__ez.dot.isValid(pixelData)){var adUnit=vals[0],impId=vals[2];pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(pixelData),is_orig:isOrig||__ez.template.isOrig});}}
+  function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender")return;if(__ez.dot.isDefined(pixels)&&pixels.length>0){var allPixels=[pixels.filter(function(pixel){return pixel.is_orig}),pixels.filter(function(pixel){return!pixel.is_orig})];allPixels.forEach(function(pixels){while(pixels.length>0){var isOrig=pixels[0].is_orig||false;var j=5;if(j>pixels.length){j=pixels.length;}
+  var pushPixels=pixels.splice(0,j);var pixelURL=__ez.dot.getURL(pxURL)+"?orig="+(isOrig===true?1:0)+"&sts="+btoa(JSON.stringify(pushPixels));if(typeof window.isAmp!=='undefined'&&isAmp&&typeof window._ezaq!=='undefined'&&_ezaq.hasOwnProperty("domain_id")){pixelURL+="&visit_uuid="+_ezaq['visit_uuid'];}
+  __ez.dot.Fire(pixelURL);}})}
+  pixels=[];}
+  function getEzimData(adSlot){if(typeof _ezim_d=="undefined"){return false}
+  var adUnitName=__ez.dot.getAdUnitPath(adSlot).split('/').pop();if(typeof _ezim_d==='object'&&_ezim_d.hasOwnProperty(adUnitName)){return _ezim_d[adUnitName];}
+  for(var ezimKey in _ezim_d){if(ezimKey.split('/').pop()===adUnitName){return _ezim_d[ezimKey];}}
+  return false;}
+  return{Add:AddPixel,AddAndFire:AddAndFirePixel,AddAndFireOrig:AddAndFireOrigPixel,AddById:AddPixelById,Fire:Fire,GetPixels:GetCurrentPixels,};})();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-0&cb=5', false, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-0&cb=4', false, [], true, false, true, false);
+  </script>
+<script data-cfasync="false" data-ezscrex="false">
+  (function(){if("function"===typeof window.CustomEvent)return!1;window.CustomEvent=function(c,a){a=a||{bubbles:!1,cancelable:!1,detail:null};var b=document.createEvent("CustomEvent");b.initCustomEvent(c,a.bubbles,a.cancelable,a.detail);return b}})();
+  </script>
+<script data-cfasync="false" data-ezscrex="false">
+  __ez.queue.addFile('/detroitchicago/tulsa.js', '/detroitchicago/tulsa.js?gcb=195-0&cb=5', false, [], true, false, true, false);
+  </script>
+<link href="../bouches-du-rhone@page=5" rel="canonical"/>
+<meta content="Bouches-du-Rhône, retrouvez toutes les informations des établissements de santé près de chez vous sur Le Guide Santé. Guide de référence des hôpitaux, coordonnées utiles, indicateurs de qualité et de sécurité des soins." name="description"/>
+<meta content="Le Guide Santé" property="og:site_name"/>
+<meta content="contact@le-guide-sante.org" property="og:email"/>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../../taxonomy/term/1017/delete" rel="delete-form"/>
+<link href="../../../taxonomy/term/1017/edit" rel="edit-form"/>
+<script defer="" src="../../../sites/default/files/google_tag/default/google_tag.script@r3bkrv.js"></script>
+<title>Hôpital ou clinique Bouches-du-Rhône | Le Guide Santé</title>
+<link href="../../../sites/default/files/css/css_o2aqwWTLaFPCWcx81kLUUOrRwdH8bdR7-c5WjTl61EY.css" media="all" rel="stylesheet"/>
+<link href="../../../sites/default/files/css/css_2eGMPurPoHsZAsCLYFmXgHJF5m2JwWIVGNEyZyGdFaA.css" media="all" rel="stylesheet"/>
+<link href="../../../sites/default/files/css/css_hUaj3Sck8PiWV031VtGM5vwmFiWZ93BLkGZHpqX1i2M.css" media="print" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" rel="preload"/>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/><noscript>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="../../../themes/custom/starter/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link color="#e32327" href="../../../themes/custom/starter/safari-pinned-tab.svg" rel="mask-icon" type="image/svg+xml"/>
+<link href="../../../themes/custom/starter/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../../../themes/custom/starter/site.webmanifest" rel="manifest"/>
+<script type="text/javascript">
+  var ezouid = "1";
+  </script>
+<base href="https://www.le-guide-sante.org/le-guide/provence-alpes-cote-dazur/bouches-du-rhone?page=5"/>
+<script type="text/javascript">
+  var ezoTemplate = 'old_site_noads';
+  if(typeof ezouid == 'undefined')
+  {
+    var ezouid = 'none';
+  }
+  var ezoFormfactor = '1';
+  var ezo_elements_to_check = Array();
+  </script>
+<script data-ezscrex="false" type="text/javascript">
+  var soc_app_id = '0';
+  var did = 311059;
+  var ezdomain = 'www.le-guide-sante.org';
+  var ezoicSearchable = 1;
+  </script>
+<script data-cfasync="false" data-ezscrex="false" type="text/javascript">
+  var _ezaq = {"ad_cache_level":0,"ad_lazyload_version":0,"ad_load_version":0,"city":"Ashburn","country":"US","days_since_last_visit":-1,"domain_id":311059,"engaged_time_visit":0,"ezcache_level":1,"ezcache_skip_code":3,"form_factor_id":1,"framework_id":1,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"metro_code":511,"page_ad_positions":"","page_view_count":0,"page_view_id":"212cfbca-da24-4e76-7d7f-18da0c0b85c3","position_selection_id":0,"postal_code":"20149","pv_event_count":0,"response_size_orig":29861,"response_time_orig":1056,"serverid":"44.193.76.94:22730","state":"VA","t_epoch":1638625980,"template_id":120,"time_on_site_visit":0,"url":"https://www.le-guide-sante.org/le-guide/provence-alpes-cote-dazur/bouches-du-rhone?page=5","user_id":0,"word_count":236,"worst_bad_word_level":0};var _ezExtraQueries = "&ez_orig=1";
+  </script>
+<script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+  function create_ezolpl(pvID, rv) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    __ez.ck.setByCat("ezux_lpl_311059=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
+  }
+  function attach_ezolpl(pvID, rv) {
+    if (document.readyState === "complete") {
+        create_ezolpl(pvID, rv);
+    }
+    if(window.attachEvent) {
+        window.attachEvent("onload", create_ezolpl, pvID, rv);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl(pvID, rv);
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl.bind(null, pvID, rv);
+        }
+    }
+  }
+
+  __ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["212cfbca-da24-4e76-7d7f-18da0c0b85c3", "false"], false, ['/detroitchicago/boise.js'], true, false, false, false);
+  </script>
+</head>
+<body class="view-news view-news--page-theme location path-taxonomy">
+<noscript aria-hidden="true"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WPC22MS" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div class="site-wrapper">
+<header class="header js-fixed-header">
+<div class="header__container">
+<div class="header__inner">
+<div class="header__logo">
+<div class="block block-system block-system-branding-block" id="block-starter-branding">
+<a class="site-logo" href="../../../index.html" rel="home"><img alt="Le Guide Santé" class="logo" height="49" src="../../../themes/custom/starter/dist/img/logo.svg" width="276"/> <img alt="Le Guide Santé" class="logo-white" height="49" src="../../../themes/custom/starter/dist/img/logo-white.svg" width="276"/></a>
+</div>
+</div>
+<div class="header__main">
+<div class="region region-navigation js-menu">
+<nav aria-labelledby="block-starter-main-menu-menu" class="block block-menu navigation menu--main" id="block-starter-main-menu" role="navigation">
+<span class="visually-hidden" id="block-starter-main-menu-menu">Navigation principale</span>
+<ul class="menu" data-region="navigation">
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide" href="../../index.html">Le Guide : hôpitaux et cliniques</a>
+</li>
+<li class="menu-item has-mega-menu">
+<a href="#">Actualités Santé, Bien-être</a>
+<div class="mega-menu">
+<div class="mega-menu__col">
+<p class="mega-menu__col-title">Thématiques</p>
+<ul class="menu">
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1" href="../../../actualites/cancer/index.html">Cancer</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/2" href="../../../actualites/nutrition/index.html">Nutrition</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1083" href="../../../actualites/chirurgie/index.html">Chirurgie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1084" href="../../../actualites/forme-et-bien-etre/index.html">Forme et bien-être</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1085" href="../../../actualites/geriatrie/index.html">Gériatrie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1086" href="../../../actualites/hopitaux/index.html">Hôpitaux</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1087" href="../../../actualites/medecine/index.html">Médecine</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1088" href="../../../actualites/medicaments/index.html">Médicaments</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1089" href="../../../actualites/obstetrique/index.html">Obstétrique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../../../actualites/sante-publique/index.html">Santé publique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../../../actualites/tendances/index.html">Tendances</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div><button class="button header__responsive-btn js-menu-toggle"><span>Menu</span></button>
+</div>
+</div>
+</header>
+<main class="main">
+<div class="region region-header">
+<div class="block block-system block-system-breadcrumb-block" id="block-starter-breadcrumbs">
+<div class="breadcrumb">
+<div class="breadcrumb__container">
+<span class="visually-hidden" id="system-breadcrumb">Fil d'Ariane</span>
+<ol class="breadcrumb__items" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="../../../index.html" itemprop="item"><span itemprop="name">Accueil</span></a>
+<meta content="1" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="../index.html" itemprop="item"><span itemprop="name">Provence-Alpes-Côte d'Azur</span></a>
+<meta content="2" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<span itemprop="name">Bouches-du-Rhône</span>
+<meta content="3" itemprop="position"/>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="hidden" data-drupal-messages-fallback=""></div>
+<div class="block block-choosit-lgs block-institution-search-form-block" id="block-formulairederecherchedesinstitutions">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="block__heading">
+<h1 class="block__title"><span>Hôpitaux et cliniques: Bouches-du-Rhône (13)</span></h1>
+</div>
+<div class="block__body">
+<form accept-charset="UTF-8" action="index@page=5.html" class="choosit-lgs-institution-search-form" data-drupal-selector="choosit-lgs-institution-search-form" id="choosit-lgs-institution-search-form" method="post" name="choosit-lgs-institution-search-form" novalidate="novalidate">
+<div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-location form-item-location form-no-label">
+<input class="form-autocomplete form-text" data-autocomplete-path="/choosit_lgs/autocomplete/institution" data-drupal-selector="edit-location" id="edit-location" maxlength="128" name="location" placeholder="Où ? ville, code postal, région" size="60" type="text" value=""/>
+</div><button class="button js-form-submit form-submit" data-drupal-selector="edit-submit" id="edit-submit" name="op" type="submit" value="Rechercher">Rechercher</button> <input autocomplete="off" data-drupal-selector="form-a5rblzj4z7qqn2axd74ynh0bexlrspranv6zwafdv9m" name="form_build_id" type="hidden" value="form-a5RBLZj4Z7qQn2Axd74yNH0bExLRSpRanv6ZwAfDv9M"/> <input data-drupal-selector="edit-choosit-lgs-institution-search-form" name="form_id" type="hidden" value="choosit_lgs_institution_search_form"/>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="block block-choosit-lgs block-header-subtitle" id="block-entetesoustitre"></div>
+</div>
+<div class="main-content">
+<div class="region region-content">
+<div class="block block-system block-system-main-block" id="block-starter-content">
+<div class="views-element-container">
+<div class="view view-news view-id-news view-display-id-page_theme js-view-dom-id-d4abe69d4b02a6cafc313710cd95248b0f6f126faa79efee5e85d62a381967d7"></div>
+</div>
+</div>
+<div class="views-element-container block block-views block-views-blockinstitution-block-by-term" id="block-views-block-institution-block-by-term">
+<div>
+<div class="view view-institution view-id-institution view-display-id-block_by_term js-view-dom-id-1443f76ee39c5f7d336643dbb1dccc0317dc87f59960d02fd38c0ee489ff5b1e">
+<nav aria-labelledby="pagination-heading" class="pager" role="navigation">
+<h4 class="visually-hidden" id="pagination-heading">Pagination</h4>
+<ul class="pager__items js-pager__items">
+<li class="pager__item pager__item--previous">
+<a href="index@page=3.html" rel="prev" title="Aller à la page précédente"><span class="visually-hidden">Page précédente</span> <svg aria-hidden="true" aria-label="Previous ›" class="icon icon-chevron-left">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-chevron-left"></use></svg></a>
+</li>
+<li class="pager__item">
+<a href="index.html" title="Go to page 1"><span class="visually-hidden">Page</span> 1</a>
+</li>
+<li class="pager__item">
+<a href="index@page=1.html" title="Go to page 2"><span class="visually-hidden">Page</span> 2</a>
+</li>
+<li class="pager__item">
+<a href="index@page=2.html" title="Go to page 3"><span class="visually-hidden">Page</span> 3</a>
+</li>
+<li class="pager__item">
+<a href="index@page=3.html" title="Go to page 4"><span class="visually-hidden">Page</span> 4</a>
+</li>
+<li class="pager__item is-active">
+<a href="index@page=4.html" title="Page courante"><span class="visually-hidden">Page courante</span> 5</a>
+</li>
+</ul>
+</nav>
+<div class="block block-choosit-lgs block-other-location-block">
+<div class="block block--items-col">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="block__body">
+<div class="block__item">
+<h3 class="block__item-title">Hôpitaux et cliniques par département</h3><a href="../alpes-de-haute-provence/index.html">Alpes-de-Haute-Provence</a> <a href="../alpes-maritimes/index.html">Alpes-Maritimes</a> <a href="index.html">Bouches-du-Rhône</a> <a href="../hautes-alpes/index.html">Hautes-Alpes</a> <a href="../toulon/index.html">Toulon</a> <a href="../var/index.html">Var</a> <a href="../vaucluse/index.html">Vaucluse</a>
+</div>
+<div class="block__item">
+<h3 class="block__item-title">Hôpitaux et cliniques par ville</h3><a href="aix-en-provence/index.html">Aix-en-Provence</a> <a href="allauch/index.html">Allauch</a> <a href="arles/index.html">Arles</a> <a href="aubagne/index.html">Aubagne</a> <a href="gardanne/index.html">Gardanne</a> <a href="istres/index.html">Istres</a> <a href="la-ciotat/index.html">La Ciotat</a> <a href="marignane/index.html">Marignane</a> <a href="marseille/index.html">Marseille</a> <a href="martigues/index.html">Martigues</a> <a href="salon-de-provence/index.html">Salon-de-Provence</a> <a href="vitrolles/index.html">Vitrolles</a>
+</div>
+</div>
+<div class="block__footer">
+                            Vous pouvez également consulter les établissements de santé par <a class="button button--underline" href="../../par-regions/index.html">régions</a> ou par <a class="button button--underline" href="../../par-regions/par-departements/index.html">départements</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="block block-choosit-lgs block-most-read-articles" id="block-articleslespluslus">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="block__heading">
+<h2 class="block__title">Articles les plus lus</h2>
+</div>
+<div class="block__body">
+<ul>
+<li>
+<a href="../../../actualites/sante-publique/arreter-de-fumer-prevention-sante/index.html"><span>1</span>
+<h3>Arrêter de fumer pour préserver sa santé !</h3></a>
+</li>
+<li>
+<a href="../../../actualites/medecine/tracheite-symptomes-traitement/index.html"><span>2</span>
+<h3>Trachéite : symptômes et traitement</h3></a>
+</li>
+<li>
+<a href="../../../actualites/forme-et-bien-etre/stress-definition-causes-symptomes-comment-gerer/index.html"><span>3</span>
+<h3>Le stress : définition, causes, symptômes et comment le gérer</h3></a>
+</li>
+<li>
+<a href="../../../actualites/medecine/plaquettes-sanguines-basses-causes-traitements/index.html"><span>4</span>
+<h3>Plaquettes sanguines basses : causes et traitements</h3></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<section class="prefooter">
+<div class="prefooter__container">
+<div class="region region-prefooter">
+<div class="block block-choosit-lgs block-newsletter-social-links" id="block-newsletteretreseauxsociaux">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="newsletter">
+<p class="block__title">Pour être informé des actualités du Guide Santé</p><a class="button button--ghost" href="../../../form/newsletter/index.html">Je m'abonne à la newsletter</a>
+</div>
+<div class="social-links">
+<p class="block__title">Nous suivre</p>
+<ul class="social">
+<li>
+<a aria-label="Twitter" href="https://x.com/docleguidesante" rel="noopener" target="_blank"><svg class="icon icon-twitter">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-twitter"></use></svg></a>
+</li>
+<li>
+<a aria-label="Twitter" href="https://x.com/docleguidesante" rel="noopener" target="_blank"><svg class="icon icon-twitter">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-twitter"></use></svg></a>
+</li>
+<li>
+<a aria-label="Facebook" href="https://www.facebook.com/leguidesante.org/" rel="noopener" target="_blank"><svg class="icon icon-facebook">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-facebook"></use></svg></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="footernav">
+<div class="footernav__container">
+<div class="region region-footernav">
+<nav aria-labelledby="block-leguidehopitauxetcliniques-menu" class="block block-menu navigation menu--guide-footer" id="block-leguidehopitauxetcliniques" role="navigation">
+<span id="block-leguidehopitauxetcliniques-menu">Le Guide : hôpitaux et cliniques</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide" href="../../index.html">Rechercher un établissement</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions" href="../../par-regions/index.html">Par régions</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions/par-departements" href="../../par-regions/par-departements/index.html">Par départements</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions/par-departements/par-villes" href="../../par-regions/par-departements/par-villes/index.html">Par villes</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1064" href="../../ile-de-france/paris/index.html">Hôpital Paris</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1014" href="../../auvergne-rhone-alpes/rhone/lyon/index.html">Hôpital Lyon</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1030" href="marseille/index.html">Hôpital Marseille</a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="block-actualitessantebienetre-menu" class="block block-menu navigation menu--news-footer" id="block-actualitessantebienetre" role="navigation">
+<span id="block-actualitessantebienetre-menu">Actualités Santé, Bien-être</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1" href="../../../actualites/cancer/index.html">Cancer</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1083" href="../../../actualites/chirurgie/index.html">Chirurgie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1084" href="../../../actualites/forme-et-bien-etre/index.html">Forme et bien-être</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1085" href="../../../actualites/geriatrie/index.html">Gériatrie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1086" href="../../../actualites/hopitaux/index.html">Hôpitaux</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1087" href="../../../actualites/medecine/index.html">Médecine</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1088" href="../../../actualites/medicaments/index.html">Médicaments</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1089" href="../../../actualites/obstetrique/index.html">Obstétrique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../../../actualites/sante-publique/index.html">Santé publique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/2" href="../../../actualites/nutrition/index.html">Nutrition</a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="block-apropos-menu" class="block block-menu navigation menu--about" id="block-apropos" role="navigation">
+<span id="block-apropos-menu">A propos</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1431" href="../../../qui-sommes-nous/index.html">Qui sommes nous ?</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1386" href="../../../comite-de-redaction-du-guide-sante/index.html">Comité de rédaction</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1387" href="../../../comite-scientifique-et-experts-medicaux-ou-scientifiques/index.html">Comité scientifiques et experts</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1433" href="../../../contact-presse/index.html">Contact Presse</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1576" href="../../../glossaire/index.html">Glossaire</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="webform/signalement_d_une_erreur" href="../../../form/signalement-d-une-erreur/index.html">Signalement</a>
+</li>
+</ul>
+</nav>
+<div class="views-element-container block block-views block-views-blockpartners-block-1" id="block-views-block-partners-block-1">
+<div>
+<div class="view view-partners view-id-partners view-display-id-block_1 js-view-dom-id-5e669556683d0a3be6ac0dc769c395ab544fe4bf750dd1637a9ab0f0bec9de0d">
+<div class="view-content">
+<div class="views-row">
+</div>
+<div class="views-row">
+<div class="card card--footer-partner taxonomy-term vocabulary-partners-institutions" id="taxonomy-term-1092">
+<a href="https://www.egora.fr/">
+<div class="field field--name-image field--type-image field--label-hidden field__item"><img alt="Egora Fr" class="image-style-partner-logo" height="46" loading="lazy" src="../../../sites/default/files/styles/partner_logo/public/2021-03/logo-egorafr@itok=D5m-H-Hs.png" width="152"/></div></a>
+</div>
+</div>
+<div class="views-row">
+<div class="card card--footer-partner taxonomy-term vocabulary-partners-institutions" id="taxonomy-term-1094">
+<a href="https://www.concourspluripro.fr/nouveaute/le-concours-medical-evolue-et-devient-concours-pluripro">
+<div class="field field--name-image field--type-image field--label-hidden field__item"><img alt="Le concours médical" class="image-style-partner-logo" height="41" loading="lazy" src="../../../sites/default/files/styles/partner_logo/public/2021-07/logo-plurimopro@itok=YLjSO8LM.jpg" width="152"/></div></a>
+</div>
+</div>
+<div class="views-row">
+<div class="card card--footer-partner taxonomy-term vocabulary-partners-institutions" id="taxonomy-term-1091">
+<a href="https://www.mediamed.org/">
+<div class="field field--name-image field--type-image field--label-hidden field__item"><img alt="mediamed" class="image-style-partner-logo" height="50" loading="lazy" src="../../../sites/default/files/styles/partner_logo/public/2021-03/partenaire-mediamed-logo@itok=-_oFEkag.png" width="152"/></div></a>
+</div>
+</div>
+<div class="views-row">
+<div class="card card--footer-partner taxonomy-term vocabulary-partners-institutions" id="taxonomy-term-1096">
+<a href="https://www.aspserveur.com/">
+<div class="field field--name-image field--type-image field--label-hidden field__item"><img alt="ASP serveur" class="image-style-partner-logo" height="29" loading="lazy" src="../../../sites/default/files/styles/partner_logo/public/2021-04/asp-serveur-ok@itok=0w49WfmO.png" width="152"/></div></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer" role="contentinfo">
+<div class="footer__container">
+<div class="region region-footer">
+<span class="footer__copyright">© Le Guide Santé</span>
+<div class="footer__legal">
+<nav aria-labelledby="block-starter-footer-menu" class="block block-menu navigation menu--footer" id="block-starter-footer" role="navigation">
+<span class="visually-hidden" id="block-starter-footer-menu">Menu Pied de page</span>
+<ul class="menu" data-region="footer">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1432" href="../../../mentions-legales-et-cgu/index.html">Mentions légales</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="responsive-menu">
+<div class="responsive-menu__backdrop js-menu-backdrop"></div>
+<div class="responsive-menu__content">
+<ul class="vertical menu drilldown js-responsive-menu" data-back="Retour"></ul>
+</div>
+</div>
+<script data-drupal-selector="drupal-settings-json" type="application/json">
+  {"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"taxonomy\/term\/1017","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"fr","currentQuery":{"page":"5"}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"classy\/base,classy\/messages,core\/drupal.autocomplete,core\/normalize,starter\/global,system\/base,views\/views.module","theme":"starter","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"630f18be6ad6a4fe65bb35d32325d392eb59045512a4b2a10d8fdcb9b01fbdcc"}}
+  </script>
+<script src="../../../sites/default/files/js/js_aqnCxKRn0CDh4OkHhqZxx4EUR7fwo2y0KP3hXK9OlOk.js"></script>
+<script async="" style="display:none;" type="text/javascript">
+
+
+  __ez.queue.addFile('/detroitchicago/edmonton.webp', '/detroitchicago/edmonton.webp?a=a&cb=0&shcb=34', true, ['/detroitchicago/minneapolis.js'], true, false, false, false);
+  __ez.queue.addFile('/porpoiseant/jellyfish.webp', '/porpoiseant/jellyfish.webp?a=a&cb=0&shcb=34', false, [], true, false, false, false);
+  </script>
+<script>
+
+  var _audins_dom="le_guide_sante_org",_audins_did=311059;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezoic.net/detroitchicago/audins.js?cb=195-0");
+  </script><noscript>
+<div style="display:none;"></div></noscript>
+<script data-cfasync="false" type="text/javascript"></script>
+<script>
+
+  __ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=0&cb=3', false, ['/detroitchicago/minneapolis.js'], true, false, true, false);
+  </script>
+<script async="" onload="__ezcl.handle(true);" src="../../../utilcave_com/inc/ezcl@cb=4.webp" type="text/javascript"></script>
+<script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"6f64f15c991f46c985b1c28fb08922bc","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' defer="" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"></script>
+</body>
+</html>

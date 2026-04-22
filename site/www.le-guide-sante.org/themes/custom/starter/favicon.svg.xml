@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36.991" height="36.991" viewBox="0 0 36.991 36.991">
+  <style>
+    .lgs-logo path.notch-dark {
+      fill: #383846;
+    }
+    @media (prefers-color-scheme: dark) {
+      .lgs-logo path.notch-dark {
+        fill: #ffffff;
+      }
+    }
+  </style>
+  <g class="lgs-logo" transform="translate(0 0)">
+    <path class="notch-dark" d="M489.715,392.228h0V379.9H477.385v24.659h24.659v-12.33Z" transform="translate(-477.385 -367.567)" />
+    <path class="notch-red" d="M491.949,377.664H504.28v12.329h12.33V365.331H491.949Z" transform="translate(-479.619 -365.332)" fill="#e32327"/>
+  </g>
+</svg>

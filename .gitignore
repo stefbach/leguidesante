@@ -1,0 +1,4 @@
+.crawl/
+logs/
+*.pyc
+__pycache__/

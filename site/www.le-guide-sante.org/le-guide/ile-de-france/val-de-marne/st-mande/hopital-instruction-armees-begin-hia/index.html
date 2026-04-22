@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="utf-8"/>
+<script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+  var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;__ez.queue=(function(){var count=0,incr=0,items=[],timeDelayFired=false,hpItems=[],lpItems=[],allowLoad=true;var obj={func:function(name,funcName,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError){var self=this;this.name=name;this.funcName=funcName;this.parameters=parameters===null?null:(parameters instanceof Array)?parameters:[parameters];this.isBlock=isBlock;this.blockedBy=blockedBy;this.deleteWhenComplete=deleteWhenComplete;this.isError=false;this.isComplete=false;this.isInitialized=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){log("... func = "+name);self.isInitialized=true;self.isComplete=true;log("... func.apply: "+name);var funcs=self.funcName.split('.');var func=null;if(funcs.length>3){}else if(funcs.length===3){func=window[funcs[0]][funcs[1]][funcs[2]];}else if(funcs.length===2){func=window[funcs[0]][funcs[1]];}else{func=window[self.funcName];}
+  if(typeof func!=='undefined'&&func!==null){func.apply(null,this.parameters);}
+  if(self.deleteWhenComplete===true)delete items[name];if(self.isBlock===true){log("----- F'D: "+self.name);processAll();}}},file:function(name,path,isBlock,blockedBy,async,defer,proceedIfError){var self=this;this.name=name;this.path=path;this.async=async;this.defer=defer;this.isBlock=isBlock;this.blockedBy=blockedBy;this.isInitialized=false;this.isError=false;this.isComplete=false;this.proceedIfError=proceedIfError;this.isTimeDelay=false;this.process=function(){self.isInitialized=true;log("... file = "+name);var scr=document.createElement('script');scr.src=path;if(async===true)scr.async=true;else if(defer===true)scr.defer=true;scr.onerror=function(){log("----- ERR'D: "+self.name);self.isError=true;if(self.isBlock===true){processAll();}};scr.onreadystatechange=scr.onload=function(){var state=scr.readyState;log("----- F'D: "+self.name);if((!state||/loaded|complete/.test(state))){self.isComplete=true;if(self.isBlock===true){processAll();}}};document.getElementsByTagName('head')[0].appendChild(scr);}},fileLoaded:function(name,isComplete){this.name=name;this.path="";this.async=false;this.defer=false;this.isBlock=false;this.blockedBy=[];this.isInitialized=true;this.isError=false;this.isComplete=isComplete;this.proceedIfError=false;this.isTimeDelay=false;this.process=function(){};}};function init(){window.addEventListener("load",function(){setTimeout(function(){timeDelayFired=true;log('TDELAY -----');processAll();},5000);},false);}
+  function addFile(name,path,isBlock,blockedBy,async,defer,proceedIfError,priority){var item=new obj.file(name,path,isBlock,blockedBy,async,defer,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+  items[name]=item;checkIfBlocked(item);}
+  function setallowLoad(settobool){allowLoad=settobool}
+  function addFunc(name,func,parameters,isBlock,blockedBy,autoInc,deleteWhenComplete,proceedIfError,priority){if(autoInc===true)name=name+"_"+incr++;var item=new obj.func(name,func,parameters,isBlock,blockedBy,deleteWhenComplete,proceedIfError);if(priority===true){hpItems[name]=item}else{lpItems[name]=item}
+  items[name]=item;checkIfBlocked(item);}
+  function addTimeDelayFile(name,path){var item=new obj.file(name,path,false,[],false,false,true);item.isTimeDelay=true;log(name+' ... '+' FILE! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+  function addTimeDelayFunc(name,func,parameters){var item=new obj.func(name,func,parameters,false,[],true,true);item.isTimeDelay=true;log(name+' ... '+' FUNCTION! TDELAY');lpItems[name]=item;items[name]=item;checkIfBlocked(item);}
+  function checkIfBlocked(item){if(isBlocked(item)===true||allowLoad==false)return;item.process();}
+  function isBlocked(item){if(item.isTimeDelay===true&&timeDelayFired===false){log(item.name+" blocked = TIME DELAY!");return true;}
+  if(item.blockedBy instanceof Array){for(var i=0;i<item.blockedBy.length;i++){var block=item.blockedBy[i];if(items.hasOwnProperty(block)===false){log(item.name+" blocked = "+block);return true;}else if(item.proceedIfError===true&&items[block].isError===true){return false;}else if(items[block].isComplete===false){log(item.name+" blocked = "+block);return true;}}}
+  return false;}
+  function markLoaded(filename){if(!filename||0===filename.length){return;}
+  if(filename in items){var item=items[filename];if(item.isComplete===true){log(item.name+' '+filename+': error loaded duplicate')}else{item.isComplete=true;item.isInitialized=true;}}else{items[filename]=new obj.fileLoaded(filename,true);}
+  log("markLoaded dummyfile: "+items[filename].name);}
+  function logWhatsBlocked(){for(var i in items){if(items.hasOwnProperty(i)===false)continue;var item=items[i];isBlocked(item)}}
+  function log(msg){var href=window.location.href;var reg=new RegExp('[?&]ezq=([^&#]*)','i');var string=reg.exec(href);var res=string?string[1]:null;if(res==="1")console.debug(msg);}
+  function processAll(){count++;if(count>200)return;log("let's go");processItems(hpItems);processItems(lpItems);}
+  function processItems(list){for(var i in list){if(list.hasOwnProperty(i)===false)continue;var item=list[i];if(item.isComplete===true||isBlocked(item)||item.isInitialized===true||item.isError===true){if(item.isError===true){log(item.name+': error')}else if(item.isComplete===true){log(item.name+': complete already')}else if(item.isInitialized===true){log(item.name+': initialized already')}}else{item.process();}}}
+  init();return{addFile:addFile,addDelayFile:addTimeDelayFile,addFunc:addFunc,addDelayFunc:addTimeDelayFunc,items:items,processAll:processAll,setallowLoad:setallowLoad,markLoaded:markLoaded,logWhatsBlocked:logWhatsBlocked,};})();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-0&cb=1', false, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/memphis.js', '/detroitchicago/memphis.js?gcb=195-0&cb=14', false, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/minneapolis.js', '/detroitchicago/minneapolis.js?gcb=195-0&cb=3', false, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/rochester.js', '/detroitchicago/rochester.js?gcb=195-0&cb=12', false, ['/detroitchicago/memphis.js','/detroitchicago/minneapolis.js'], true, false, true, false);__ez.vep=(function(){var pixels=[],pxURL="/detroitchicago/grapefruit.gif";function AddPixel(vID,pixelData){if(__ez.dot.isDefined(vID)&&__ez.dot.isValid(pixelData)){pixels.push({type:'video',video_impression_id:vID,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(pixelData)});}}
+  function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender"){return;}
+  if(__ez.dot.isDefined(pixels)&&pixels.length>0){while(pixels.length>0){var j=5;if(j>pixels.length){j=pixels.length;}
+  var pushPixels=pixels.splice(0,j);var pixelURL=__ez.dot.getURL(pxURL)+"?orig="+(__ez.template.isOrig===true?1:0)+"&v="+btoa(JSON.stringify(pushPixels));__ez.dot.Fire(pixelURL);}}
+  pixels=[];}
+  return{Add:AddPixel,Fire:Fire};})();
+  </script>
+<script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+  __ez.pel=(function(){var pixels=[],pxURL="/porpoiseant/army.gif";function AddAndFirePixel(adSlot,pixelData){AddPixel(adSlot,pixelData,0,0,0,0,0);Fire();}
+  function AddAndFireOrigPixel(adSlot,pixelData){AddPixel(adSlot,pixelData,0,0,0,0,0,true);Fire();}
+  function GetCurrentPixels(){return pixels;}
+  function AddPixel(adSlot,pixelData,revenue,est_revenue,bid_floor_filled,bid_floor_prev,stat_source_id,isOrig){if(!__ez.dot.isDefined(adSlot)||__ez.dot.isAnyDefined(adSlot.getSlotElementId,adSlot.ElementId)==false){return;}
+  var ad_position_id=parseInt(__ez.dot.getTargeting(adSlot,'ap'));var impId=__ez.dot.getSlotIID(adSlot),adUnit=__ez.dot.getAdUnit(adSlot,isOrig);var compId=parseInt(__ez.dot.getTargeting(adSlot,"compid"));var lineItemId=0;var creativeId=0;var ezimData=getEzimData(adSlot);if(typeof ezimData=='object'){if(ezimData.creative_id!==undefined){creativeId=ezimData.creative_id;}
+  if(ezimData.line_item_id!==undefined){lineItemId=ezimData.line_item_id;}}
+  if(__ez.dot.isDefined(impId,adUnit)&&__ez.dot.isValid(pixelData)){pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),revenue:revenue,est_revenue:est_revenue,ad_position:ad_position_id,ad_size:"",bid_floor_filled:bid_floor_filled,bid_floor_prev:bid_floor_prev,stat_source_id:stat_source_id,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:compId,line_item_id:lineItemId,creative_id:creativeId,data:__ez.dot.dataToStr(pixelData),is_orig:isOrig||__ez.template.isOrig,});}}
+  function AddPixelById(impFullId,pixelData,isOrig){var vals=impFullId.split('/');if(__ez.dot.isDefined(impFullId)&&vals.length===3&&__ez.dot.isValid(pixelData)){var adUnit=vals[0],impId=vals[2];pixels.push({type:"impression",impression_id:impId,domain_id:__ez.dot.getDID(),unit:adUnit,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(pixelData),is_orig:isOrig||__ez.template.isOrig});}}
+  function Fire(){if(typeof document.visibilityState!=='undefined'&&document.visibilityState==="prerender")return;if(__ez.dot.isDefined(pixels)&&pixels.length>0){var allPixels=[pixels.filter(function(pixel){return pixel.is_orig}),pixels.filter(function(pixel){return!pixel.is_orig})];allPixels.forEach(function(pixels){while(pixels.length>0){var isOrig=pixels[0].is_orig||false;var j=5;if(j>pixels.length){j=pixels.length;}
+  var pushPixels=pixels.splice(0,j);var pixelURL=__ez.dot.getURL(pxURL)+"?orig="+(isOrig===true?1:0)+"&sts="+btoa(JSON.stringify(pushPixels));if(typeof window.isAmp!=='undefined'&&isAmp&&typeof window._ezaq!=='undefined'&&_ezaq.hasOwnProperty("domain_id")){pixelURL+="&visit_uuid="+_ezaq['visit_uuid'];}
+  __ez.dot.Fire(pixelURL);}})}
+  pixels=[];}
+  function getEzimData(adSlot){if(typeof _ezim_d=="undefined"){return false}
+  var adUnitName=__ez.dot.getAdUnitPath(adSlot).split('/').pop();if(typeof _ezim_d==='object'&&_ezim_d.hasOwnProperty(adUnitName)){return _ezim_d[adUnitName];}
+  for(var ezimKey in _ezim_d){if(ezimKey.split('/').pop()===adUnitName){return _ezim_d[ezimKey];}}
+  return false;}
+  return{Add:AddPixel,AddAndFire:AddAndFirePixel,AddAndFireOrig:AddAndFireOrigPixel,AddById:AddPixelById,Fire:Fire,GetPixels:GetCurrentPixels,};})();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-0&cb=5', false, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-0&cb=4', false, [], true, false, true, false);
+  </script>
+<script data-cfasync="false" data-ezscrex="false">
+  (function(){if("function"===typeof window.CustomEvent)return!1;window.CustomEvent=function(c,a){a=a||{bubbles:!1,cancelable:!1,detail:null};var b=document.createEvent("CustomEvent");b.initCustomEvent(c,a.bubbles,a.cancelable,a.detail);return b}})();
+  </script>
+<script data-cfasync="false" data-ezscrex="false">
+  __ez.queue.addFile('/detroitchicago/tulsa.js', '/detroitchicago/tulsa.js?gcb=195-0&cb=5', false, [], true, false, true, false);
+  </script>
+<link href="." rel="canonical"/>
+<meta content="Hôpital d'Instruction des Armées Bégin Saint-Mandé (Île-de-France). HIA Saint-Mandé : hôpital militaire lié au Service de santé des armées (DCSSA)." name="description"/>
+<meta content="Le Guide Santé" property="og:site_name"/>
+<meta content="Etablissement" property="og:type"/>
+<meta content="https://www.le-guide-sante.org/le-guide/ile-de-france/val-de-marne/st-mande/hopital-instruction-armees-begin-hia" property="og:url"/>
+<meta content="Hôpital d'Instruction des Armées Bégin - HIA Bégin" property="og:title"/>
+<meta "le="" "pour="" "situé="" (94)="" (94163).="" (avec="" (biochimie="" (consultation="" (coro-ct).="" (digestifs,="" (et="" (insuffisance="" (irm="" (mapa),="" (militaires="" (plan="" (sauf="" (sources="" (vincennes)="" (°1793-†1859).="" (échographie="" -="" 00.="" 01="" 1="" 1,="" 1,5="" 10="" 12ᵉ="" 13="" 132="" 1853="" 1856="" 19="" 1900,="" 20="" 2002,="" 2014,="" 2015="" 2016.="" 24="" 24h="" 27="" 325,="" 360="" 43="" 431="" 48="" 50="" 500="" 6="" 65.="" 69,="" 7,="" 7.="" 7j="" 8="" 94163="" 98="" :="" ;="" ?="" @hiabegin.="" a="" a,="" a1,="" a10,="" a11="" a13="" a4="" a6,="" accepte="" accessible="" accueillent="" accès="" activité="" activités="" actualisées="" actuellement="" administrativement="" admission="" admission)="" adresse="" adressés="" adultes="" agréable.="" ailleurs,="" allant="" ambulatoire="" ambulatoire),="" ambulatoire,="" aménagé="" anesthésie-réanimation,="" anglais".="" armées="" arrondissement="" arrêt="" assurés="" au="" aussi,="" autorisation="" autoroutes="" autour="" aux="" avant="" avec="" avenue="" begin-saint-mande-94="" besoin.="" blanc="" bois="" bordé="" bus="" bâtiment="" bégin="" bégin,="" bégin.="" bégin ="" bénéficie="" bérault.="" cadre="" cancers="" canicule,="" capacité="" cardiaque="" cardiaque,="" cardiologie="" cardiologie,="" cardiologue="" cardiovasculaires="" cas="" central="" centre="" certaines="" certification="" cet="" cette="" charge="" charge,="" chaussée="" chimiothérapie,="" chirurgicales="" chirurgicaux="" chirurgie="" chirurgien="" château="" ci-dessous="" civils)="" coalition="" cofrac="" comme="" comment="" commun="" compte="" concernent="" concoure="" conseil="" consultation="" consultations="" contact="" contacter="" contacter,="" content="L'Hôpital d'Instruction des Armées Bégin de Saint-Mandé dans le département du Val-de-Marne (94), ou HIA Bégin de Saint-Mandé, est un hôpital militaire du Service de santé des armées françaises. L'HIA Bégin de Saint-Mandé fait partie de la liste des 8 hôpitaux d'instruction des armées (HIA) du Service de santé des armées françaises : HIA Clermont-Tonnerre, HIA Desgenettes, HIA Laveran, HIA Legouest, HIA Percy, HIA Robert-Picqué, HIA Sainte-Anne. Établissement rattaché à la direction des Hôpitaux (DHop) de la direction centrale du Service de santé des armées (DCSSA), l'Hôpital d'Instruction des Armées Bégin est situé 69 avenue de Paris à Saint-Mandé (94163) dans le département du Val-de-Marne en région Île-de-France. Cet hôpital militaire est situé à environ 500 mètres d'une station de transports en commun et dispose d'un parking libre proche. Cet hôpital militaire a été fondé en 1858, suite à un décret de Napoléon III (21 avril 1855) afin d'accueillir les blessés et invalides de la guerre de Crimée. Pour mémoire, la guerre de Crimée " coordonné".="" coronaire="" coronaire,="" crise.="" cœur="" d'avoir="" d'effort,="" d'hospitalisation="" d'hôpital="" d'imagerie="" d'instruction="" d'ophtalmologie="" d'un="" d'urologie,="" d'équipements="" d'établissement),="" dans="" de="" depuis="" dermatologie="" dermatologie,="" des="" destinés="" différentes="" différents="" digestive,="" directement="" direction="" dispensant="" disponible="" disponibles="" dispose="" diététique,="" dont="" droit="" droite="" du="" décembre="" découvrez="" défense,="" défense-château="" délais. "="" démarches="" développe="" d’expertise,="" d’hospitalisation".="" d’ivry="" d’urgences="" ecg, holter="" effectuer="" effet,="" empruntant="" en="" endocrinologie,="" endoscopie="" entouré="" entre="" environ="" est="" et="" etc.),="" exactement,="" explorations="" externes="" faire="" fait="" forces="" formée="" france).="" france,="" garer="" gouvernementaux="" grille="" grimper="" grippales,="" gynécologie-obstétrique,="" gynécologiques,="" générale="" géographique="" has).="" hectare="" hia="" holter="" hommage="" hopitaux-militaires="" hospitalier="" hospitalier.="" hospitalisation="" hta....).="" http:="" https:="" huit="" hépato-gastro-entérologie,="" hôpital="" hôpitaux="" il="" ils="" imagerie="" infectieuses="" infirmiers="" informations="" intensifs="" interne,="" invasives="" irm="" jacques="" jardin="" jour="" juin="" jusqu'à="" km="" l'accréditation="" l'activité="" l'actualité="" l'arrêt="" l'autoroute="" l'empire="" l'enceinte="" l'ensemble="" l'hia="" l'hospitalisation="" l'hôpital="" l'information="" l'offre="" l'Étang.="" l'établissement="" la="" laboratoire="" lac="" le="" les="" leur="" le bureau="" libre="" lien="" ligne="" limite="" lits="" lits)="" lits,="" loin="" louis="" lourds="" l’accès="" l’activité="" l’avenue="" l’entrée="" l’hia="" l’hôpital="" mairie="" mais="" maladie="" maladies="" marne-la-vallée,="" mars="" maxillo-faciale="" maxillo-faciale,="" meilleurs="" militaire="" ministère="" mobilité="" modernisé="" moyens="" mètres="" médecin="" médecine="" médicale="" médicale,="" médicales="" médicaux="" métaboliques,="" métro="" même="" n'est="" nature="" naturel,="" navette="" ne="" niveau="" nom="" nombre="" non="" nord="" nécessaires="" obstétrique="" odontologie,="" officiel="" oncologie,="" ophta-begin.wixsite.com="" ophtalmologie="" ophtalmologie,="" opposa="" organise="" orl="" orthophonie,="" orthopédique,="" othopédie,="" ottoman,="" ou="" ouvert="" ouverts="" palliatifs.="" pandémies="" par="" parc="" parcours="" paris="" paris,="" paris.="" parking="" parmi="" participe="" particulier="" partie="" partielle),="" partir="" pas="" pathologies="" patients,="" permet="" permettent="" personnes="" peuvent="" physique="" places="" plans="" plateau="" plateformes="" plaçant="" plus="" plus,="" plusieurs="" podologie,="" porte="" possible="" possibles="" postale="" pour="" pouvant="" prend="" prendre="" prennent="" principales="" priorité="" prise="" prises="" proche="" profondément="" property="og:description" propose="" psychiatrie="" psychiatrie,="" public="" publique="" pédiatrie,="" pédiatriques.="" périphérique="" qualité="" que="" quel="" qui="" rapport="" rend="" rendez-vous="" rendez-vous.="" rendre="" rer="" restructuré="" rhumatologie,="" route="" royaume="" royaume-uni="" russe="" rythme,="" rythmologie="" réadaptation,="" réanimation="" réduite,="" s'informer,="" saint-mandé="" saint-mandé,="" saint-mandé.="" sans="" sante="" sante-publique="" sardaigne".="" scanner="" scanner.="" se="" secours="" secteur="" sein,="" selon="" septembre="" service="" services="" site="" situation="" situé="" sociaux="" sociaux.="" soins="" soins,="" soins.="" soit="" solutions="" son="" sont="" soumises="" soutient="" spécialisés.="" spécialité="" spécialités="" spécifiques="" stationnement="" stomatologie,="" style="" sud="" suite="" sur="" surface="" sécurité,="" sérologie="" tabacologie,="" technique="" technique.="" tensionnel="" thromboembolique,="" total="" totale="" tous="" tout="" toute="" toutes="" traitant="" transports="" traumatologie,="" tropicales,="" troubles="" très="" twitter="" types="" télécopie="" téléphone="" téléphonique="" un="" une="" unité="" urgences="" urgences),="" urgences,="" urologie="" urologique="" urologiques),="" vaccinations,="" vasculaire,="" vasculaire,…)="" venir="" vers="" via="" vincennes="" vincennes,="" vincennes.="" virologie).="" viscérale="" votre="" vous-souhaitez-consulter="" voyages="" voyageurs,="" véhicule="" vénérologie.="" www.defense.gouv.fr="" www.urc-begin.fr="" www.urologie-begin.fr=""  ="" ©="" à="" écho-doppler="" également="" épreuve="" étang="" été="" –="" •="" □="" □ =""/>
+<meta content="48.845498" property="place:location:latitude"/>
+<meta content="2.42693" property="place:location:longitude"/>
+<meta content="contact@le-guide-sante.org" property="og:email"/>
+<meta content="https://www.le-guide-sante.org/user/0" property="article:author"/>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="." rel="revision"/>
+<script defer="" src="../../../../../sites/default/files/google_tag/default/google_tag.script@r3bkrv.js"></script>
+<title>Hôpital d'Instruction des Armées Bégin - HIA Saint-Mandé | Le Guide Santé</title>
+<link href="../../../../../sites/default/files/css/css_o2aqwWTLaFPCWcx81kLUUOrRwdH8bdR7-c5WjTl61EY.css" media="all" rel="stylesheet"/>
+<link href="../../../../../sites/default/files/css/css_2eGMPurPoHsZAsCLYFmXgHJF5m2JwWIVGNEyZyGdFaA.css" media="all" rel="stylesheet"/>
+<link href="../../../../../sites/default/files/css/css_hUaj3Sck8PiWV031VtGM5vwmFiWZ93BLkGZHpqX1i2M.css" media="print" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" rel="preload"/>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+<noscript>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" rel="stylesheet"/>
+</noscript>
+<link href="../../../../../themes/custom/starter/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link color="#e32327" href="../../../../../themes/custom/starter/safari-pinned-tab.svg" rel="mask-icon" type="image/svg+xml"/>
+<link href="../../../../../themes/custom/starter/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../../../../../themes/custom/starter/site.webmanifest" rel="manifest"/>
+<script type="text/javascript">
+  var ezouid = "1";
+  </script>
+<base href="https://www.le-guide-sante.org/le-guide/ile-de-france/val-de-marne/st-mande/hopital-instruction-armees-begin-hia"/>
+<script type="text/javascript">
+  var ezoTemplate = 'old_site_noads';
+  if(typeof ezouid == 'undefined')
+  {
+    var ezouid = 'none';
+  }
+  var ezoFormfactor = '1';
+  var ezo_elements_to_check = Array();
+  </script>
+<script data-ezscrex="false" type="text/javascript">
+  var soc_app_id = '0';
+  var did = 311059;
+  var ezdomain = 'www.le-guide-sante.org';
+  var ezoicSearchable = 1;
+  </script>
+<script data-cfasync="false" data-ezscrex="false" type="text/javascript">
+  var _ezaq = {"ad_cache_level":0,"ad_lazyload_version":0,"ad_load_version":0,"city":"Ashburn","country":"US","days_since_last_visit":-1,"domain_id":311059,"engaged_time_visit":0,"ezcache_level":1,"ezcache_skip_code":3,"form_factor_id":1,"framework_id":1,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"metro_code":511,"page_ad_positions":"","page_view_count":0,"page_view_id":"b3990e87-902f-4074-51e0-b409da75ebe2","position_selection_id":0,"postal_code":"20149","pv_event_count":0,"response_size_orig":55537,"response_time_orig":549,"serverid":"3.81.203.181:25129","state":"VA","t_epoch":1638626085,"template_id":120,"time_on_site_visit":0,"url":"https://www.le-guide-sante.org/le-guide/ile-de-france/val-de-marne/st-mande/hopital-instruction-armees-begin-hia","user_id":0,"word_count":1672,"worst_bad_word_level":0};var _ezExtraQueries = "&ez_orig=1";
+  </script>
+<script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+  function create_ezolpl(pvID, rv) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    __ez.ck.setByCat("ezux_lpl_311059=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
+  }
+  function attach_ezolpl(pvID, rv) {
+    if (document.readyState === "complete") {
+        create_ezolpl(pvID, rv);
+    }
+    if(window.attachEvent) {
+        window.attachEvent("onload", create_ezolpl, pvID, rv);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl(pvID, rv);
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl.bind(null, pvID, rv);
+        }
+    }
+  }
+
+  __ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["b3990e87-902f-4074-51e0-b409da75ebe2", "false"], false, ['/detroitchicago/boise.js'], true, false, false, false);
+  </script>
+</head>
+<body class="path-node page-node-type-institution">
+<noscript aria-hidden="true"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WPC22MS" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div class="site-wrapper">
+<header class="header js-fixed-header">
+<div class="header__container">
+<div class="header__inner">
+<div class="header__logo">
+<div class="block block-system block-system-branding-block" id="block-starter-branding">
+<a class="site-logo" href="../../../../../index.html" rel="home"><img alt="Le Guide Santé" class="logo" height="49" src="../../../../../themes/custom/starter/dist/img/logo.svg" width="276"/> <img alt="Le Guide Santé" class="logo-white" height="49" src="../../../../../themes/custom/starter/dist/img/logo-white.svg" width="276"/></a>
+</div>
+</div>
+<div class="header__main">
+<div class="region region-navigation js-menu">
+<nav aria-labelledby="block-starter-main-menu-menu" class="block block-menu navigation menu--main" id="block-starter-main-menu" role="navigation">
+<span class="visually-hidden" id="block-starter-main-menu-menu">Navigation principale</span>
+<ul class="menu" data-region="navigation">
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide" href="../../../../index.html">Le Guide : hôpitaux et cliniques</a>
+</li>
+<li class="menu-item has-mega-menu">
+<a href="#">Actualités Santé, Bien-être</a>
+<div class="mega-menu">
+<div class="mega-menu__col">
+<p class="mega-menu__col-title">Thématiques</p>
+<ul class="menu">
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1" href="../../../../../actualites/cancer/index.html">Cancer</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/2" href="../../../../../actualites/nutrition/index.html">Nutrition</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1083" href="../../../../../actualites/chirurgie/index.html">Chirurgie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1084" href="../../../../../actualites/forme-et-bien-etre/index.html">Forme et bien-être</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1085" href="../../../../../actualites/geriatrie/index.html">Gériatrie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1086" href="../../../../../actualites/hopitaux/index.html">Hôpitaux</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1087" href="../../../../../actualites/medecine/index.html">Médecine</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1088" href="../../../../../actualites/medicaments/index.html">Médicaments</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1089" href="../../../../../actualites/obstetrique/index.html">Obstétrique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../../../../../actualites/sante-publique/index.html">Santé publique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../../../../../actualites/tendances/index.html">Tendances</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<button class="button header__responsive-btn js-menu-toggle"><span>Menu</span></button>
+</div>
+</div>
+</header>
+<main class="main">
+<div class="region region-header">
+<div class="block block-system block-system-breadcrumb-block" id="block-starter-breadcrumbs">
+<div class="breadcrumb">
+<div class="breadcrumb__container">
+<span class="visually-hidden" id="system-breadcrumb">Fil d'Ariane</span>
+<ol class="breadcrumb__items" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="../../../../../index.html" itemprop="item"><span itemprop="name">Accueil</span></a>
+<meta content="1" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="../../../../index.html" itemprop="item"><span itemprop="name">Le Guide : hôpitaux et cliniques</span></a>
+<meta content="2" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="../../../index.html" itemprop="item"><span itemprop="name">Île-de-France</span></a>
+<meta content="3" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="../../index.html" itemprop="item"><span itemprop="name">Val-de-Marne</span></a>
+<meta content="4" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<span itemprop="name">Hôpital d'Instruction des Armées Bégin - HIA Bégin</span>
+<meta content="5" itemprop="position"/>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="hidden" data-drupal-messages-fallback=""></div>
+<div class="block block-choosit-lgs block-header-subtitle" id="block-entetesoustitre"></div>
+</div>
+<div class="main-content">
+<div class="region region-content">
+<div class="block block-system block-system-main-block" id="block-starter-content">
+<article class="node node--type-institution node--view-mode-full" role="article">
+<div class="node__header">
+<div class="node__heading">
+<h1 class="node__title"><span>Hôpital d'Instruction des Armées Bégin - HIA Bégin</span></h1>
+<div class="node__metas">
+<ul class="institution-id">
+<li class="institution-id__address">
+<div class="field field--name-address field--type-string field--label-hidden field__item">
+                          69 avenue de Paris
+                        </div>
+<div class="field field--name-ref-location field--type-entity-reference field--label-hidden field__item">
+<div class="taxonomy-term vocabulary-location" id="taxonomy-term-953">
+<div class="field field--name-zipcode field--type-string field--label-hidden field__item">
+                              94163
+                            </div>
+<div class="field field--name-name field--type-string field--label-hidden field__item">
+                              Saint-Mandé
+                            </div>
+</div>
+</div>
+</li>
+<li class="institution-id__plan">
+<a href="https://maps.google.com/?q=48.845498,2.42693" target="_blank">Itinéraire</a>
+</li>
+<li class="institution-id__website">
+<div class="field field--name-website field--type-link field--label-hidden field__item">
+<a href="https://www.defense.gouv.fr/sante/sante-publique/hopitaux-militaires/begin-saint-mande-94" rel="nofollow" target="_blank">https://www.defense.gouv.fr/sante/sante-publique/hopitaux-militaires/begin-sain…</a>
+</div>
+</li>
+<li class="institution-id__network">Membre d'un réseau régional de Cancérologie :
+                        <div class="field field--name-ref-rcn field--type-entity-reference field--label-hidden field__item">
+                          ONCORIF
+                        </div>
+</li>
+</ul>
+<div class="field field--name-phone field--type-string field--label-hidden field__item"></div>
+</div>
+</div>
+<div class="node__header-chart">
+<div class="chart">
+<div class="chart__pie">
+<div class="success field field--name-satisfaction-rate field--type-integer field--label-hidden field__item">
+                        77%
+                      </div>
+<svg class="chart__progress" height="132" style="--progress-value: 83.81775" viewbox="0 0 132 132" width="132" xmlns="http://www.w3.org/2000/svg">
+<circle class="chart__progress--circle" cx="66" cy="66" fill="transparent" r="58" stroke="#CDD5E1" stroke-width="16"></circle>
+<circle class="chart__progress--current" cx="66" cy="66" fill="transparent" r="58" stroke="#1556B0" stroke-linecap="round" stroke-width="16"></circle></svg>
+</div>
+<div class="chart__body">
+<span class="chart__title">Satisfaction</span>
+<p class="chart__desc">Mesure de la satisfaction des patients hospitalisés (enquête e-Satis)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="node__content">
+<div class="node__content-grid">
+<div class="node__body">
+<div class="widget">
+<h2 class="widget__title">Chiffres-clés</h2>
+<div class="widget__content">
+<div class="charts">
+<div class="chart">
+<div class="chart__pie">
+<div class="success field field--name-certification field--type-list-string field--label-hidden field__item">
+                                A
+                              </div>
+<svg class="chart__progress" height="132" style="--progress-value: 0" viewbox="0 0 132 132" width="132" xmlns="http://www.w3.org/2000/svg">
+<circle class="chart__progress--circle" cx="66" cy="66" fill="transparent" r="58" stroke="#CDD5E1" stroke-width="16"></circle>
+<circle class="chart__progress--current" cx="66" cy="66" fill="transparent" r="58" stroke="#1556B0" stroke-linecap="round" stroke-width="16"></circle></svg>
+</div>
+<div class="chart__body">
+<h3 class="chart__title">Certification</h3>
+<p class="chart__desc">Évaluation externe de la qualité et de la sécurité des soins</p>
+</div>
+</div>
+<div class="chart">
+<div class="chart__pie">
+<div class="success field field--name-rcp-rate field--type-integer field--label-hidden field__item">
+                                92%
+                              </div>
+<svg class="chart__progress" height="132" style="--progress-value: 29.154" viewbox="0 0 132 132" width="132" xmlns="http://www.w3.org/2000/svg">
+<circle class="chart__progress--circle" cx="66" cy="66" fill="transparent" r="58" stroke="#CDD5E1" stroke-width="16"></circle>
+<circle class="chart__progress--current" cx="66" cy="66" fill="transparent" r="58" stroke="#1556B0" stroke-linecap="round" stroke-width="16"></circle></svg>
+</div>
+<div class="chart__body">
+<h3 class="chart__title">RCP</h3>
+<p class="chart__desc">Proportion de nouveaux patients atteints de cancer ayant bénéficié d'un avis émis en réunion de concertation pluridisciplinaire</p>
+</div>
+</div>
+<div class="chart">
+<div class="chart__pie">
+<div class="success field field--name-recommandation-rate field--type-integer field--label-hidden field__item">
+                                71%
+                              </div>
+<svg class="chart__progress" height="132" style="--progress-value: 105.68325" viewbox="0 0 132 132" width="132" xmlns="http://www.w3.org/2000/svg">
+<circle class="chart__progress--circle" cx="66" cy="66" fill="transparent" r="58" stroke="#CDD5E1" stroke-width="16"></circle>
+<circle class="chart__progress--current" cx="66" cy="66" fill="transparent" r="58" stroke="#1556B0" stroke-linecap="round" stroke-width="16"></circle></svg>
+</div>
+<div class="chart__body">
+<h3 class="chart__title">Taux de recommandation</h3>
+<p class="chart__desc">% de patients hospitalisés qui recommanderaient l’établissement à leurs proches</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="widget widget--prez">
+<h2 class="widget__title">Présentation</h2>
+<div class="widget__content">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<p><strong>L'Hôpital d'Instruction des Armées Bégin de Saint-Mandé dans le département du <a href="../../index.html" title="Hôpitaux et cliniques: Val-de-Marne (94)">Val-de-Marne</a> (94), ou HIA Bégin de Saint-Mandé, est un hôpital militaire du Service de santé des armées françaises.</strong> <strong>L'HIA Bégin de Saint-Mandé fait partie de la liste des 8 hôpitaux d'instruction des armées (HIA) du Service de santé des armées françaises : <a href="../../../../bretagne/finistere/brest/hopital-instruction-armees-clermont-tonnerre-hia-clermont-tonnerre/index.html" title="HIA Clermont-Tonnerre">HIA Clermont-Tonnerre</a>, HIA Desgenettes, HIA Laveran, HIA Legouest, <a href="../../../hauts-de-seine/clamart/hopital-instruction-armees-percy-hia/index.html" title="Hôpital d'Instruction des Armées Percy - HIA Percy">HIA Percy</a>, HIA Robert-Picqué, <a href="../../../../provence-alpes-cote-dazur/var/toulon/hopital-instruction-armees-sainte-anne-hia/index.html" title="Hôpital d'Instruction des Armées Sainte-Anne - HIA Sainte-Anne">HIA Sainte-Anne</a>.</strong></p>
+<p>Établissement rattaché à la direction des Hôpitaux (DHop) de la direction centrale du <a href="https://www.defense.gouv.fr/sante" target="_blank" title="SSA - Ministère des Armées">Service de santé des armées</a> (DCSSA), l'<strong>Hôpital d'Instruction des Armées Bégin</strong> est situé <a href="https://goo.gl/maps/LJQ7wKbpzZtqjs5y5" target="_blank" title="Itinéraire HIA Saint-Mandé (France)">69 avenue de Paris à Saint-Mandé</a> (94163) dans le département du Val-de-Marne en région Île-de-France. Cet hôpital militaire est situé à environ 500 mètres d'une station de transports en commun et dispose d'un parking libre proche.</p>
+<p>Cet hôpital militaire a été fondé en 1858, suite à un décret de Napoléon III (21 avril 1855) afin d'accueillir les blessés et invalides de la guerre de Crimée. Pour mémoire, la <a href="https://fr.wikipedia.org/wiki/Guerre_de_Crim%C3%A9e" target="_blank" title="Guerre de Crimée">guerre de Crimée</a> "<em>opposa de 1853 à 1856 l'Empire russe à une coalition formée de l'Empire ottoman, de la France, du Royaume-Uni et du royaume de Sardaigne</em>". L'HIA de Saint-Mandé prend le nom d'hôpital militaire Bégin à partir de 1900, et rend hommage au chirurgien militaire Louis Jacques Bégin (°1793-†1859).</p>
+<p> </p>
+<figure class="caption caption-img align-center" role="group">
+<figcaption>
+                              © Hôpital d'Instruction des Armées Bégin - HIA Bégin
+                            </figcaption>
+</figure>
+<h3>Hôpital d'Instruction des Armées Bégin : droit des patients, sécurité, qualité des soins</h3>
+<p><strong>L'Hôpital d'Instruction des Armées Bégin de Saint-Mandé soutient en priorité les forces armées en leur dispensant des soins médicaux et chirurgicaux spécialisés. De plus, l'HIA Bégin, qui dispose de moyens d’expertise, participe également au service public hospitalier.</strong></p>
+<p>En effet, l'<strong>Hôpital d'Instruction des Armées Bégin</strong> est ouvert à tous les assurés sociaux (plan blanc d'établissement), et concoure aux plans gouvernementaux de secours (plan canicule, pandémies grippales, etc.), en plaçant les soins infirmiers au cœur de la qualité des soins.</p>
+<p>"<em>Le parc hospitalier militaire participe à l'offre publique de soins : les huit hôpitaux d'instruction des armées sont ouverts à tous les assurés sociaux. Ils accueillent tous les patients, même sans lien avec le ministère de la Défense, adressés par leur médecin traitant dans le cadre du parcours de soins coordonné</em>".</p>
+<p>Profondément modernisé et restructuré à partir de 2002, l'Hôpital d'Instruction des Armées Bégin de Saint-Mandé permet actuellement une capacité d'un nombre totale de 360 lits, dont 20 lits destinés à l'hospitalisation ambulatoire - ou hôpital de jour - et une capacité pouvant grimper à nombre total de 431 lits en cas de crise.</p>
+<p> </p>
+<figure class="caption caption-img align-center" role="group">
+<figcaption>
+                              © Hôpital d'Instruction des Armées Bégin - HIA Bégin
+                            </figcaption>
+</figure>
+<h3>Activités et spécialités principales de l'établissement</h3>
+<p><strong>Les services et spécialités médicales et chirurgicales de l'Hôpital d'Instruction des Armées Bégin concernent en particulier</strong> : Ambulatoire, Anesthésie-Réanimation, Cardiologie, Chirurgie maxillo-faciale, Chirurgie orthopédique, Chirurgie viscérale et vasculaire, Consultation diététique, Dermatologie, Endocrinologie, Endoscopie digestive, Hépato-gastro-entérologie, Imagerie médicale, Maladies infectieuses et tropicales, Maladies métaboliques, Médecine des voyages – conseil aux voyageurs, Médecine interne, Médecine physique et de réadaptation, Oncologie, Odontologie, Ophtalmologie, ORL - Orthophonie, Pédiatrie, Podologie, Psychiatrie, Rhumatologie, Stomatologie, Tabacologie, Traumatologie, Urgences, Vaccinations, Vénérologie.</p>
+<p>Suite à l'arrêt de l’activité Obstétrique depuis juin 2015 et de la Chirurgie maxillo-faciale depuis décembre 2014, l'hôpital d'instruction des armées Bégin propose une activité de Chirurgie urologique depuis juin 2015 et d'Ophtalmologie depuis mars 2016. Aussi, l'HIA Bégin, a depuis septembre 2015 l'accréditation laboratoire COFRAC (Biochimie/sérologie/virologie).</p>
+<p>Les activités soumises à autorisation de l'HIA Bégin permettent la prise en charge de différents <a href="../../../../../actualites/cancer/index.html" title="Actualités Cancers">cancers</a> (digestifs, du sein, gynécologiques, urologiques), la Chimiothérapie, la Réanimation et les Soins palliatifs.</p>
+<p>Parmi les types de prise en charge, l'HIA Bégin dispose d'un nombre total de 48 lits d'hospitalisation en Chirurgie (et 10 places de chirurgie ambulatoire), de 27 lits en Gynécologie-Obstétrique, 132 en Médecine (et 13 places d'hospitalisation partielle), et d'un nombre total de 8 lits en Psychiatrie générale (sources : rapport de certification HAS).</p>
+<p>Le plateau technique l'Hôpital d'Instruction des Armées Bégin bénéficie d'équipements lourds d'imagerie médicale dont un IRM<br/>
+                          et un Scanner.</p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/ioYpv-V51XQ" title="YouTube video player" width="560"></iframe></p>
+<h2>Informations sur l'Hôpital d'Instruction des Armées Bégin (94)</h2>
+<p>Découvrez ci-dessous les informations actualisées et nécessaires pour s'informer, contacter, venir en consultation et se rendre à l'HIA Bégin de Saint-Mandé quel que soit votre besoin.</p>
+<h3>Comment venir à l'HIA Bégin de Saint-Mandé ?</h3>
+<p><strong>Pour se rendre à l'Hôpital d'Instruction des Armées Bégin de <a href="https://www.saintmande.fr/" target="_blank" title="Site officiel de la ville de Saint-Mandé (94)">Saint-Mandé</a>, plusieurs solutions sont possibles :</strong></p>
+<p><strong>□ en transports en commun ;</strong></p>
+<p>• métro : ligne 1, Défense-Château de Vincennes, arrêt Bérault.<br/>
+                          • RER : ligne A, direction Marne-la-Vallée, arrêt Vincennes.<br/>
+                          • bus : ligne 325, Mairie d’Ivry - Château de Vincennes, arrêt Bérault.</p>
+<p><strong>□ par la route ;</strong></p>
+<p>• en empruntant les autoroutes A1, A6, A10, A11 : prendre le périphérique Est jusqu'à la porte de Vincennes, prendre la direction Saint-Mandé – Vincennes, avenue de Paris. L'hôpital est à environ 1 km sur la droite de l’avenue de Paris en allant vers le Château de Vincennes.</p>
+<p>• par l'autoroute A4 : prendre le périphérique Nord jusqu'à la porte de Vincennes.<br/>
+                          • par l'autoroute A13 : prendre le périphérique Sud jusqu'à la porte de Vincennes.</p>
+<p> </p>
+<figure class="caption caption-img align-center" role="group">
+<figcaption>
+                              © HIA Bégin
+                            </figcaption>
+</figure>
+<h4>Hôpital Bégin : parking et stationnement</h4>
+<p>Il n'est pas possible de garer un véhicule dans l'enceinte de l'établissement (sauf pour les urgences), mais un parking libre est accessible à environ 500 mètres de l'HIA Bégin.</p>
+<p>Par ailleurs, "<em>pour les personnes à mobilité réduite, une navette est disponible entre l’entrée la grille de l’hôpital et l’entrée du bâtiment de consultation ou d’hospitalisation</em>".</p>
+<h5>Un lac proche de l'Hôpital (Vincennes)</h5>
+<p>L'HIA Bégin est situé non loin du Lac de Saint-Mandé. Cette situation géographique permet d'avoir un accès à la nature et rend le cadre très agréable. Plus exactement, étang naturel, le <a href="https://fr.wikipedia.org/wiki/Lac_de_Saint-Mand%C3%A9" target="_blank" title="Lac de Saint-Mandé">Lac de Saint-Mandé</a> a été aménagé sur une surface de 1,5 hectare "<em>situé dans le bois de Vincennes à la limite de Saint-Mandé et bordé par la chaussée de l'Étang. Il fait partie administrativement du 12ᵉ arrondissement de Paris, comme l'ensemble du bois de Vincennes. Il est entouré d'un jardin de style anglais</em>".</p>
+<h3>Comment contacter l'Hôpital d'Instruction des Armées Bégin ?</h3>
+<p>L'Hôpital d'instruction des armées Bégin est situé au 69, avenue de Paris, à Saint-Mandé.</p>
+<p>□  Adresse postale : HIA Bégin  69, avenue de Paris 94163 Saint-Mandé, France).<br/>
+                          □  Contacter l'HIA Bégin par téléphone : 01 43 98 50 00.<br/>
+                          □  Contacter l'HIA Bégin par télécopie : 01 43 98 27 65.<br/>
+                          □  Compte officiel <a href="https://twitter.com/hiabegin?lang=fr" target="_blank" title="Hôpital BEGIN @HiaBegin">Twitter de l'HIA Bégin : @HiaBegin</a>.</p>
+<h4>Les consultations externes à l'Hôpital Saint-Mandé</h4>
+<p>Pour prendre rendez-vous à l'Hôpital d'instruction des armées Bégin, le Bureau central des rendez-vous est situé au au 69, avenue de Paris, à Saint-Mandé (94163). Le contact téléphonique est : 01 43 98 50 00.</p>
+<p>Toute l'information sur l'actualité de cet hôpital militaire et les démarches spécifiques sont disponibles sur le site officiel de l'HIA Bégin : <a href="https://www.defense.gouv.fr/sante/sante-publique/hopitaux-militaires/begin-saint-mande-94/vous-souhaitez-consulter" target="_blank" title="Consultation HIA Bégin (94)">https://www.defense.gouv.fr/sante/sante-publique/hopitaux-militaires/begin-saint-mande-94/vous-souhaitez-consulter</a></p>
+<h4>Hôpital Bégin : Ophtalmologie, Othopédie, Dermatologie</h4>
+<p>Certaines démarches à effectuer avant de venir à cet hôpital de Saint-Mandé (consultation et admission) peuvent se faire directement en ligne via différentes plateformes selon les spécialités : Urologie <a href="http://www.urologie-begin.fr/hospitalisation/admission/" target="_blank" title="admission@hia-begin.fr">http://www.urologie-begin.fr/hospitalisation/admission/</a> ; Dermatologie <a href="https://www.urc-begin.fr/dermatologie" target="_blank" title="Unité de Recherche Clinique (URC) de l'hôpital Bégin">https://www.urc-begin.fr/dermatologie</a> ; Ophtalmologie <a href="https://ophta-begin.wixsite.com/ophtalmologie/rendez-vous" target="_blank" title="Chirurgie ophtalmologique ">https://ophta-begin.wixsite.com/ophtalmologie/rendez-vous</a>.</p>
+<h4>Hôpital Bégin : consultations cardiologue</h4>
+<p>Tout en plaçant la qualité des soins infirmiers au cœur de la qualité des soins, l'HIA Bégin organise son <a href="https://www.urc-begin.fr/cardiologie" target="_blank" title="Consultations cardiologue HIA Bégin">service de cardiologie</a> autour de : 1 secteur d'hospitalisation (avec un nombre total de 19 lits) ; 1 unité de soins intensifs (avec un nombre total de 6 lits) ; 1 plateau technique.</p>
+<p>L'Hôpital Bégin prend en charge en consultation et en hospitalisation les différentes pathologies cardiovasculaires (insuffisance cardiaque, maladie coronaire, maladie thromboembolique, troubles du rythme, HTA....). Centre de rythmologie de niveau 1, cet hôpital militaire dispose de l'ensemble des explorations cardiovasculaires non invasives (échographie cardiaque, Holter ECG, Holter tensionnel (MAPA), épreuve d'effort, écho-doppler vasculaire,…) et développe une activité d'imagerie cardiaque (IRM cardiaque, Scanner coronaire (coro-CT).</p>
+<h4>Hôpital Bégin : les Urgences</h4>
+<p><strong>L’accès au Service des Urgences de l’hôpital militaire Bégin de Saint-Mandé est accessible 24h/24 et 7j/7.</strong></p>
+<p>Les <strong>Urgences de l’HIA Bégin</strong> prennent en charge tous les adultes (militaires et civils) 24h/24 et 7J/7, mais <u>ne propose pas d’urgences pédiatriques</u>.</p>
+<p>De plus, pour l'activité et la spécialité d'urologie, l’HIA Bégin accepte toutes les urgences et prises en charge dans les meilleurs délais. </p>
+</div>
+<a class="button button--underline js-expand-toggle" data-toggle-text="Voir moins">Voir plus</a>
+</div>
+</div>
+<div class="widget widget--autorization">
+<h3 class="widget__title">Activités soumises à autorisation</h3>
+<div class="widget__content">
+<ul class="field field--name-ref-restricted-activities field--type-entity-reference field--label-hidden field__items">
+<li class="field__item">Cancers digestifs</li>
+<li class="field__item">Cancers du sein</li>
+<li class="field__item">Cancers gynécologiques</li>
+<li class="field__item">Cancers urologiques</li>
+<li class="field__item">Chimiothérapie</li>
+<li class="field__item">Réanimation</li>
+<li class="field__item">Soins palliatifs</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="node__sidebar">
+<div class="widget widget--equipments">
+<h3 class="widget__title">Équipements lourds d'imagerie médicale</h3>
+<div class="widget__content">
+<div class="field field--name-ref-heavy-equipments field--type-entity-reference field--label-hidden field__items">
+<div class="irm field__item">
+                            IRM
+                          </div>
+<div class="scanner field__item">
+                            Scanner
+                          </div>
+</div>
+</div>
+</div>
+<div class="widget widget--interests">
+<h3 class="widget__title">À savoir</h3>
+<div class="widget__content">
+<div class="field field--name-ref-attributes field--type-entity-reference field--label-hidden field__items">
+<div class="mtrooubus500m field__item">
+                            Métro ou Bus &lt; 500m
+                          </div>
+<div class="parkinglibre field__item">
+                            Parking Libre
+                          </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="block block-choosit-lgs block-most-read-articles" id="block-articleslespluslus">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="block__heading">
+<h2 class="block__title">Articles les plus lus</h2>
+</div>
+<div class="block__body">
+<ul>
+<li>
+<a href="../../../../../actualites/sante-publique/arreter-de-fumer-prevention-sante/index.html"><span>1</span>
+<h3>Arrêter de fumer pour préserver sa santé !</h3></a>
+</li>
+<li>
+<a href="../../../../../actualites/medecine/tracheite-symptomes-traitement/index.html"><span>2</span>
+<h3>Trachéite : symptômes et traitement</h3></a>
+</li>
+<li>
+<a href="../../../../../actualites/forme-et-bien-etre/stress-definition-causes-symptomes-comment-gerer/index.html"><span>3</span>
+<h3>Le stress : définition, causes, symptômes et comment le gérer</h3></a>
+</li>
+<li>
+<a href="../../../../../actualites/medecine/plaquettes-sanguines-basses-causes-traitements/index.html"><span>4</span>
+<h3>Plaquettes sanguines basses : causes et traitements</h3></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<section class="prefooter">
+<div class="prefooter__container">
+<div class="region region-prefooter">
+<div class="block block-choosit-lgs block-newsletter-social-links" id="block-newsletteretreseauxsociaux">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="newsletter">
+<p class="block__title">Pour être informé des actualités du Guide Santé</p>
+<a class="button button--ghost" href="../../../../../form/newsletter/index.html">Je m'abonne à la newsletter</a>
+</div>
+<div class="social-links">
+<p class="block__title">Nous suivre</p>
+<ul class="social">
+<li>
+<a aria-label="Twitter" href="https://x.com/docleguidesante" rel="noopener" target="_blank"><svg class="icon icon-twitter">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-twitter"></use></svg></a>
+</li>
+<li>
+<a aria-label="Twitter" href="https://x.com/docleguidesante" rel="noopener" target="_blank"><svg class="icon icon-twitter">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-twitter"></use></svg></a>
+</li>
+<li>
+<a aria-label="Facebook" href="https://www.facebook.com/leguidesante.org/" rel="noopener" target="_blank"><svg class="icon icon-facebook">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-facebook"></use></svg></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="footernav">
+<div class="footernav__container">
+<div class="region region-footernav">
+<nav aria-labelledby="block-leguidehopitauxetcliniques-menu" class="block block-menu navigation menu--guide-footer" id="block-leguidehopitauxetcliniques" role="navigation">
+<span id="block-leguidehopitauxetcliniques-menu">Le Guide : hôpitaux et cliniques</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide" href="../../../../index.html">Rechercher un établissement</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions" href="../../../../par-regions/index.html">Par régions</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions/par-departements" href="../../../../par-regions/par-departements/index.html">Par départements</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions/par-departements/par-villes" href="../../../../par-regions/par-departements/par-villes/index.html">Par villes</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1064" href="../../../paris/index.html">Hôpital Paris</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1014" href="../../../../auvergne-rhone-alpes/rhone/lyon/index.html">Hôpital Lyon</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1030" href="../../../../provence-alpes-cote-dazur/bouches-du-rhone/marseille/index.html">Hôpital Marseille</a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="block-actualitessantebienetre-menu" class="block block-menu navigation menu--news-footer" id="block-actualitessantebienetre" role="navigation">
+<span id="block-actualitessantebienetre-menu">Actualités Santé, Bien-être</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1" href="../../../../../actualites/cancer/index.html">Cancer</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1083" href="../../../../../actualites/chirurgie/index.html">Chirurgie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1084" href="../../../../../actualites/forme-et-bien-etre/index.html">Forme et bien-être</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1085" href="../../../../../actualites/geriatrie/index.html">Gériatrie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1086" href="../../../../../actualites/hopitaux/index.html">Hôpitaux</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1087" href="../../../../../actualites/medecine/index.html">Médecine</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1088" href="../../../../../actualites/medicaments/index.html">Médicaments</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1089" href="../../../../../actualites/obstetrique/index.html">Obstétrique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../../../../../actualites/sante-publique/index.html">Santé publique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/2" href="../../../../../actualites/nutrition/index.html">Nutrition</a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="block-apropos-menu" class="block block-menu navigation menu--about" id="block-apropos" role="navigation">
+<span id="block-apropos-menu">A propos</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1431" href="../../../../../qui-sommes-nous/index.html">Qui sommes nous ?</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1386" href="../../../../../comite-de-redaction-du-guide-sante/index.html">Comité de rédaction</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1387" href="../../../../../comite-scientifique-et-experts-medicaux-ou-scientifiques/index.html">Comité scientifiques et experts</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1433" href="../../../../../contact-presse/index.html">Contact Presse</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1576" href="../../../../../glossaire/index.html">Glossaire</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="webform/signalement_d_une_erreur" href="../../../../../form/signalement-d-une-erreur/index.html">Signalement</a>
+</li>
+</ul>
+</nav>
+<div class="views-element-container block block-views block-views-blockpartners-block-1" id="block-views-block-partners-block-1">
+<div>
+<div class="view view-partners view-id-partners view-display-id-block_1 js-view-dom-id-1edc48f8e6f99e9e8f1b0ff7eed0888400b01b7225d9bc55487ce40417d562d2">
+<div class="view-content">
+<div class="views-row">
+</div>
+<div class="views-row">
+<div class="card card--footer-partner taxonomy-term vocabulary-partners-institutions" id="taxonomy-term-1092">
+<a href="https://www.egora.fr/">
+<div class="field field--name-image field--type-image field--label-hidden field__item"><img alt="Egora Fr" class="image-style-partner-logo" height="46" loading="lazy" src="../../../../../sites/default/files/styles/partner_logo/public/2021-03/logo-egorafr@itok=D5m-H-Hs.png" width="152"/></div></a>
+</div>
+</div>
+<div class="views-row">
+<div class="card card--footer-partner taxonomy-term vocabulary-partners-institutions" id="taxonomy-term-1094">
+<a href="https://www.concourspluripro.fr/nouveaute/le-concours-medical-evolue-et-devient-concours-pluripro">
+<div class="field field--name-image field--type-image field--label-hidden field__item"><img alt="Le concours médical" class="image-style-partner-logo" height="41" loading="lazy" src="../../../../../sites/default/files/styles/partner_logo/public/2021-07/logo-plurimopro@itok=YLjSO8LM.jpg" width="152"/></div></a>
+</div>
+</div>
+<div class="views-row">
+<div class="card card--footer-partner taxonomy-term vocabulary-partners-institutions" id="taxonomy-term-1091">
+<a href="https://www.mediamed.org/">
+<div class="field field--name-image field--type-image field--label-hidden field__item"><img alt="mediamed" class="image-style-partner-logo" height="50" loading="lazy" src="../../../../../sites/default/files/styles/partner_logo/public/2021-03/partenaire-mediamed-logo@itok=-_oFEkag.png" width="152"/></div></a>
+</div>
+</div>
+<div class="views-row">
+<div class="card card--footer-partner taxonomy-term vocabulary-partners-institutions" id="taxonomy-term-1096">
+<a href="https://www.aspserveur.com/">
+<div class="field field--name-image field--type-image field--label-hidden field__item"><img alt="ASP serveur" class="image-style-partner-logo" height="29" loading="lazy" src="../../../../../sites/default/files/styles/partner_logo/public/2021-04/asp-serveur-ok@itok=0w49WfmO.png" width="152"/></div></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer" role="contentinfo">
+<div class="footer__container">
+<div class="region region-footer">
+<span class="footer__copyright">© Le Guide Santé</span>
+<div class="footer__legal">
+<nav aria-labelledby="block-starter-footer-menu" class="block block-menu navigation menu--footer" id="block-starter-footer" role="navigation">
+<span class="visually-hidden" id="block-starter-footer-menu">Menu Pied de page</span>
+<ul class="menu" data-region="footer">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1432" href="../../../../../mentions-legales-et-cgu/index.html">Mentions légales</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="responsive-menu">
+<div class="responsive-menu__backdrop js-menu-backdrop"></div>
+<div class="responsive-menu__content">
+<ul class="vertical menu drilldown js-responsive-menu" data-back="Retour"></ul>
+</div>
+</div>
+<script data-drupal-selector="drupal-settings-json" type="application/json">
+  {"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1255","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"fr"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"630f18be6ad6a4fe65bb35d32325d392eb59045512a4b2a10d8fdcb9b01fbdcc"}}
+  </script>
+<script src="../../../../../sites/default/files/js/js_aqnCxKRn0CDh4OkHhqZxx4EUR7fwo2y0KP3hXK9OlOk.js"></script>
+<script async="" style="display:none;" type="text/javascript">
+
+
+  __ez.queue.addFile('/detroitchicago/edmonton.webp', '/detroitchicago/edmonton.webp?a=a&cb=0&shcb=34', true, ['/detroitchicago/minneapolis.js'], true, false, false, false);
+  __ez.queue.addFile('/porpoiseant/jellyfish.webp', '/porpoiseant/jellyfish.webp?a=a&cb=0&shcb=34', false, [], true, false, false, false);
+  </script>
+<script>
+
+  var _audins_dom="le_guide_sante_org",_audins_did=311059;__ez.queue.addDelayFunc("audins.js","__ez.script.add", "//go.ezoic.net/detroitchicago/audins.js?cb=195-0");
+  </script><noscript>
+<div style="display:none;"></div>
+</noscript>
+<script data-cfasync="false" type="text/javascript"></script>
+<script>
+
+  __ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=0&cb=3', false, ['/detroitchicago/minneapolis.js'], true, false, true, false);
+  </script>
+<script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"6f64f15c991f46c985b1c28fb08922bc","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' defer="" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"></script>
+</body>
+</html>

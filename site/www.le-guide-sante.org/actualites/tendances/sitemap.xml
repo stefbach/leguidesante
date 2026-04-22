@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/actualites/tendances/wp-content/plugins/xml-sitemap-feed/assets/sitemap.xsl?ver=5.7.2"?>
+<!-- generated-on="2026-04-22T09:22:31+00:00" -->
+<!-- generator="XML Sitemap & Google News for WordPress" -->
+<!-- generator-url="https://status301.net/wordpress-plugins/xml-sitemap-feed/" -->
+<!-- generator-version="5.7.2" -->
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap><loc>https://www.le-guide-sante.org/actualites/tendances/sitemap-posttype-post.2026.xml</loc><lastmod>2026-04-21T11:17:15+02:00</lastmod></sitemap>
+<sitemap><loc>https://www.le-guide-sante.org/actualites/tendances/sitemap-news.xml</loc><lastmod>2026-04-21T11:17:15+02:00</lastmod></sitemap>
+</sitemapindex>

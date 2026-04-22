@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="fr" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="utf-8"/>
+<script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+  var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=true;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],s=[],r=!0,a=function(e,i,n,o,s,r,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,c=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=s,this.deleteWhenComplete=r,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),c.isInitialized=!0,c.isComplete=!0,f("... func.apply: "+e);var i=c.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[c.funcName]),null!=n&&n.apply(null,this.parameters),!0===c.deleteWhenComplete&&delete t[e],!0===c.isBlock&&(f("----- F'D: "+c.name),u())}},l=function(e,i,t,n,o,s,r){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=s,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=r,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===s&&(t.defer=!0),t.onerror=function(){f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},c=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function d(e){!0!==h(e)&&0!=r&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(s))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,r,a,c,h,f,u){var m=new l(e,i,n,r,a,c,h,u);!0===f?o[e]=m:s[e]=m,t[e]=m,d(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),s[e]=n,t[e]=n,d(n)},addFunc:function(e,n,r,l,c,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var y=new a(e,n,r,l,c,f,u,p);!0===m?o[e]=y:s[e]=y,t[e]=y,d(y)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),s[e]=o,t[e]=o,d(o)},items:t,processAll:u,setallowLoad:function(e){r=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new c(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};__ez.queue.addFile('/detroitchicago/boise.js', '/detroitchicago/boise.js?gcb=195-0&cb=2', true, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/memphis.js', '/detroitchicago/memphis.js?gcb=195-0&cb=23', true, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/minneapolis.js', '/detroitchicago/minneapolis.js?gcb=195-0&cb=4', true, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/rochester.js', '/detroitchicago/rochester.js?gcb=195-0&cb=13', false, ['/detroitchicago/memphis.js','/detroitchicago/minneapolis.js'], true, false, true, false);!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();
+  </script>
+<script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+  !function(){function e(i){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(i)}__ez.pel=function(){var i=[];function t(t,o,d,_,n,r,a,s){if(__ez.dot.isDefined(t)&&0!=__ez.dot.isAnyDefined(t.getSlotElementId,t.ElementId)){void 0===s&&(s=!1);var p=parseInt(__ez.dot.getTargeting(t,"ap")),f=__ez.dot.getSlotIID(t),u=__ez.dot.getAdUnit(t,s),z=parseInt(__ez.dot.getTargeting(t,"compid")),g=0,c=0,l=function(i){if("undefined"==typeof _ezim_d)return!1;var t=__ez.dot.getAdUnitPath(i).split("/").pop();if("object"===("undefined"==typeof _ezim_d?"undefined":e(_ezim_d))&&_ezim_d.hasOwnProperty(t))return _ezim_d[t];for(var o in _ezim_d)if(o.split("/").pop()===t)return _ezim_d[o];return!1}(t);"object"==e(l)&&(void 0!==l.creative_id&&(c=l.creative_id),void 0!==l.line_item_id&&(g=l.line_item_id)),__ez.dot.isDefined(f,u)&&__ez.dot.isValid(o)&&("0"===f&&!0!==s||""===u||i.push({type:"impression",impression_id:f,domain_id:__ez.dot.getDID(),unit:u,t_epoch:__ez.dot.getEpoch(0),revenue:d,est_revenue:_,ad_position:p,ad_size:"",bid_floor_filled:n,bid_floor_prev:r,stat_source_id:a,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:z,line_item_id:g,creative_id:c,data:__ez.dot.dataToStr(o),is_orig:s||__ez.template.isOrig}))}}function o(){void 0!==document.visibilityState&&"prerender"===document.visibilityState||(__ez.dot.isDefined(i)&&i.length>0&&[i.filter((function(e){return e.is_orig})),i.filter((function(e){return!e.is_orig}))].forEach((function(e){for(;e.length>0;){var i=e[0].is_orig||!1,t=5;t>e.length&&(t=e.length);var o=e.splice(0,t),d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig="+(!0===i?1:0)+"&sts="+btoa(JSON.stringify(o));(void 0!==window.isAmp&&isAmp||void 0!==window.ezWp&&ezWp)&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("domain_id")&&(d+="&visit_uuid="+_ezaq.visit_uuid),__ez.dot.Fire(d)}})),i=[])}return{Add:t,AddAndFire:function(e,i){t(e,i,0,0,0,0,0),o()},AddAndFireOrig:function(e,i){t(e,i,0,0,0,0,0,!0),o()},AddById:function(e,t,o,d){var _=e.split("/");if(__ez.dot.isDefined(e)&&3===_.length&&__ez.dot.isValid(t)){var n=_[0],r={type:"impression",impression_id:_[2],domain_id:__ez.dot.getDID(),unit:n,t_epoch:__ez.dot.getEpoch(0),pageview_id:__ez.dot.getPageviewId(),data:__ez.dot.dataToStr(t),is_orig:o||__ez.template.isOrig};void 0!==d&&(r.revenue=d),i.push(r)}},Fire:o,GetPixels:function(){return i}}}()}();__ez.queue.addFile('/detroitchicago/raleigh.js', '/detroitchicago/raleigh.js?gcb=195-0&cb=6', false, [], true, false, true, false);__ez.queue.addFile('/detroitchicago/tampa.js', '/detroitchicago/tampa.js?gcb=195-0&cb=5', false, [], true, false, true, false);
+  </script>
+<script data-cfasync="false" data-ezscrex="false">
+  (function(){if("function"===typeof window.CustomEvent)return!1;window.CustomEvent=function(c,a){a=a||{bubbles:!1,cancelable:!1,detail:null};var b=document.createEvent("CustomEvent");b.initCustomEvent(c,a.bubbles,a.cancelable,a.detail);return b}})();
+  </script>
+<script data-cfasync="false" data-ezscrex="false">
+  __ez.queue.addFile('/detroitchicago/tulsa.js', '/detroitchicago/tulsa.js?gcb=195-0&cb=7', false, [], true, false, true, false);
+  </script>
+<link href="." rel="canonical"/>
+<meta content="Doc Le Guide Santé - App iPhone/Android gratuite 24H/24 7J/7 pour prendre vos RDV médicaux auprès de 400 000 professionnels de santé en France." name="description"/>
+<meta content="Le Guide Santé" property="og:site_name"/>
+<meta content="Page" property="og:type"/>
+<meta content="https://www.le-guide-sante.org/doc-le-guide-sante-app-rdv-medicaux-rapides" property="og:url"/>
+<meta content="Doc Le Guide Santé : l'application pour vos RDV médicaux rapides !" property="og:title"/>
+<meta content="contact@le-guide-sante.org" property="og:email"/>
+<meta content="https://www.le-guide-sante.org/user/braunjimmyhandpanjapancom" property="article:author"/>
+<meta content="width" name="MobileOptimized"/>
+<meta content="true" name="HandheldFriendly"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script defer="" src="../sites/default/files/google_tag/default/google_tag.script@rs86gd.js"></script>
+<title>Doc Le Guide Santé : App de RDV médicaux rapides | Le Guide Santé</title>
+<link href="../sites/default/files/css/css_o2aqwWTLaFPCWcx81kLUUOrRwdH8bdR7-c5WjTl61EY.css" media="all" rel="stylesheet"/>
+<link href="../sites/default/files/css/css_2eGMPurPoHsZAsCLYFmXgHJF5m2JwWIVGNEyZyGdFaA.css" media="all" rel="stylesheet"/>
+<link href="../sites/default/files/css/css_hUaj3Sck8PiWV031VtGM5vwmFiWZ93BLkGZHpqX1i2M.css" media="print" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" rel="preload"/>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/><noscript>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap" rel="stylesheet"/></noscript>
+<link href="../themes/custom/starter/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link color="#e32327" href="../themes/custom/starter/safari-pinned-tab.svg" rel="mask-icon" type="image/svg+xml"/>
+<link href="../themes/custom/starter/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../themes/custom/starter/site.webmanifest" rel="manifest"/>
+<script type="text/javascript">
+  var ezouid = "1";
+  </script>
+<base href="https://www.le-guide-sante.org/doc-le-guide-sante-app-rdv-medicaux-rapides"/>
+<script type="text/javascript">
+  var ezoTemplate = 'old_site_noads';
+  if(typeof ezouid == 'undefined')
+  {
+    var ezouid = 'none';
+  }
+  var ezoFormfactor = '1';
+  var ezo_elements_to_check = Array();
+  </script>
+<script data-ezscrex="false" type="text/javascript">
+  var soc_app_id = '0';
+  var did = 330072;
+  var ezdomain = 'www.le-guide-sante.org';
+  var ezoicSearchable = 1;
+  </script>
+<script data-cfasync="false" data-ezscrex="false" type="text/javascript">
+  var _ezaq = {"ab_test_id":"mod7","ad_cache_level":0,"ad_lazyload_version":0,"ad_load_version":0,"city":"Ashburn","country":"US","days_since_last_visit":-1,"domain_id":330072,"domain_test_group":20230806,"engaged_time_visit":0,"ezcache_level":1,"ezcache_skip_code":3,"form_factor_id":1,"framework_id":1,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"","last_pageview_id":"","lt_cache_level":0,"metro_code":511,"page_ad_positions":"","page_view_count":0,"page_view_id":"1ee4d4e3-72a9-49b0-6101-9d558c8fec2b","position_selection_id":0,"postal_code":"20149","pv_event_count":0,"response_size_orig":28429,"response_time_orig":502,"serverid":"i-0bae5753b69f01d5e","state":"VA","t_epoch":1680000522,"template_id":120,"time_on_site_visit":0,"url":"https://www.le-guide-sante.org/doc-le-guide-sante-app-rdv-medicaux-rapides","user_id":0,"word_count":608,"worst_bad_word_level":0};var _ezExtraQueries = "&ez_orig=1";
+  </script>
+<script async="" defer="" src="../detroitchicago/ezd@gcb=195-0_cb=4.js"></script>
+<script data-cfasync="false" data-ezscrex="false" data-pagespeed-no-defer="">
+  function create_ezolpl(pvID, rv) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    __ez.ck.setByCat("ezux_lpl_330072=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
+  }
+  function attach_ezolpl(pvID, rv) {
+    if (document.readyState === "complete") {
+        create_ezolpl(pvID, rv);
+    }
+    if(window.attachEvent) {
+        window.attachEvent("onload", create_ezolpl, pvID, rv);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl(pvID, rv);
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl.bind(null, pvID, rv);
+        }
+    }
+  }
+
+  __ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["1ee4d4e3-72a9-49b0-6101-9d558c8fec2b", "false"], false, ['/detroitchicago/boise.js'], true, false, false, false);
+  </script>
+</head>
+<body class="path-node page-node-type-page">
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WPC22MS" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<div class="site-wrapper">
+<header class="header js-fixed-header">
+<div class="header__container">
+<div class="header__inner">
+<div class="header__logo">
+<div class="block block-system block-system-branding-block" id="block-starter-branding">
+<a class="site-logo" href="../index.html" rel="home"><img alt="Le Guide Santé" class="logo" height="49" src="../themes/custom/starter/dist/img/logo.svg" width="276"/> <img alt="Le Guide Santé" class="logo-white" height="49" src="../themes/custom/starter/dist/img/logo-white.svg" width="276"/></a>
+</div>
+</div>
+<div class="header__main">
+<div class="region region-navigation js-menu">
+<nav aria-labelledby="block-starter-main-menu-menu" class="block block-menu navigation menu--main" id="block-starter-main-menu" role="navigation">
+<span class="visually-hidden" id="block-starter-main-menu-menu">Navigation principale</span>
+<ul class="menu" data-region="navigation">
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide" href="../le-guide/index.html" title="Annuaire santé hospitalier">Le Guide : hôpitaux et cliniques</a>
+</li>
+<li class="menu-item has-mega-menu">
+<a href="#">Actualités Santé, Bien-être</a>
+<div class="mega-menu">
+<div class="mega-menu__col">
+<p class="mega-menu__col-title">Thématiques</p>
+<ul class="menu">
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1" href="../actualites/cancer/index.html">Cancer</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/2" href="../actualites/nutrition/index.html">Nutrition</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1083" href="../actualites/chirurgie/index.html">Chirurgie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1084" href="../actualites/forme-et-bien-etre/index.html">Forme et bien-être</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1085" href="../actualites/geriatrie/index.html">Gériatrie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1086" href="../actualites/hopitaux/index.html">Hôpitaux</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1087" href="../actualites/medecine/index.html">Médecine</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1088" href="../actualites/medicaments/index.html">Médicaments</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1089" href="../actualites/obstetrique/index.html">Obstétrique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../actualites/sante-publique/index.html">Santé publique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../actualites/tendances/index.html">Tendances</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1105" href="../actualites/medical-news-english/index.html">Medical News in English</a>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div><button class="button header__responsive-btn js-menu-toggle"><span>Menu</span></button>
+</div>
+</div>
+</header>
+<main class="main">
+<div class="region region-header">
+<div class="block block-system block-system-breadcrumb-block" id="block-starter-breadcrumbs">
+<div class="breadcrumb">
+<div class="breadcrumb__container">
+<span class="visually-hidden" id="system-breadcrumb">Fil d'Ariane</span>
+<ol class="breadcrumb__items" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="../index.html" itemprop="item"><span itemprop="name">Accueil</span></a>
+<meta content="1" itemprop="position"/>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<span itemprop="name">Doc Le Guide Santé : l'application pour vos RDV médicaux rapides !</span>
+<meta content="2" itemprop="position"/>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="hidden" data-drupal-messages-fallback=""></div>
+<div class="block block-core block-page-title-block" id="block-starter-page-title">
+<h1 class="page-title"><span>Doc Le Guide Santé : l'application pour vos RDV médicaux rapides !</span></h1>
+</div>
+<div class="block block-choosit-lgs block-header-subtitle" id="block-entetesoustitre"></div>
+</div>
+<div class="main-content">
+<div class="region region-content">
+<div class="block block-system block-system-main-block" id="block-starter-content">
+<article class="node node--type-page node--view-mode-full" role="article">
+<div class="node__content">
+<div class="field field--name-blocks field--type-entity-reference-revisions field--label-hidden field__items">
+<a class="anchor" id="1656"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-large" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<p class="chapo text-align-center"><strong>Doc Le Guide Santé : Application Mobile en Santé conçue pour <a href="https://apps.apple.com/fr/app/doc-le-guide-sant%C3%A9/id1542359945" target="_blank" title=" App Store Doc Le Guide Santé ">iPhone</a> et Android offrant un service sécurisé, gratuit et exclusif.</strong></p>
+<p class="chapo"> </p><img alt="App Doc Le Guide Santé " class="align-center" data-entity-type="image" data-entity-uuid="0" src="../sites/default/files/resources/app-docleguidesante-landingpage-001.jpg"/>
+<p class="text-align-center"><a href="https://apps.apple.com/fr/app/doc-le-guide-sant%C3%A9/id1542359945" target="_blank" title="Doc Le guide Santé App Store"><img alt="Apple Store Doc Le Guide Santé" data-entity-type="image" data-entity-uuid="0" height="45" src="../sites/default/files/resources/news/apple-store-docleguidesante.jpg" width="116"/></a><img alt="Google Play Doc Le Guide Santé" data-entity-type="image" data-entity-uuid="0" height="39" src="../sites/default/files/resources/news/google-play-docleguidesante.jpg" width="130"/></p>
+<p class="focus-bleu text-align-center"><strong>Disponible 24H/24 7J/7 ! Trouvez votre rendez-vous en quelques clics rapidement auprès de 400 000 professionnels de santé en France.</strong></p>
+<p class="focus text-align-center"><strong><a href="https://youtu.be/VM1wom-aGuU" rel="noopener" target="_blank" title="Tutoriel vidéo ">Découvrez le tutoriel vidéo</a> de l'app. Doc Le Guide Santé</strong></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><a class="anchor" id="1654"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">App Doc Le Guide Santé®</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<p class="focus"><strong>L’application gratuite Doc Le Guide Santé vous donne la solution en trois clics et 24h/24 et 7j/7 sur les 400 000 professionnels de santé de France : délais d'attente moyens de RDV, médecins les plus proches de vous, etc. Vous pourrez prendre <a href="../actualites/sante-publique/plateformes-prise-rdv-medicaux-enquete-comparative/index.html" rel="noopener" target="_blank" title="Plateformes en ligne de prise de RDV médicaux : enquête comparative ">RDV en ligne</a> avec votre médecin généraliste, votre ophtalmologue ou encore votre dentiste. <u>Disponible pour <a href="https://apps.apple.com/fr/app/doc-le-guide-sant%C3%A9/id1542359945" target="_blank" title=" App Store Doc Le Guide Santé ">iPhone</a> et <a href="https://play.google.com/store/apps/details?id=com.doclgs" target="_blank" title="Google Play Doc Le Guide Santé">Android</a></u>.</strong></p>
+<p class="focus-bleu"><strong>Une application gratuite, intuitive, facile à utiliser et efficace.</strong></p>
+<p>Doc Le Guide Santé est une application intuitive avec des résultats instantanés pour obtenir des RDV rapides chez tous les médecins spécialistes (dermatologue, ophtalmologue, gynécologue...) mais également chez tous les autres professionnels de santé (dentiste, kinésithérapeute, <a href="../actualites/forme-et-bien-etre/osteopathie-interview-jean-pierre-marguaritte-kinesitherapeute-osteopathe/index.html" rel="noopener" target="_blank" title="/actualites/forme-et-bien-etre/osteopathie-interview-jean-pierre-marguaritte-kinesitherapeute-osteopathe">ostéopathes</a>, infirmières, ambulanciers,...).</p>
+<h3>Des résultats rapides à partir de recherches simples</h3>
+<p class="focus"><strong>La recherche est facile : géolocalisation ou saisie du nom de votre commune puis cliquer sur un des icônes des différents métiers de la santé et la liste de résultats s'affiche en instantanée.</strong></p>
+<p>Les professionnels de santé avec les délais de rendez-vous les plus courts s'affichent en premier. Il suffit de cliquer sur une des mini-fiches et tout ce qui est utile va s'afficher : coordonnées, horaires, délai d'attente moyen d'obtention d'un RDV, agenda en ligne et distance en minutes (à pied, en voiture ou en transport en commun).</p>
+<p>En cliquant sur le bouton <strong>Prendre RDV</strong>, vous serez dirigé vers l'agenda en ligne ou vers le numéro de téléphone (<em>click to call</em>) du professionnel de santé.</p>
+<p>Si vous souhaitez prendre RDV chez un professionnel de santé partenaire de Doc Le Guide Santé, il sera identifié sur la liste de résultat par une fiche sur fond bleu et lorsque vous cliquerez sur le bouton Prendre RDV, il vous sera demandé de vous identifier ou de vous enregistrer si c'est votre première demande de rendez-vous chez un partenaire.</p>
+<h4>Fiabilité et sécurité</h4>
+<p>Notre base de données est fiable et complète : les coordonnées sont toutes vérifiées une par une et tous les professionnels de santé en exercice sont référencés sur notre application unique.</p>
+<p>L’envoi de vos ordonnances est crypté et sécurisé grâce à notre serveur certifié “données de santé”.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><a class="anchor" id="1755"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-normal" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<a href="https://www.aspserveur.com/" target="_blank" title="ASP Serveur"><img alt="ASP Serveur" class="align-center" data-entity-type="image" data-entity-uuid="0" src="../sites/default/files/resources/news/ASP_SERVEUR_Leaderboard_002.jpg"/></a>
+<p> </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><a class="anchor" id="2112"></a>
+<div class="paragraph paragraph--type--block-1-col paragraph--style-large" data-animated="" data-toggle-class="in-viewport">
+<div class="paragraph__container">
+<div class="paragraph__grid">
+<div class="paragraph__content">
+<div class="paragraph__heading">
+<div class="field field--name-title field--type-string field--label-hidden field__item">
+<h2 class="paragraph__title">Tutoriel Doc Le Guide Santé : App pour vos RDV médicaux rapides !</h2>
+</div>
+</div>
+<div class="paragraph__body">
+<div class="too-long js-expand-body clearfix text-formatted field field--name-body field--type-text-long field--label-hidden field__item">
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/VM1wom-aGuU" title="YouTube video player" width="560"></iframe></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="block block-choosit-lgs block-hospital-guide" id="block-leguidedeshopitauxetcliniques-2">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="block__heading">
+<p class="block__title">Le guide des hôpitaux et cliniques de France.</p>
+<p>Recherchez parmi les 1335 établissements</p>
+</div>
+<div class="block__body">
+<a class="button" href="../le-guide/index.html">Rechercher un établissement de santé</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<section class="prefooter">
+<div class="prefooter__container">
+<div class="region region-prefooter">
+<div class="block block-choosit-lgs block-newsletter-social-links" id="block-newsletteretreseauxsociaux">
+<div class="block__container">
+<div class="block__grid">
+<div class="block__content">
+<div class="newsletter">
+<p class="block__title">Pour être informé des actualités du Guide Santé</p><a class="button button--ghost" href="../form/newsletter/index.html">Je m'abonne à la newsletter</a>
+</div>
+<div class="social-links">
+<p class="block__title">Nous suivre</p>
+<ul class="social">
+<li>
+<a aria-label="Twitter" href="https://x.com/docleguidesante" rel="noopener" target="_blank"><svg class="icon icon-twitter">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-twitter"></use></svg></a>
+</li>
+<li>
+<a aria-label="Facebook" href="https://www.facebook.com/leguidesante.org/" rel="noopener" target="_blank"><svg class="icon icon-facebook">
+<use xlink:href="/themes/custom/starter/dist/img/spritemap.svg#sprite-facebook"></use></svg></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="footernav">
+<div class="footernav__container">
+<div class="region region-footernav">
+<nav aria-labelledby="block-leguidehopitauxetcliniques-menu" class="block block-menu navigation menu--guide-footer" id="block-leguidehopitauxetcliniques" role="navigation">
+<span id="block-leguidehopitauxetcliniques-menu">Le Guide : hôpitaux et cliniques</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide" href="../le-guide/index.html">Rechercher un établissement</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions" href="../le-guide/par-regions/index.html">Par régions</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions/par-departements" href="../le-guide/par-regions/par-departements/index.html">Par départements</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="le-guide/par-regions/par-departements/par-villes" href="../le-guide/par-regions/par-departements/par-villes/index.html">Par villes</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1064" href="../le-guide/ile-de-france/paris/index.html">Hôpital Paris</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1014" href="../le-guide/auvergne-rhone-alpes/rhone/lyon/index.html">Hôpital Lyon</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1030" href="../le-guide/provence-alpes-cote-dazur/bouches-du-rhone/marseille/index.html">Hôpital Marseille</a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="block-actualitessantebienetre-menu" class="block block-menu navigation menu--news-footer" id="block-actualitessantebienetre" role="navigation">
+<span id="block-actualitessantebienetre-menu">Actualités Santé, Bien-être</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1" href="../actualites/cancer/index.html">Cancer</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1105" href="../actualites/medical-news-english/index.html">Medical News in English</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1083" href="../actualites/chirurgie/index.html">Chirurgie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1084" href="../actualites/forme-et-bien-etre/index.html">Forme et bien-être</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1085" href="../actualites/geriatrie/index.html">Gériatrie</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1086" href="../actualites/hopitaux/index.html">Hôpitaux</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1087" href="../actualites/medecine/index.html">Médecine</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1088" href="../actualites/medicaments/index.html">Médicaments</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1089" href="../actualites/obstetrique/index.html">Obstétrique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/1090" href="../actualites/sante-publique/index.html">Santé publique</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="taxonomy/term/2" href="../actualites/nutrition/index.html">Nutrition</a>
+</li>
+</ul>
+</nav>
+<nav aria-labelledby="block-apropos-menu" class="block block-menu navigation menu--about" id="block-apropos" role="navigation">
+<span id="block-apropos-menu">A propos</span>
+<ul class="menu" data-region="footernav">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1431" href="../qui-sommes-nous/index.html">Qui sommes nous ?</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1386" href="../comite-de-redaction-du-guide-sante/index.html">Comité de rédaction</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1387" href="../comite-scientifique-et-experts-medicaux-ou-scientifiques/index.html">Comité scientifiques et experts</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1433" href="../contact-presse/index.html">Contact Presse</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1576" href="../glossaire/index.html">Glossaire</a>
+</li>
+<li class="menu-item">
+<a data-drupal-link-system-path="webform/signalement_d_une_erreur" href="../form/signalement-d-une-erreur/index.html">Signalement</a>
+</li>
+</ul>
+</nav>
+<div class="views-element-container block block-views block-views-blockpartners-block-1" id="block-views-block-partners-block-1">
+<div>
+<div class="view view-partners view-id-partners view-display-id-block_1 js-view-dom-id-6ec71b1c97764c27e78fcdf6b565568cf707639e64b6d56922d6214f0de5921b">
+<div class="view-content">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="footer" role="contentinfo">
+<div class="footer__container">
+<div class="region region-footer">
+<span class="footer__copyright">© Le Guide Santé</span>
+<div class="footer__legal">
+<nav aria-labelledby="block-starter-footer-menu" class="block block-menu navigation menu--footer" id="block-starter-footer" role="navigation">
+<span class="visually-hidden" id="block-starter-footer-menu">Menu Pied de page</span>
+<ul class="menu" data-region="footer">
+<li class="menu-item">
+<a data-drupal-link-system-path="node/1432" href="../mentions-legales-et-cgu/index.html">Mentions légales</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="responsive-menu">
+<div class="responsive-menu__backdrop js-menu-backdrop"></div>
+<div class="responsive-menu__content">
+<ul class="vertical menu drilldown js-responsive-menu" data-back="Retour"></ul>
+</div>
+</div>
+<script data-drupal-selector="drupal-settings-json" type="application/json">
+  {"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1586","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"fr"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"630f18be6ad6a4fe65bb35d32325d392eb59045512a4b2a10d8fdcb9b01fbdcc"}}
+  </script>
+<script src="../sites/default/files/js/js_aqnCxKRn0CDh4OkHhqZxx4EUR7fwo2y0KP3hXK9OlOk.js"></script>
+<script async="" style="display:none;" type="text/javascript">
+
+
+  __ez.queue.addFile('/detroitchicago/edmonton.webp', '/detroitchicago/edmonton.webp?a=a&cb=0&shcb=34', true, ['/detroitchicago/minneapolis.js'], true, false, false, false);
+  __ez.queue.addFile('/porpoiseant/jellyfish.webp', '/porpoiseant/jellyfish.webp?a=a&cb=0&shcb=34', false, [], true, false, false, false);
+  </script>
+<script>
+
+  __ez.queue.addFile('/tardisrocinante/vitals.js', '/tardisrocinante/vitals.js?gcb=0&cb=3', false, ['/detroitchicago/minneapolis.js'], true, false, true, false);
+  </script>
+<script data-cfasync="false" type="text/javascript"></script><noscript>
+<div style="display:none;"></div></noscript>
+<script>
+
+  __ez.queue.addFile('/beardeddragon/drake.js', '/beardeddragon/drake.js?gcb=0&cb=4', false, [], true, false, true, false);
+  </script>
+<script crossorigin="anonymous" data-cf-beacon='{"version":"2024.11.0","token":"6f64f15c991f46c985b1c28fb08922bc","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' defer="" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"></script>
+</body>
+</html>
