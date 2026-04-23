@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Annuaire des praticiens — Le Guide Santé</title>
+  <meta name="description" content="Annuaire de praticiens : médecine générale, cardiologie, gastro-entérologie, gynécologie, psychiatrie, pédiatrie. Filtres par spécialité et par ville.">
+  <meta property="og:title" content="Annuaire des praticiens — Le Guide Santé">
+  <meta property="og:description" content="Annuaire de praticiens avec filtres par spécialité et par ville.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leguidesante.fr/annuaire/">
+  <link rel="stylesheet" href="../assets/css/starter.css">
+</head>
+<body>
+  <a class="u-sr-only u-sr-only--focusable" href="#main">Aller au contenu</a>
+
+  <header class="c-header">
+    <div class="c-header__inner">
+      <a class="c-header__logo c-header__brand" href="../index.html">Le Guide Santé</a>
+      <nav class="c-nav" aria-label="Navigation principale">
+        <button id="c-nav-toggle" class="c-nav__toggle" aria-expanded="false" aria-controls="c-nav-list" aria-label="Ouvrir le menu">
+          <span class="c-nav__toggle-bar"></span>
+        </button>
+        <ul id="c-nav-list" class="c-nav__list">
+          <li class="c-nav__item"><a class="c-nav__link" href="../tribunes/index.html">Tribunes</a></li>
+          <li class="c-nav__item"><a class="c-nav__link" href="../thematique/science-preuves.html">Science &amp; preuves</a></li>
+          <li class="c-nav__item"><a class="c-nav__link" href="../thematique/clinique-terrain.html">Clinique</a></li>
+          <li class="c-nav__item"><a class="c-nav__link" href="../thematique/politique-sante.html">Politique</a></li>
+          <li class="c-nav__item"><a class="c-nav__link" href="../thematique/innovations.html">Innovations</a></li>
+          <li class="c-nav__item"><a class="c-nav__link" href="../travaux-scientifiques.html">Travaux</a></li>
+          <li class="c-nav__item"><a class="c-nav__link c-nav__link--active" href="index.html" aria-current="page">Annuaire</a></li>
+          <li class="c-nav__item"><a class="c-nav__link" href="../dr-stephane-bach.html">Dr Bach</a></li>
+          <li class="c-nav__item"><a class="c-nav__link" href="../a-propos.html">À propos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="c-hero c-hero--compact">
+      <div class="c-hero__inner">
+        <div class="c-hero__content">
+          <p class="c-hero__eyebrow">Annuaire</p>
+          <h1 class="c-hero__title">Praticiens référencés</h1>
+          <p class="c-hero__lede">Listing illustratif. Filtrez par spécialité ou par ville. Les fiches individuelles sont en cours de consolidation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-annuaire" data-filter-scope>
+      <div class="c-annuaire__header">
+        <h2 class="c-annuaire__title">Trouver un praticien</h2>
+      </div>
+
+      <div class="c-annuaire__filter" data-filter-group="specialite" role="group" aria-label="Filtrer par spécialité">
+        <span class="c-annuaire__filter-label">Spécialité</span>
+        <button class="c-chip is-active" type="button" data-filter-value="">Tous</button>
+        <button class="c-chip" type="button" data-filter-value="medecine-generale">Médecine générale</button>
+        <button class="c-chip" type="button" data-filter-value="cardiologie">Cardiologie</button>
+        <button class="c-chip" type="button" data-filter-value="gastro">Gastro-entérologie</button>
+        <button class="c-chip" type="button" data-filter-value="gyneco">Gynécologie</button>
+        <button class="c-chip" type="button" data-filter-value="psychiatrie">Psychiatrie</button>
+        <button class="c-chip" type="button" data-filter-value="pediatrie">Pédiatrie</button>
+      </div>
+
+      <div class="c-annuaire__filter" data-filter-group="ville" role="group" aria-label="Filtrer par ville">
+        <span class="c-annuaire__filter-label">Ville</span>
+        <button class="c-chip is-active" type="button" data-filter-value="">Toutes villes</button>
+        <button class="c-chip" type="button" data-filter-value="paris">Paris</button>
+        <button class="c-chip" type="button" data-filter-value="lyon">Lyon</button>
+        <button class="c-chip" type="button" data-filter-value="marseille">Marseille</button>
+        <button class="c-chip" type="button" data-filter-value="toulouse">Toulouse</button>
+        <button class="c-chip" type="button" data-filter-value="bordeaux">Bordeaux</button>
+      </div>
+
+      <ul class="c-annuaire__grid" style="list-style:none; padding:0;">
+
+        <li class="c-annuaire__row" data-filterable data-specialite="medecine-generale" data-ville="paris">
+          <img class="c-annuaire__photo" src="https://placehold.co/80x80/0B1F3A/F7F6F1?text=AM" alt="">
+          <div class="c-annuaire__info">
+            <p class="c-annuaire__name">Dr Amélie Moreau</p>
+            <p class="c-annuaire__speciality">Médecine générale</p>
+            <p class="c-annuaire__city">Paris</p>
+          </div>
+          <a class="c-btn c-btn--sm c-btn--ghost c-annuaire__cta" href="#">Voir fiche</a>
+        </li>
+
+        <li class="c-annuaire__row" data-filterable data-specialite="cardiologie" data-ville="lyon">
+          <img class="c-annuaire__photo" src="https://placehold.co/80x80/12304F/F7F6F1?text=KN" alt="">
+          <div class="c-annuaire__info">
+            <p class="c-annuaire__name">Dr Karim Nacer</p>
+            <p class="c-annuaire__speciality">Cardiologie</p>
+            <p class="c-annuaire__city">Lyon</p>
+          </div>
+          <a class="c-btn c-btn--sm c-btn--ghost c-annuaire__cta" href="#">Voir fiche</a>
+        </li>
+
+        <li class="c-annuaire__row" data-filterable data-specialite="gyneco" data-ville="bordeaux">
+          <img class="c-annuaire__photo" src="https://placehold.co/80x80/0B1F3A/F7F6F1?text=CL" alt="">
+          <div class="c-annuaire__info">
+            <p class="c-annuaire__name">Dr Claire Laroche</p>
+            <p class="c-annuaire__speciality">Gynécologie médicale</p>
+            <p class="c-annuaire__city">Bordeaux</p>
+          </div>
+          <a class="c-btn c-btn--sm c-btn--ghost c-annuaire__cta" href="#">Voir fiche</a>
+        </li>
+
+        <li class="c-annuaire__row" data-filterable data-specialite="psychiatrie" data-ville="paris">
+          <img class="c-annuaire__photo" src="https://placehold.co/80x80/12304F/F7F6F1?text=JO" alt="">
+          <div class="c-annuaire__info">
+            <p class="c-annuaire__name">Dr Julien Ouédraogo</p>
+            <p class="c-annuaire__speciality">Psychiatrie</p>
+            <p class="c-annuaire__city">Paris</p>
+          </div>
+          <a class="c-btn c-btn--sm c-btn--ghost c-annuaire__cta" href="#">Voir fiche</a>
+        </li>
+
+        <li class="c-annuaire__row" data-filterable data-specialite="pediatrie" data-ville="toulouse">
+          <img class="c-annuaire__photo" src="https://placehold.co/80x80/0B1F3A/F7F6F1?text=SR" alt="">
+          <div class="c-annuaire__info">
+            <p class="c-annuaire__name">Dr Sofia Ribeiro</p>
+            <p class="c-annuaire__speciality">Pédiatrie</p>
+            <p class="c-annuaire__city">Toulouse</p>
+          </div>
+          <a class="c-btn c-btn--sm c-btn--ghost c-annuaire__cta" href="#">Voir fiche</a>
+        </li>
+
+        <li class="c-annuaire__row" data-filterable data-specialite="gastro" data-ville="marseille">
+          <img class="c-annuaire__photo" src="https://placehold.co/80x80/12304F/F7F6F1?text=MB" alt="">
+          <div class="c-annuaire__info">
+            <p class="c-annuaire__name">Dr Mathieu Bensoussan</p>
+            <p class="c-annuaire__speciality">Gastro-entérologie</p>
+            <p class="c-annuaire__city">Marseille</p>
+          </div>
+          <a class="c-btn c-btn--sm c-btn--ghost c-annuaire__cta" href="#">Voir fiche</a>
+        </li>
+
+        <li class="c-annuaire__row" data-filterable data-specialite="medecine-generale" data-ville="lyon">
+          <img class="c-annuaire__photo" src="https://placehold.co/80x80/0B1F3A/F7F6F1?text=NV" alt="">
+          <div class="c-annuaire__info">
+            <p class="c-annuaire__name">Dr Nadia Vidal</p>
+            <p class="c-annuaire__speciality">Médecine générale</p>
+            <p class="c-annuaire__city">Lyon</p>
+          </div>
+          <a class="c-btn c-btn--sm c-btn--ghost c-annuaire__cta" href="#">Voir fiche</a>
+        </li>
+
+        <li class="c-annuaire__row" data-filterable data-specialite="cardiologie" data-ville="paris">
+          <img class="c-annuaire__photo" src="https://placehold.co/80x80/12304F/F7F6F1?text=TH" alt="">
+          <div class="c-annuaire__info">
+            <p class="c-annuaire__name">Dr Thibault Hoareau</p>
+            <p class="c-annuaire__speciality">Cardiologie</p>
+            <p class="c-annuaire__city">Paris</p>
+          </div>
+          <a class="c-btn c-btn--sm c-btn--ghost c-annuaire__cta" href="#">Voir fiche</a>
+        </li>
+
+        <li class="c-annuaire__row" data-filterable data-specialite="psychiatrie" data-ville="toulouse">
+          <img class="c-annuaire__photo" src="https://placehold.co/80x80/0B1F3A/F7F6F1?text=ER" alt="">
+          <div class="c-annuaire__info">
+            <p class="c-annuaire__name">Dr Émilie Roussel</p>
+            <p class="c-annuaire__speciality">Psychiatrie</p>
+            <p class="c-annuaire__city">Toulouse</p>
+          </div>
+          <a class="c-btn c-btn--sm c-btn--ghost c-annuaire__cta" href="#">Voir fiche</a>
+        </li>
+
+        <li class="c-annuaire__row" data-filterable data-specialite="gyneco" data-ville="marseille">
+          <img class="c-annuaire__photo" src="https://placehold.co/80x80/12304F/F7F6F1?text=LD" alt="">
+          <div class="c-annuaire__info">
+            <p class="c-annuaire__name">Dr Léa Duval</p>
+            <p class="c-annuaire__speciality">Gynécologie médicale</p>
+            <p class="c-annuaire__city">Marseille</p>
+          </div>
+          <a class="c-btn c-btn--sm c-btn--ghost c-annuaire__cta" href="#">Voir fiche</a>
+        </li>
+
+        <li class="c-annuaire__row" data-filterable data-specialite="pediatrie" data-ville="bordeaux">
+          <img class="c-annuaire__photo" src="https://placehold.co/80x80/0B1F3A/F7F6F1?text=FK" alt="">
+          <div class="c-annuaire__info">
+            <p class="c-annuaire__name">Dr Farid Khelifi</p>
+            <p class="c-annuaire__speciality">Pédiatrie</p>
+            <p class="c-annuaire__city">Bordeaux</p>
+          </div>
+          <a class="c-btn c-btn--sm c-btn--ghost c-annuaire__cta" href="#">Voir fiche</a>
+        </li>
+
+        <li class="c-annuaire__row" data-filterable data-specialite="gastro" data-ville="lyon">
+          <img class="c-annuaire__photo" src="https://placehold.co/80x80/12304F/F7F6F1?text=MP" alt="">
+          <div class="c-annuaire__info">
+            <p class="c-annuaire__name">Dr Marie Pichon</p>
+            <p class="c-annuaire__speciality">Gastro-entérologie</p>
+            <p class="c-annuaire__city">Lyon</p>
+          </div>
+          <a class="c-btn c-btn--sm c-btn--ghost c-annuaire__cta" href="#">Voir fiche</a>
+        </li>
+
+      </ul>
+    </section>
+  </main>
+
+  <footer class="c-footer">
+    <div class="c-footer__inner">
+      <div class="c-footer__grid">
+        <div class="c-footer__col">
+          <p class="c-footer__brand">Le Guide Santé</p>
+          <p class="c-footer__tagline">Tribune clinique du Dr Stéphane Bach.</p>
+        </div>
+        <div class="c-footer__col">
+          <p class="c-footer__heading">Plan du site</p>
+          <ul class="c-footer__list">
+            <li><a class="c-footer__link" href="../tribunes/index.html">Tribunes</a></li>
+            <li><a class="c-footer__link" href="../travaux-scientifiques.html">Travaux scientifiques</a></li>
+            <li><a class="c-footer__link" href="index.html">Annuaire</a></li>
+            <li><a class="c-footer__link" href="../dr-stephane-bach.html">Dr Stéphane Bach</a></li>
+            <li><a class="c-footer__link" href="../a-propos.html">À propos</a></li>
+          </ul>
+        </div>
+        <div class="c-footer__col">
+          <p class="c-footer__heading">Mentions</p>
+          <ul class="c-footer__list">
+            <li><a class="c-footer__link" href="../a-propos.html">Charte éditoriale</a></li>
+            <li><a class="c-footer__link" href="mailto:contact@leguidesante.fr">contact@leguidesante.fr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="c-footer__bottom">
+        <p class="c-footer__credit">© 2026 Le Guide Santé — Dr Stéphane Bach.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
