@@ -1,0 +1,19 @@
+uuid: 33333333-3333-3333-3333-100000000007
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pullquote
+    - node.type.tribune
+id: node.tribune.field_pullquote
+field_name: field_pullquote
+entity_type: node
+bundle: tribune
+label: Citation marquante
+description: 'Citation mise en exergue (pull-quote) dans la tribune.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

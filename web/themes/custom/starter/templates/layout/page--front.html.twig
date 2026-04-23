@@ -1,0 +1,210 @@
+{#
+  Home — 6 sections : hero, piliers, derniers articles, travaux, annuaire, newsletter.
+#}
+{{ attach_library('starter/global') }}
+{{ attach_library('starter/newsletter') }}
+<a class="u-sr-only u-sr-only--focusable" href="#main">Aller au contenu</a>
+
+<header class="c-header" role="banner">
+  <div class="u-container c-header__inner">
+    <div class="c-header__brand">{{ page.header }}</div>
+    <button type="button"
+            id="c-nav-toggle"
+            class="c-nav__toggle"
+            aria-expanded="false"
+            aria-controls="c-primary-nav"
+            aria-label="Ouvrir le menu">
+      <span class="c-nav__toggle-bar" aria-hidden="true"></span>
+      <span class="c-nav__toggle-bar" aria-hidden="true"></span>
+      <span class="c-nav__toggle-bar" aria-hidden="true"></span>
+    </button>
+    {% if page.primary_menu %}
+      <nav id="c-primary-nav" class="c-nav" aria-label="Navigation principale">
+        {{ page.primary_menu }}
+      </nav>
+    {% endif %}
+  </div>
+</header>
+
+<main id="main" class="c-home" role="main" tabindex="-1">
+
+  {# 1. Hero éditorial — dernière tribune #}
+  {% set hero_view = drupal_view_result('latest_tribunes', 'block_hero') %}
+  <section class="c-hero c-hero--front" aria-label="Dernière tribune">
+    <div class="u-container">
+      {% if hero_view is not empty %}
+        {{ drupal_view('latest_tribunes', 'block_hero') }}
+      {% else %}
+        <p class="c-hero__eyebrow">Tribune</p>
+        <h1 class="c-hero__title">Soigner mieux, documenter chaque choix.</h1>
+        <p class="c-hero__lede">
+          Le Dr Stéphane Bach partage ses analyses cliniques, ses lectures de la littérature
+          scientifique et ses prises de position sur la santé publique.
+        </p>
+        <a class="c-btn c-btn--primary c-hero__cta" href="/tribunes">Lire les tribunes</a>
+      {% endif %}
+    </div>
+  </section>
+
+  {# 2. Quatre piliers #}
+  <section class="c-pillars" aria-label="Les quatre thématiques">
+    <div class="u-container">
+      <h2 class="c-pillars__title">Quatre piliers éditoriaux</h2>
+      <ul class="c-pillars__list">
+        <li class="c-pillars__item" data-pilier="science-preuves">
+          <a class="c-pillars__link" href="/thematique/science-preuves">
+            <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4.5 3h15"/><path d="M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3"/><path d="M6 14h12"/>
+            </svg>
+            <h3 class="c-pillars__item-title">Science &amp; preuves</h3>
+            <p class="c-pillars__blurb">Lectures critiques, méta-analyses, niveaux de preuve.</p>
+          </a>
+        </li>
+        <li class="c-pillars__item" data-pilier="clinique-terrain">
+          <a class="c-pillars__link" href="/thematique/clinique-terrain">
+            <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4v6a5 5 0 0 0 10 0V4"/><path d="M2 4h4"/><path d="M12 4h4"/><circle cx="19" cy="16" r="3"/><path d="M9 14v2a5 5 0 0 0 5 5h2"/>
+            </svg>
+            <h3 class="c-pillars__item-title">Clinique &amp; terrain</h3>
+            <p class="c-pillars__blurb">Cas, retours de consultation, pratique du soin.</p>
+          </a>
+        </li>
+        <li class="c-pillars__item" data-pilier="politique-sante">
+          <a class="c-pillars__link" href="/thematique/politique-sante">
+            <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 22h18"/><path d="M6 18V9"/><path d="M10 18V9"/><path d="M14 18V9"/><path d="M18 18V9"/><path d="M2 9h20L12 3Z"/>
+            </svg>
+            <h3 class="c-pillars__item-title">Politique de santé</h3>
+            <p class="c-pillars__blurb">Système, régulation, accès aux soins.</p>
+          </a>
+        </li>
+        <li class="c-pillars__item" data-pilier="innovations">
+          <a class="c-pillars__link" href="/thematique/innovations">
+            <svg class="c-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M13 2 4 14h7l-1 8 9-12h-7z"/>
+            </svg>
+            <h3 class="c-pillars__item-title">Innovations</h3>
+            <p class="c-pillars__blurb">Nouvelles molécules, dispositifs, IA médicale.</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  {# 3. Derniers articles #}
+  <section class="c-latest" aria-label="Derniers articles">
+    <div class="u-container">
+      <header class="c-latest__head">
+        <h2 class="c-latest__title">Dernières tribunes</h2>
+        <a class="c-btn c-btn--ghost" href="/tribunes">Toutes les tribunes</a>
+      </header>
+      {% set grid_view = drupal_view_result('latest_tribunes', 'block_grid') %}
+      {% if grid_view is not empty %}
+        {{ drupal_view('latest_tribunes', 'block_grid') }}
+      {% else %}
+        <p class="c-latest__empty">Les prochaines tribunes paraîtront bientôt.</p>
+      {% endif %}
+    </div>
+  </section>
+
+  {# 4. Travaux scientifiques #}
+  <section class="c-travaux" aria-label="Travaux scientifiques">
+    <div class="u-container">
+      <header class="c-travaux__head">
+        <h2 class="c-travaux__title">Travaux scientifiques en cours</h2>
+        <p class="c-travaux__lede">Trois programmes de recherche pilotés par le Dr Bach.</p>
+      </header>
+      <ul class="c-travaux__list">
+        <li class="c-travaux__item">
+          <p class="c-travail__acronym">BSD</p>
+          <h3 class="c-travaux__item-title">Bach Syndrome Dataset</h3>
+          <p class="c-travaux__blurb">Cohorte longitudinale de suivi clinique multicentrique.</p>
+          <a class="c-btn c-btn--ghost" href="/travaux-scientifiques#bsd">En savoir plus</a>
+        </li>
+        <li class="c-travaux__item">
+          <p class="c-travail__acronym">BMN</p>
+          <h3 class="c-travaux__item-title">Biomarqueurs Neuro</h3>
+          <p class="c-travaux__blurb">Identification de biomarqueurs en santé mentale.</p>
+          <a class="c-btn c-btn--ghost" href="/travaux-scientifiques#bmn">En savoir plus</a>
+        </li>
+        <li class="c-travaux__item">
+          <p class="c-travail__acronym">COMPASS</p>
+          <h3 class="c-travaux__item-title">COMPASS</h3>
+          <p class="c-travaux__blurb">Étude comparative des parcours de soin en médecine générale.</p>
+          <a class="c-btn c-btn--ghost" href="/travaux-scientifiques#compass">En savoir plus</a>
+        </li>
+      </ul>
+      <div class="c-travaux__cta">
+        <a class="c-btn c-btn--primary" href="/travaux-scientifiques">Voir tous les travaux</a>
+      </div>
+    </div>
+  </section>
+
+  {# 5. Annuaire compact #}
+  <section class="c-annuaire c-annuaire--compact" aria-label="Annuaire des praticiens">
+    <div class="u-container">
+      <header class="c-annuaire__head">
+        <h2 class="c-annuaire__title">Annuaire des praticiens</h2>
+        <a class="c-btn c-btn--ghost" href="/annuaire">Annuaire complet</a>
+      </header>
+      {% set annuaire_view = drupal_view_result('annuaire', 'block_featured') %}
+      {% if annuaire_view is not empty %}
+        {{ drupal_view('annuaire', 'block_featured') }}
+      {% else %}
+        <ul class="c-annuaire__row">
+          <li class="c-annuaire__card">
+            <h3>Dr Alice Martin</h3>
+            <p class="c-annuaire__spec">Médecine générale</p>
+            <p class="c-annuaire__city">Paris 11e</p>
+          </li>
+          <li class="c-annuaire__card">
+            <h3>Dr Julien Nguyen</h3>
+            <p class="c-annuaire__spec">Cardiologie</p>
+            <p class="c-annuaire__city">Lyon</p>
+          </li>
+          <li class="c-annuaire__card">
+            <h3>Dr Sophie Bernard</h3>
+            <p class="c-annuaire__spec">Pédiatrie</p>
+            <p class="c-annuaire__city">Nantes</p>
+          </li>
+          <li class="c-annuaire__card">
+            <h3>Dr Marc Dupuis</h3>
+            <p class="c-annuaire__spec">Psychiatrie</p>
+            <p class="c-annuaire__city">Bordeaux</p>
+          </li>
+        </ul>
+      {% endif %}
+    </div>
+  </section>
+
+  {# 6. Newsletter #}
+  <section class="c-newsletter" aria-label="Newsletter">
+    <div class="u-container c-newsletter__inner">
+      <div class="c-newsletter__copy">
+        <h2 class="c-newsletter__title">Recevoir la tribune</h2>
+        <p class="c-newsletter__lede">Un mail par mois. Pas de spam, pas de publicité.</p>
+      </div>
+      <form id="c-newsletter" class="c-newsletter__form" action="/newsletter" method="post" novalidate>
+        <label class="u-sr-only" for="c-newsletter-email">Adresse e-mail</label>
+        <input class="c-newsletter__field"
+               id="c-newsletter-email"
+               type="email"
+               name="email"
+               required
+               autocomplete="email"
+               placeholder="votre@email.fr">
+        <button type="submit" class="c-btn c-btn--primary">S'abonner</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="c-footer" role="contentinfo">
+  {% if page.footer_top %}
+    <div class="c-footer__top"><div class="u-container">{{ page.footer_top }}</div></div>
+  {% endif %}
+  {% if page.footer_bottom %}
+    <div class="c-footer__bottom"><div class="u-container">{{ page.footer_bottom }}</div></div>
+  {% endif %}
+</footer>

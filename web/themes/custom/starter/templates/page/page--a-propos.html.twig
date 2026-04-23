@@ -1,0 +1,44 @@
+{#
+  Page "À propos" — mise en page éditoriale simple, mesure 72ch.
+#}
+{{ attach_library('starter/global') }}
+<a class="u-sr-only u-sr-only--focusable" href="#main">Aller au contenu</a>
+
+<header class="c-header" role="banner">
+  <div class="u-container c-header__inner">
+    <div class="c-header__brand">{{ page.header }}</div>
+    <button type="button"
+            id="c-nav-toggle"
+            class="c-nav__toggle"
+            aria-expanded="false"
+            aria-controls="c-primary-nav"
+            aria-label="Ouvrir le menu">
+      <span class="c-nav__toggle-bar" aria-hidden="true"></span>
+      <span class="c-nav__toggle-bar" aria-hidden="true"></span>
+      <span class="c-nav__toggle-bar" aria-hidden="true"></span>
+    </button>
+    {% if page.primary_menu %}
+      <nav id="c-primary-nav" class="c-nav" aria-label="Navigation principale">
+        {{ page.primary_menu }}
+      </nav>
+    {% endif %}
+  </div>
+</header>
+
+<main id="main" class="c-page c-page--a-propos" role="main" tabindex="-1">
+  <article class="u-container c-page__measure">
+    <h1 class="c-page__title">À propos</h1>
+    <div class="c-page__body">
+      {{ page.content }}
+    </div>
+  </article>
+</main>
+
+<footer class="c-footer" role="contentinfo">
+  {% if page.footer_top %}
+    <div class="c-footer__top"><div class="u-container">{{ page.footer_top }}</div></div>
+  {% endif %}
+  {% if page.footer_bottom %}
+    <div class="c-footer__bottom"><div class="u-container">{{ page.footer_bottom }}</div></div>
+  {% endif %}
+</footer>

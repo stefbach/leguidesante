@@ -1,0 +1,21 @@
+uuid: 33333333-3333-3333-3333-100000000003
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lede
+    - node.type.tribune
+  module:
+    - text
+id: node.tribune.field_lede
+field_name: field_lede
+entity_type: node
+bundle: tribune
+label: Lede
+description: 'Accroche (2-3 phrases, résumé éditorial).'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

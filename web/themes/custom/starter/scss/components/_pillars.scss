@@ -1,0 +1,114 @@
+// =============================================================================
+// c-pillars — 4 cartes cliquables avec accent color par pilier
+// =============================================================================
+
+@use "../mixins" as m;
+
+.c-pillars {
+  @include m.container;
+  padding-top: var(--sp-8);
+  padding-bottom: var(--sp-8);
+}
+
+.c-pillars__title {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-h2);
+  margin-bottom: var(--sp-6);
+}
+
+.c-pillars__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-4);
+
+  @include m.respond-above(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.respond-above(lg) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-5);
+  }
+}
+
+// --- Item --------------------------------------------------------------------
+.c-pillars__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-5);
+  background: var(--c-paper-2);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-md);
+  color: var(--c-ink);
+  text-decoration: none;
+  box-shadow: var(--sh-1);
+  transition: transform var(--dur-med) var(--ease-out),
+              box-shadow var(--dur-med) var(--ease-out),
+              border-color var(--dur-med) var(--ease-out);
+  min-height: 220px;
+
+  // Accent par défaut — overridé via data-pilier
+  --pilier-accent: var(--c-accent);
+}
+
+.c-pillars__item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sh-2);
+  border-color: var(--pilier-accent);
+}
+
+.c-pillars__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--sp-5);
+  height: 3px;
+  background: var(--pilier-accent);
+  border-top-left-radius: var(--r-md);
+  transition: width var(--dur-med) var(--ease-out);
+}
+
+.c-pillars__item:hover::before {
+  width: 100%;
+  border-top-right-radius: var(--r-md);
+}
+
+.c-pillars__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-sm);
+  background: color-mix(in srgb, var(--pilier-accent) 14%, transparent);
+  color: var(--pilier-accent);
+}
+
+.c-pillars__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.c-pillars__item-title {
+  font-family: var(--ff-serif);
+  font-size: 1.25rem;
+  font-weight: var(--fw-semibold);
+  line-height: 1.2;
+  color: var(--c-ink);
+}
+
+.c-pillars__blurb {
+  font-size: var(--fs-small);
+  color: var(--c-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+// --- Accents par pilier (brief §6) ------------------------------------------
+.c-pillars__item[data-pilier="science-preuves"] { --pilier-accent: var(--c-pilier-science); }
+.c-pillars__item[data-pilier="clinique-terrain"] { --pilier-accent: var(--c-pilier-clinique); }
+.c-pillars__item[data-pilier="politique-sante"]  { --pilier-accent: var(--c-pilier-politique); }
+.c-pillars__item[data-pilier="innovations"]      { --pilier-accent: var(--c-pilier-innovations); }

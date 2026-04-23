@@ -1,0 +1,35 @@
+name: Starter
+type: theme
+description: 'Thème custom Le Guide Santé — tribune Dr Stéphane Bach (bleu nuit + vert techno).'
+package: Custom
+core_version_requirement: ^10 || ^11
+base theme: stable9
+
+libraries:
+  - starter/global
+  - starter/nav
+
+libraries-extend:
+  core/drupal.dialog: [starter/nav]
+
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  hero: Hero
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer_top: 'Footer top'
+  footer_bottom: 'Footer bottom'
+
+logo:
+  path: logo/logo.svg
+
+features:
+  - logo
+  - favicon
+  - node_user_picture
+  - comment_user_picture
+  - comment_user_verification

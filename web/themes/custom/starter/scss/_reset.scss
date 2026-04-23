@@ -1,0 +1,119 @@
+// =============================================================================
+// Modern Reset — Le Guide Santé
+// Inspiré de Josh Comeau + Andy Bell, adapté au projet.
+// =============================================================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  line-height: var(--lh-body, 1.65);
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration-skip-ink: auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Focus visible default — override par composant si besoin
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: var(--focus-ring-width, 2px) solid var(--focus-ring-color, #00C28C);
+  outline-offset: var(--focus-ring-offset, 2px);
+  border-radius: 2px;
+}
+
+// Reduced motion (brief §10)
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Scroll padding pour anchor links sous header sticky
+html {
+  scroll-padding-top: calc(var(--header-h, 64px) + 1rem);
+}
+
+// Selection
+::selection {
+  background: var(--c-accent, #00C28C);
+  color: var(--c-ink, #0B1F3A);
+}

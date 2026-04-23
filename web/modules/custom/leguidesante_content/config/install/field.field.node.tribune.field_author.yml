@@ -1,0 +1,31 @@
+uuid: 33333333-3333-3333-3333-100000000008
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.tribune
+  module:
+    - user
+id: node.tribune.field_author
+field_name: field_author
+entity_type: node
+bundle: tribune
+label: Auteur
+description: "Utilisateur signataire de la tribune (par défaut Dr Bach)."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

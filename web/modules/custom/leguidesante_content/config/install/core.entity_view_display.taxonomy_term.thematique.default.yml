@@ -1,0 +1,38 @@
+uuid: 55555555-5555-5555-5555-300000000001
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.thematique.field_color_token
+    - field.field.taxonomy_term.thematique.field_icon
+    - taxonomy.vocabulary.thematique
+id: taxonomy_term.thematique.default
+targetEntityType: taxonomy_term
+bundle: thematique
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_color_token:
+    type: string
+    label: inline
+    weight: 1
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_icon:
+    type: string
+    label: inline
+    weight: 2
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

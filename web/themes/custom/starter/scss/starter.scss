@@ -1,0 +1,26 @@
+// =============================================================================
+// starter.scss — entry point Le Guide Santé
+// Ordre : tokens → reset → mixins → typography → components/*
+// Syntaxe moderne Sass : @forward + @use
+// =============================================================================
+
+@forward "tokens";
+@forward "mixins";
+@forward "reset";
+@forward "typography";
+
+// Components
+@forward "components/buttons";
+@forward "components/tags";
+@forward "components/header";
+@forward "components/nav";
+@forward "components/hero";
+@forward "components/pillars";
+@forward "components/card";
+@forward "components/tribune";
+@forward "components/author";
+@forward "components/annuaire";
+@forward "components/newsletter";
+@forward "components/pagination";
+@forward "components/footer";
+@forward "components/utilities";

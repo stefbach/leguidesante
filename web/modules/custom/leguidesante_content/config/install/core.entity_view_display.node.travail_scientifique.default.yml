@@ -1,0 +1,80 @@
+uuid: 55555555-5555-5555-5555-200000000001
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.travail_scientifique.field_abstract
+    - field.field.node.travail_scientifique.field_acronym
+    - field.field.node.travail_scientifique.field_doi
+    - field.field.node.travail_scientifique.field_image
+    - field.field.node.travail_scientifique.field_related_tribunes
+    - field.field.node.travail_scientifique.field_status
+    - node.type.travail_scientifique
+  module:
+    - link
+    - options
+    - text
+    - user
+id: node.travail_scientifique.default
+targetEntityType: node
+bundle: travail_scientifique
+mode: default
+content:
+  field_abstract:
+    type: text_default
+    label: hidden
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_acronym:
+    type: string
+    label: hidden
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_doi:
+    type: link
+    label: inline
+    weight: 6
+    region: content
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    weight: 4
+    region: content
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_related_tribunes:
+    type: entity_reference_label
+    label: above
+    weight: 7
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_status:
+    type: list_default
+    label: inline
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

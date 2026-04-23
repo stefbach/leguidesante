@@ -1,0 +1,69 @@
+{#
+  Page Dr Stéphane Bach — 2 colonnes desktop, empilé mobile, citation mise en avant.
+#}
+{{ attach_library('starter/global') }}
+<a class="u-sr-only u-sr-only--focusable" href="#main">Aller au contenu</a>
+
+<header class="c-header" role="banner">
+  <div class="u-container c-header__inner">
+    <div class="c-header__brand">{{ page.header }}</div>
+    <button type="button"
+            id="c-nav-toggle"
+            class="c-nav__toggle"
+            aria-expanded="false"
+            aria-controls="c-primary-nav"
+            aria-label="Ouvrir le menu">
+      <span class="c-nav__toggle-bar" aria-hidden="true"></span>
+      <span class="c-nav__toggle-bar" aria-hidden="true"></span>
+      <span class="c-nav__toggle-bar" aria-hidden="true"></span>
+    </button>
+    {% if page.primary_menu %}
+      <nav id="c-primary-nav" class="c-nav" aria-label="Navigation principale">
+        {{ page.primary_menu }}
+      </nav>
+    {% endif %}
+  </div>
+</header>
+
+<main id="main" class="c-page c-page--bio" role="main" tabindex="-1">
+  <article class="u-container c-bio">
+    <div class="c-bio__grid">
+      <div class="c-bio__main">
+        <p class="c-bio__eyebrow">Tribune du</p>
+        <h1 class="c-bio__title">Dr Stéphane Bach</h1>
+        <blockquote class="c-bio__quote">
+          <p>« Soigner, c'est d'abord refuser de mentir — aux patients comme à soi-même. »</p>
+        </blockquote>
+        <div class="c-bio__body">
+          {{ page.content }}
+        </div>
+      </div>
+      <aside class="c-bio__aside" aria-label="Portrait et informations">
+        <figure class="c-bio__portrait">
+          <img src="{{ base_path ~ directory }}/images/dr-stephane-bach.jpg"
+               alt="Portrait du Dr Stéphane Bach"
+               width="480"
+               height="600"
+               loading="lazy">
+        </figure>
+        <dl class="c-bio__meta">
+          <dt>Spécialité</dt>
+          <dd>Médecine interne</dd>
+          <dt>Exercice</dt>
+          <dd>Hôpital universitaire</dd>
+          <dt>Enseignement</dt>
+          <dd>Faculté de médecine</dd>
+        </dl>
+      </aside>
+    </div>
+  </article>
+</main>
+
+<footer class="c-footer" role="contentinfo">
+  {% if page.footer_top %}
+    <div class="c-footer__top"><div class="u-container">{{ page.footer_top }}</div></div>
+  {% endif %}
+  {% if page.footer_bottom %}
+    <div class="c-footer__bottom"><div class="u-container">{{ page.footer_bottom }}</div></div>
+  {% endif %}
+</footer>

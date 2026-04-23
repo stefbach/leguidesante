@@ -1,0 +1,16 @@
+uuid: 77777777-7777-7777-7777-000000000001
+langcode: fr
+status: true
+dependencies:
+  enforced:
+    module:
+      - redirect
+bundle: redirect
+redirect_source:
+  path: article/exemple
+  query: {  }
+redirect_redirect:
+  uri: 'internal:/tribune/exemple'
+  title: ''
+  options: {  }
+status_code: 301

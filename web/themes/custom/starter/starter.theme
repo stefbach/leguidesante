@@ -1,0 +1,83 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Starter theme.
+ */
+
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_preprocess_HOOK() for html.
+ */
+function starter_preprocess_html(array &$variables): void {
+  $variables['attributes']['class'][] = 'lgs';
+  if (!empty($variables['node_type'])) {
+    $variables['attributes']['class'][] = 'lgs--' . str_replace('_', '-', $variables['node_type']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page.
+ */
+function starter_preprocess_page(array &$variables): void {
+  $variables['site_name'] = \Drupal::config('system.site')->get('name') ?: 'Le Guide Santé';
+  $variables['site_slogan'] = \Drupal::config('system.site')->get('slogan') ?: 'Tribune du Dr Stéphane Bach';
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function starter_theme_suggestions_page_alter(array &$suggestions, array $variables): void {
+  $path = \Drupal::service('path.current')->getPath();
+  $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
+  $alias = trim($alias, '/');
+  if ($alias) {
+    $slug = preg_replace('/[^a-z0-9]+/', '-', strtolower($alias));
+    $suggestions[] = 'page__' . str_replace('-', '_', $slug);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.
+ */
+function starter_preprocess_node(array &$variables): void {
+  $node = $variables['elements']['#node'] ?? NULL;
+  if (!$node) {
+    return;
+  }
+  $variables['reading_time'] = _starter_reading_time($node);
+
+  if ($node->bundle() === 'tribune') {
+    $author = NULL;
+    if ($node->hasField('field_author') && !$node->get('field_author')->isEmpty()) {
+      $author = $node->get('field_author')->entity;
+    }
+    $author ??= $node->getOwner();
+
+    if ($author) {
+      $variables['author_name'] = $author->getDisplayName();
+      $variables['author_profile_url'] = $author->toUrl()->toString();
+      if ($author->hasField('user_picture') && !$author->get('user_picture')->isEmpty()) {
+        $variables['author_picture'] = \Drupal::service('entity_type.manager')
+          ->getViewBuilder('user')
+          ->view($author, 'compact', ['user_picture']);
+      }
+      if ($author->hasField('field_bio') && !$author->get('field_bio')->isEmpty()) {
+        $variables['author_bio'] = $author->get('field_bio')->view(['label' => 'hidden']);
+      }
+    }
+  }
+}
+
+/**
+ * Estimate reading time (200 wpm) from the node body.
+ */
+function _starter_reading_time($node): int {
+  if (!$node->hasField('body') || $node->get('body')->isEmpty()) {
+    return 1;
+  }
+  $text = strip_tags($node->get('body')->value ?? '');
+  $words = str_word_count($text);
+  return max(1, (int) ceil($words / 200));
+}

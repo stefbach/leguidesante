@@ -1,0 +1,152 @@
+// =============================================================================
+// Typography — Le Guide Santé
+// Fraunces (serif, variable) + Inter (sans, variable), servis via Google Fonts.
+// =============================================================================
+
+// Google Fonts via @import (pas de fichiers locaux)
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Inter:wght@400;500;600;700&display=swap");
+
+// ----- Base -----------------------------------------------------------------
+html {
+  font-family: var(--ff-sans);
+  font-size: 100%;
+}
+
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--c-ink);
+  background: var(--c-paper);
+  font-feature-settings: "kern", "liga", "calt";
+}
+
+// ----- Headings -------------------------------------------------------------
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-title);
+  letter-spacing: -0.01em;
+  color: var(--c-ink);
+  margin: 0;
+  text-wrap: balance;
+}
+
+h1, .h1 { font-size: var(--fs-h1); font-weight: var(--fw-bold); letter-spacing: -0.02em; }
+h2, .h2 { font-size: var(--fs-h2); }
+h3, .h3 { font-size: var(--fs-h3); }
+h4, .h4 { font-size: var(--fs-h4); font-family: var(--ff-sans); font-weight: var(--fw-semibold); }
+h5, .h5 { font-size: var(--fs-h5); font-family: var(--ff-sans); font-weight: var(--fw-semibold); }
+h6, .h6 { font-size: var(--fs-h6); font-family: var(--ff-sans); font-weight: var(--fw-semibold); text-transform: uppercase; letter-spacing: 0.06em; }
+
+// ----- Paragraphs & prose ---------------------------------------------------
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+// ----- Links ----------------------------------------------------------------
+a {
+  color: var(--c-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--c-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-out),
+              text-decoration-color var(--dur-fast) var(--ease-out);
+}
+
+a:hover {
+  color: var(--c-ink-2);
+  text-decoration-thickness: 2px;
+}
+
+// ----- Blockquote -----------------------------------------------------------
+blockquote {
+  font-family: var(--ff-serif);
+  font-size: clamp(1.25rem, 1vw + 1rem, 1.75rem);
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--c-ink);
+  border-left: 3px solid var(--c-accent);
+  padding: var(--sp-2) var(--sp-5);
+  margin: var(--sp-6) 0;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: var(--sp-3);
+  font-size: var(--fs-small);
+  font-style: normal;
+  font-family: var(--ff-sans);
+  color: var(--c-muted);
+}
+
+// ----- Dropcap --------------------------------------------------------------
+.dropcap::first-letter,
+.u-dropcap::first-letter {
+  font-family: var(--ff-serif);
+  font-weight: var(--fw-bold);
+  float: left;
+  font-size: 4.5em;
+  line-height: 0.85;
+  padding: 0.1em 0.1em 0 0;
+  color: var(--c-accent);
+}
+
+// ----- Lede (chapo) ---------------------------------------------------------
+.lede,
+.u-lede {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-lede);
+  line-height: var(--lh-lede);
+  color: var(--c-ink);
+  font-weight: var(--fw-regular);
+  font-style: italic;
+}
+
+// ----- Small / captions -----------------------------------------------------
+small,
+.small,
+.u-small {
+  font-size: var(--fs-small);
+  color: var(--c-muted);
+}
+
+// ----- Code -----------------------------------------------------------------
+code, kbd, samp, pre {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.925em;
+}
+
+code {
+  background: var(--c-line);
+  padding: 0.1em 0.35em;
+  border-radius: var(--r-sm);
+}
+
+pre {
+  background: var(--c-ink);
+  color: var(--c-paper);
+  padding: var(--sp-4);
+  border-radius: var(--r-md);
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+// ----- HR -------------------------------------------------------------------
+hr {
+  border: 0;
+  border-top: 1px solid var(--c-line);
+  margin: var(--sp-6) 0;
+}

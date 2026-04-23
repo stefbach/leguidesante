@@ -1,0 +1,122 @@
+uuid: 44444444-4444-4444-4444-100000000002
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.travail_scientifique.field_abstract
+    - field.field.node.travail_scientifique.field_acronym
+    - field.field.node.travail_scientifique.field_doi
+    - field.field.node.travail_scientifique.field_image
+    - field.field.node.travail_scientifique.field_related_tribunes
+    - field.field.node.travail_scientifique.field_status
+    - node.type.travail_scientifique
+  module:
+    - link
+    - media_library
+    - options
+    - path
+    - text
+id: node.travail_scientifique.default
+targetEntityType: node
+bundle: travail_scientifique
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_abstract:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 8
+      placeholder: ''
+    third_party_settings: {  }
+  field_acronym:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 12
+      placeholder: 'ex. BSD'
+    third_party_settings: {  }
+  field_doi:
+    type: link_default
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: 'https://doi.org/...'
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_related_tribunes:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_status:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 17
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 18
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 19
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,43 @@
+global:
+  version: 1.x
+  css:
+    theme:
+      css/starter.css: {}
+  js:
+    js/nav.js: {}
+    js/smooth-scroll.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
+nav:
+  version: 1.x
+  js:
+    js/nav.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
+filters:
+  version: 1.x
+  js:
+    js/filters.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
+newsletter:
+  version: 1.x
+  js:
+    js/newsletter.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
+smooth-scroll:
+  version: 1.x
+  js:
+    js/smooth-scroll.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

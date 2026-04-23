@@ -1,0 +1,36 @@
+{#
+  Tribune — teaser : carte image + meta + lede tronqué.
+#}
+<article{{ attributes.addClass('c-card', 'c-card--tribune', 'node', 'node--view-mode-teaser') }}>
+  {% if content.field_image|render|trim %}
+    <a class="c-card__media" href="{{ url }}" aria-hidden="true" tabindex="-1">
+      {{ content.field_image }}
+    </a>
+  {% endif %}
+
+  <div class="c-card__body">
+    {% if content.field_thematique|render|trim %}
+      <div class="c-card__tags">{{ content.field_thematique }}</div>
+    {% endif %}
+
+    <div class="c-card__meta">
+      <time datetime="{{ node.getCreatedTime|format_date('custom','c') }}">
+        {{ node.getCreatedTime|format_date('custom','d F Y') }}
+      </time>
+      <span aria-hidden="true">·</span>
+      <span>{{ reading_time }} min</span>
+    </div>
+
+    {{ title_prefix }}
+    <h2 class="c-card__title">
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+    {{ title_suffix }}
+
+    {% if node.hasField('field_lede') and not node.field_lede.isEmpty %}
+      <p class="c-card__excerpt">{{ node.field_lede.value|striptags|u.truncate(160, '…') }}</p>
+    {% endif %}
+
+    <a class="c-card__cta" href="{{ url }}">Lire<span class="u-sr-only"> la tribune {{ label }}</span></a>
+  </div>
+</article>

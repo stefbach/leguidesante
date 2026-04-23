@@ -1,0 +1,19 @@
+uuid: 33333333-3333-3333-3333-300000000001
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_color_token
+    - taxonomy.vocabulary.thematique
+id: taxonomy_term.thematique.field_color_token
+field_name: field_color_token
+entity_type: taxonomy_term
+bundle: thematique
+label: 'Token couleur'
+description: 'Token CSS de la couleur d’accent (ex. --c-accent).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

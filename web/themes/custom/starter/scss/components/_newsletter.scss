@@ -1,0 +1,151 @@
+// =============================================================================
+// c-newsletter — Form inline, dark sur bleu nuit
+// =============================================================================
+
+@use "../mixins" as m;
+
+.c-newsletter {
+  background: var(--c-ink);
+  color: var(--c-paper);
+  padding: var(--sp-8) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.c-newsletter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(0, 194, 140, 0.12), transparent 55%);
+  pointer-events: none;
+}
+
+.c-newsletter__inner {
+  @include m.container(800px);
+  position: relative;
+  text-align: center;
+}
+
+.c-newsletter__eyebrow {
+  font-family: var(--ff-sans);
+  font-size: 0.8125rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  margin-bottom: var(--sp-3);
+}
+
+.c-newsletter__title {
+  font-family: var(--ff-serif);
+  font-size: clamp(1.75rem, 1.5vw + 1.25rem, 2.5rem);
+  font-weight: var(--fw-bold);
+  color: var(--c-paper);
+  line-height: 1.15;
+  margin-bottom: var(--sp-3);
+}
+
+.c-newsletter__lede {
+  font-size: 1.0625rem;
+  color: color-mix(in srgb, var(--c-paper) 80%, transparent);
+  line-height: 1.55;
+  margin-bottom: var(--sp-5);
+  max-width: 52ch;
+  margin-inline: auto;
+}
+
+// --- Form inline -------------------------------------------------------------
+.c-newsletter__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  max-width: 520px;
+  margin-inline: auto;
+
+  @include m.respond-above(sm) {
+    flex-direction: row;
+  }
+}
+
+.c-newsletter__field {
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.c-newsletter__input {
+  width: 100%;
+  height: 48px;
+  padding: 0 var(--sp-4);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--r-sm);
+  color: var(--c-paper);
+  font-size: 1rem;
+  font-family: var(--ff-sans);
+  transition: border-color var(--dur-fast) var(--ease-out),
+              background var(--dur-fast) var(--ease-out);
+}
+
+.c-newsletter__input::placeholder {
+  color: color-mix(in srgb, var(--c-paper) 55%, transparent);
+}
+
+.c-newsletter__input:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.c-newsletter__input:focus-visible {
+  outline: none;
+  border-color: var(--c-accent);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--c-accent) 30%, transparent);
+}
+
+.c-newsletter__submit {
+  flex-shrink: 0;
+  height: 48px;
+  padding: 0 var(--sp-5);
+  background: var(--c-accent);
+  color: var(--c-ink);
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-semibold);
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out),
+              transform var(--dur-fast) var(--ease-out);
+}
+
+.c-newsletter__submit:hover {
+  background: var(--c-accent-2);
+}
+
+.c-newsletter__submit:active {
+  transform: translateY(1px);
+}
+
+.c-newsletter__note {
+  font-size: var(--fs-small);
+  color: color-mix(in srgb, var(--c-paper) 55%, transparent);
+  margin-top: var(--sp-4);
+}
+
+.c-newsletter__note a {
+  color: var(--c-paper);
+  text-decoration-color: var(--c-accent);
+}
+
+// --- Variante compacte (ex: sidebar / footer) -------------------------------
+.c-newsletter--inline {
+  padding: var(--sp-6) 0;
+  background: var(--c-ink-2);
+
+  .c-newsletter__title {
+    font-size: var(--fs-h3);
+  }
+
+  .c-newsletter__lede {
+    display: none;
+  }
+}

@@ -1,0 +1,23 @@
+uuid: 33333333-3333-3333-3333-200000000006
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_doi
+    - node.type.travail_scientifique
+  module:
+    - link
+id: node.travail_scientifique.field_doi
+field_name: field_doi
+entity_type: node
+bundle: travail_scientifique
+label: DOI
+description: 'Digital Object Identifier (lien vers la publication).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

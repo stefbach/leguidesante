@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * @file
+ * Provides content types for Le Guide Santé.
+ *
+ * This module ships content types (tribune, travail_scientifique),
+ * the thematique taxonomy vocabulary and the views that expose them.
+ * All configuration is delivered via config/install and config/optional.
+ */

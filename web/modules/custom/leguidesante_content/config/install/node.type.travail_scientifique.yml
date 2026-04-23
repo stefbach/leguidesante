@@ -1,0 +1,11 @@
+uuid: 11111111-1111-1111-1111-000000000002
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Travail scientifique'
+type: travail_scientifique
+description: 'Étude, essai ou travail de recherche (BSD, BMN, COMPASS, etc.).'
+help: "Renseignez l'acronyme, un abstract, le statut (en cours / publié / recrutement), le DOI et les tribunes liées."
+new_revision: true
+preview_mode: 0
+display_submitted: false

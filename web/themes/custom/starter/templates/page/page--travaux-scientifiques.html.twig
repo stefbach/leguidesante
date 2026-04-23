@@ -1,0 +1,104 @@
+{#
+  Page Travaux scientifiques — hero + 3 sections ancrées BSD / BMN / COMPASS.
+#}
+{{ attach_library('starter/global') }}
+{{ attach_library('starter/smooth-scroll') }}
+<a class="u-sr-only u-sr-only--focusable" href="#main">Aller au contenu</a>
+
+<header class="c-header" role="banner">
+  <div class="u-container c-header__inner">
+    <div class="c-header__brand">{{ page.header }}</div>
+    <button type="button"
+            id="c-nav-toggle"
+            class="c-nav__toggle"
+            aria-expanded="false"
+            aria-controls="c-primary-nav"
+            aria-label="Ouvrir le menu">
+      <span class="c-nav__toggle-bar" aria-hidden="true"></span>
+      <span class="c-nav__toggle-bar" aria-hidden="true"></span>
+      <span class="c-nav__toggle-bar" aria-hidden="true"></span>
+    </button>
+    {% if page.primary_menu %}
+      <nav id="c-primary-nav" class="c-nav" aria-label="Navigation principale">
+        {{ page.primary_menu }}
+      </nav>
+    {% endif %}
+  </div>
+</header>
+
+<main id="main" class="c-page c-page--travaux" role="main" tabindex="-1">
+
+  <section class="c-hero c-hero--travaux" aria-label="Travaux scientifiques">
+    <div class="u-container">
+      <p class="c-hero__eyebrow">Recherche</p>
+      <h1 class="c-hero__title">Travaux scientifiques</h1>
+      <p class="c-hero__lede">
+        Trois programmes en cours, portés ou co-pilotés par le Dr Stéphane Bach,
+        explorent la médecine interne, la neuro-psychiatrie et l'organisation des soins.
+      </p>
+      <nav class="c-travaux__anchors" aria-label="Accès rapide aux travaux">
+        <a href="#bsd">BSD</a>
+        <a href="#bmn">BMN</a>
+        <a href="#compass">COMPASS</a>
+      </nav>
+    </div>
+  </section>
+
+  <article id="bsd" class="c-travail c-travail--section">
+    <div class="u-container">
+      <header class="c-travail__header">
+        <p class="c-travail__acronym">BSD</p>
+        <p class="c-chip c-travail__status">En cours</p>
+        <h2 class="c-travail__title">Bach Syndrome Dataset</h2>
+      </header>
+      <div class="c-travail__abstract">
+        <p>Cohorte longitudinale multicentrique visant à caractériser les trajectoires
+        cliniques et biologiques de patients présentant des syndromes chroniques complexes.</p>
+      </div>
+      <p class="c-travail__related-link"><a href="/tribunes?travail=bsd">Tribunes liées à BSD</a></p>
+    </div>
+  </article>
+
+  <article id="bmn" class="c-travail c-travail--section">
+    <div class="u-container">
+      <header class="c-travail__header">
+        <p class="c-travail__acronym">BMN</p>
+        <p class="c-chip c-travail__status">En recrutement</p>
+        <h2 class="c-travail__title">Biomarqueurs Neuro</h2>
+      </header>
+      <div class="c-travail__abstract">
+        <p>Identification et validation de biomarqueurs sanguins et d'imagerie pour
+        l'aide au diagnostic en santé mentale.</p>
+      </div>
+      <p class="c-travail__related-link"><a href="/tribunes?travail=bmn">Tribunes liées à BMN</a></p>
+    </div>
+  </article>
+
+  <article id="compass" class="c-travail c-travail--section">
+    <div class="u-container">
+      <header class="c-travail__header">
+        <p class="c-travail__acronym">COMPASS</p>
+        <p class="c-chip c-travail__status">Publié</p>
+        <h2 class="c-travail__title">COMPASS</h2>
+      </header>
+      <div class="c-travail__abstract">
+        <p>Étude comparative des parcours de soin en médecine générale, avec un focus
+        sur l'adhérence thérapeutique et la coordination ville-hôpital.</p>
+      </div>
+      <p class="c-travail__related-link"><a href="/tribunes?travail=compass">Tribunes liées à COMPASS</a></p>
+    </div>
+  </article>
+
+  <div class="u-container">
+    {{ page.content }}
+  </div>
+</main>
+
+<footer class="c-footer" role="contentinfo">
+  {% if page.footer_top %}
+    <div class="c-footer__top"><div class="u-container">{{ page.footer_top }}</div></div>
+  {% endif %}
+  {% if page.footer_bottom %}
+    <div class="c-footer__bottom"><div class="u-container">{{ page.footer_bottom }}</div></div>
+  {% endif %}
+</footer>

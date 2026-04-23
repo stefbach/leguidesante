@@ -1,0 +1,9 @@
+uuid: 11111111-1111-1111-1111-000000000003
+langcode: fr
+status: true
+dependencies: {  }
+name: Thématique
+vid: thematique
+description: 'Les 4 piliers éditoriaux : Science & preuves, Clinique & terrain, Politique de santé, Innovations.'
+weight: 0
+new_revision: false

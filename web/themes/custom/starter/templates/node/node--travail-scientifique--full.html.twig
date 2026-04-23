@@ -1,0 +1,45 @@
+{#
+  Travail scientifique — affichage complet : acronyme géant, statut, abstract, DOI, tribunes liées.
+#}
+<article{{ attributes.addClass('c-travail', 'node', 'node--type-travail-scientifique', 'node--view-mode-full') }}>
+  {{ title_prefix }}
+
+  <header class="c-travail__header">
+    {% if content.field_acronym|render|trim %}
+      <p class="c-travail__acronym">{{ content.field_acronym }}</p>
+    {% endif %}
+
+    {% if content.field_status|render|trim %}
+      <p class="c-chip c-travail__status">{{ content.field_status }}</p>
+    {% endif %}
+
+    <h1 class="c-travail__title">{{ label }}</h1>
+  </header>
+
+  {{ title_suffix }}
+
+  {% if content.field_image|render|trim %}
+    <figure class="c-travail__media">{{ content.field_image }}</figure>
+  {% endif %}
+
+  {% if content.field_abstract|render|trim %}
+    <div class="c-travail__abstract">
+      <h2 class="u-sr-only">Résumé</h2>
+      {{ content.field_abstract }}
+    </div>
+  {% endif %}
+
+  {% if content.field_doi|render|trim %}
+    <p class="c-travail__doi">
+      <span class="c-travail__doi-label">DOI :</span>
+      {{ content.field_doi }}
+    </p>
+  {% endif %}
+
+  {% if content.field_related_tribunes|render|trim %}
+    <section class="c-travail__related" aria-label="Tribunes liées">
+      <h2 class="c-travail__related-title">Tribunes liées</h2>
+      {{ content.field_related_tribunes }}
+    </section>
+  {% endif %}
+</article>

@@ -1,0 +1,100 @@
+// =============================================================================
+// Tokens — Le Guide Santé
+// Source de vérité : /docs/DESIGN_BRIEF.md §2–§5
+// =============================================================================
+
+// Breakpoints (SCSS vars — utilisés par @mixin respond-above)
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+
+// Container max width
+$container-max: 1200px;
+
+:root {
+  // --- Couleurs (brief §2) ---------------------------------------------------
+  --c-ink: #0B1F3A;        // Bleu nuit — fond hero, footer, titres
+  --c-ink-2: #12304F;      // Bleu nuit +1 — cards sombres
+  --c-accent: #00C28C;     // Vert techno — CTA, liens actifs, accents
+  --c-accent-2: #00E3A4;   // Vert hover
+  --c-paper: #F7F6F1;      // Fond clair (crème journal)
+  --c-paper-2: #FFFFFF;    // Fond card clair
+  --c-line: #E6E3DA;       // Divider clair
+  --c-muted: #5A6676;      // Texte secondaire
+  --c-warn: #E0654A;       // Alerte / tag controverse
+
+  // Accents piliers (brief §6)
+  --c-pilier-science: #00C28C;    // vert
+  --c-pilier-clinique: #4A90E2;   // bleu ciel
+  --c-pilier-politique: #E0654A;  // orange
+  --c-pilier-innovations: #9B6BFF;// violet
+
+  // --- Typographie (brief §3) ------------------------------------------------
+  --ff-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --ff-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  // Échelle (clamp)
+  --fs-h1: clamp(2.25rem, 2vw + 2rem, 4rem);
+  --fs-h2: clamp(1.75rem, 1.2vw + 1.4rem, 2.5rem);
+  --fs-h3: clamp(1.25rem, 0.6vw + 1.1rem, 1.625rem);
+  --fs-h4: 1.25rem;
+  --fs-h5: 1.0625rem;
+  --fs-h6: 1rem;
+  --fs-body: 1.0625rem;
+  --fs-small: 0.9rem;
+  --fs-lede: clamp(1.125rem, 0.4vw + 1rem, 1.375rem);
+
+  // Line-height
+  --lh-title: 1.1;
+  --lh-body: 1.65;
+  --lh-lede: 1.5;
+
+  // Poids
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  // --- Espacement (brief §4) -------------------------------------------------
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+
+  // --- Radius ----------------------------------------------------------------
+  --r-sm: 4px;
+  --r-md: 10px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+
+  // --- Shadows ---------------------------------------------------------------
+  --sh-1: 0 1px 2px rgba(11, 31, 58, 0.06);
+  --sh-2: 0 8px 24px rgba(11, 31, 58, 0.08);
+  --sh-3: 0 16px 48px rgba(11, 31, 58, 0.12);
+
+  // --- Grille ----------------------------------------------------------------
+  --container-max: 1200px;
+  --grid-gap: 2rem;
+  --grid-gap-sm: 1rem;
+
+  // --- Focus ring ------------------------------------------------------------
+  --focus-ring-color: var(--c-accent);
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+
+  // --- Motion ----------------------------------------------------------------
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur-med: 240ms;
+  --dur-slow: 420ms;
+
+  // --- Header ----------------------------------------------------------------
+  --header-h: 64px;
+}

@@ -1,0 +1,132 @@
+// =============================================================================
+// Utilities — u-container, u-grid, u-flex, u-sr-only, u-stack-*
+// =============================================================================
+
+@use "../mixins" as m;
+@use "../tokens" as t;
+
+// --- Container ---------------------------------------------------------------
+.u-container {
+  @include m.container;
+}
+
+.u-container--narrow {
+  @include m.container(760px);
+}
+
+.u-container--wide {
+  @include m.container(1440px);
+}
+
+// --- Grid 12 cols ------------------------------------------------------------
+.u-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
+}
+
+.u-grid--2 { grid-template-columns: repeat(2, 1fr); }
+.u-grid--3 { grid-template-columns: repeat(3, 1fr); }
+.u-grid--4 { grid-template-columns: repeat(4, 1fr); }
+.u-grid--auto { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+// --- Flex --------------------------------------------------------------------
+.u-flex { display: flex; }
+.u-flex--col { flex-direction: column; }
+.u-flex--wrap { flex-wrap: wrap; }
+.u-flex--center { align-items: center; justify-content: center; }
+.u-flex--between { justify-content: space-between; }
+.u-flex--start { align-items: flex-start; }
+.u-flex--end { align-items: flex-end; }
+.u-flex--gap-2 { gap: var(--sp-2); }
+.u-flex--gap-3 { gap: var(--sp-3); }
+.u-flex--gap-4 { gap: var(--sp-4); }
+
+// --- Vertical rhythm : stack -------------------------------------------------
+.u-stack > * + * { margin-top: var(--sp-4); }
+.u-stack-1 > * + * { margin-top: var(--sp-1); }
+.u-stack-2 > * + * { margin-top: var(--sp-2); }
+.u-stack-3 > * + * { margin-top: var(--sp-3); }
+.u-stack-4 > * + * { margin-top: var(--sp-4); }
+.u-stack-5 > * + * { margin-top: var(--sp-5); }
+.u-stack-6 > * + * { margin-top: var(--sp-6); }
+.u-stack-7 > * + * { margin-top: var(--sp-7); }
+.u-stack-8 > * + * { margin-top: var(--sp-8); }
+
+// --- Screen-reader only ------------------------------------------------------
+.u-sr-only,
+.u-visually-hidden {
+  @include m.visually-hidden;
+}
+
+// Version focusable (skip link)
+.u-sr-only--focusable:focus,
+.u-sr-only--focusable:focus-visible,
+.u-visually-hidden--focusable:focus,
+.u-visually-hidden--focusable:focus-visible {
+  position: fixed;
+  top: var(--sp-3);
+  left: var(--sp-3);
+  width: auto;
+  height: auto;
+  padding: var(--sp-3) var(--sp-4);
+  margin: 0;
+  clip: auto;
+  white-space: normal;
+  overflow: visible;
+  background: var(--c-accent);
+  color: var(--c-ink);
+  border-radius: var(--r-sm);
+  font-weight: var(--fw-semibold);
+  z-index: 9999;
+}
+
+// --- Text utilities ----------------------------------------------------------
+.u-text-center { text-align: center; }
+.u-text-left { text-align: left; }
+.u-text-right { text-align: right; }
+
+.u-text-ink { color: var(--c-ink); }
+.u-text-muted { color: var(--c-muted); }
+.u-text-accent { color: var(--c-accent); }
+.u-text-paper { color: var(--c-paper); }
+
+// --- Background utilities ----------------------------------------------------
+.u-bg-paper { background: var(--c-paper); }
+.u-bg-paper-2 { background: var(--c-paper-2); }
+.u-bg-ink { background: var(--c-ink); color: var(--c-paper); }
+.u-bg-ink-2 { background: var(--c-ink-2); color: var(--c-paper); }
+
+// --- Spacing utilities (mt / mb) --------------------------------------------
+.u-mt-0 { margin-top: 0; }
+.u-mt-4 { margin-top: var(--sp-4); }
+.u-mt-5 { margin-top: var(--sp-5); }
+.u-mt-6 { margin-top: var(--sp-6); }
+.u-mt-8 { margin-top: var(--sp-8); }
+
+.u-mb-0 { margin-bottom: 0; }
+.u-mb-4 { margin-bottom: var(--sp-4); }
+.u-mb-5 { margin-bottom: var(--sp-5); }
+.u-mb-6 { margin-bottom: var(--sp-6); }
+.u-mb-8 { margin-bottom: var(--sp-8); }
+
+// --- Display utilities -------------------------------------------------------
+.u-hidden { display: none; }
+
+@include m.respond-above(md) {
+  .u-hidden\@md { display: none; }
+  .u-block\@md { display: block; }
+}
+
+// --- Layout sections ---------------------------------------------------------
+.u-section {
+  padding-block: var(--sp-8);
+}
+
+.u-section--sm {
+  padding-block: var(--sp-6);
+}
+
+.u-section--lg {
+  padding-block: var(--sp-9);
+}

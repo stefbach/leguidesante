@@ -1,0 +1,34 @@
+leguidesante_content.tribunes:
+  title: 'Tribunes'
+  description: 'Les dernières tribunes publiées.'
+  route_name: view.latest_tribunes.page
+  menu_name: main
+  weight: -50
+
+leguidesante_content.travaux:
+  title: 'Travaux scientifiques'
+  description: 'BSD, BMN, COMPASS et autres études en cours.'
+  url: 'internal:/travaux-scientifiques'
+  menu_name: main
+  weight: -40
+
+leguidesante_content.a_propos:
+  title: 'À propos'
+  description: 'À propos du Guide Santé.'
+  url: 'internal:/a-propos'
+  menu_name: main
+  weight: -30
+
+leguidesante_content.dr_bach:
+  title: 'Dr Bach'
+  description: 'Dr Stéphane Bach.'
+  url: 'internal:/dr-stephane-bach'
+  menu_name: main
+  weight: -20
+
+leguidesante_content.annuaire:
+  title: 'Annuaire'
+  description: 'Annuaire des praticiens.'
+  url: 'internal:/annuaire'
+  menu_name: main
+  weight: -10

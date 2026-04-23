@@ -1,0 +1,29 @@
+uuid: 33333333-3333-3333-3333-200000000005
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_tribunes
+    - node.type.travail_scientifique
+    - node.type.tribune
+id: node.travail_scientifique.field_related_tribunes
+field_name: field_related_tribunes
+entity_type: node
+bundle: travail_scientifique
+label: 'Tribunes liées'
+description: 'Tribunes éditoriales en lien avec cette étude.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tribune: tribune
+    sort:
+      field: created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

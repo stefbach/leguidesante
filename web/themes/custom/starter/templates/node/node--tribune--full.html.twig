@@ -1,0 +1,86 @@
+{#
+  Tribune — affichage complet : byline, lede, image, body mesure 72ch, pullquote, sources, auteur.
+#}
+<article{{ attributes.addClass('c-tribune', 'node', 'node--type-tribune', 'node--view-mode-full') }}>
+  {{ title_prefix }}
+
+  <header class="c-tribune__header">
+    {% if content.field_eyebrow|render|trim %}
+      <p class="c-tribune__eyebrow">{{ content.field_eyebrow }}</p>
+    {% endif %}
+
+    <h1 class="c-tribune__title">{{ label }}</h1>
+
+    {% if content.field_lede|render|trim %}
+      <div class="c-tribune__lede">{{ content.field_lede }}</div>
+    {% endif %}
+
+    <div class="c-tribune__byline">
+      {% if author_picture %}
+        <div class="c-tribune__byline-avatar">{{ author_picture }}</div>
+      {% endif %}
+      <div class="c-tribune__byline-meta">
+        <span class="c-tribune__byline-name">
+          {% if author_profile_url %}
+            <a href="{{ author_profile_url }}">{{ author_name }}</a>
+          {% else %}
+            {{ author_name }}
+          {% endif %}
+        </span>
+        <span class="c-tribune__byline-sep" aria-hidden="true">·</span>
+        <time class="c-tribune__byline-date" datetime="{{ node.getCreatedTime|format_date('custom','c') }}">
+          {{ node.getCreatedTime|format_date('custom','d F Y') }}
+        </time>
+        <span class="c-tribune__byline-sep" aria-hidden="true">·</span>
+        <span class="c-tribune__byline-read">{{ reading_time }} min</span>
+      </div>
+    </div>
+  </header>
+
+  {{ title_suffix }}
+
+  {% if content.field_image|render|trim %}
+    <figure class="c-tribune__media">{{ content.field_image }}</figure>
+  {% endif %}
+
+  <div class="c-tribune__body">
+    {{ content.body }}
+  </div>
+
+  {% if content.field_pullquote|render|trim %}
+    <blockquote class="c-tribune__pullquote">
+      {{ content.field_pullquote }}
+    </blockquote>
+  {% endif %}
+
+  {% if content.field_sources|render|trim %}
+    <details class="c-tribune__sources">
+      <summary>Sources &amp; références</summary>
+      <div class="c-tribune__sources-body">{{ content.field_sources }}</div>
+    </details>
+  {% endif %}
+
+  {% if content.field_thematique|render|trim %}
+    <ul class="c-tribune__tags">
+      {{ content.field_thematique }}
+    </ul>
+  {% endif %}
+
+  <aside class="c-author c-tribune__author" aria-label="À propos de l'auteur">
+    {% if author_picture %}
+      <div class="c-author__avatar">{{ author_picture }}</div>
+    {% endif %}
+    <div class="c-author__body">
+      <h2 class="c-author__name">
+        {% if author_profile_url %}
+          <a href="{{ author_profile_url }}">{{ author_name }}</a>
+        {% else %}
+          {{ author_name }}
+        {% endif %}
+      </h2>
+      {% if author_bio %}
+        <div class="c-author__bio">{{ author_bio }}</div>
+      {% endif %}
+    </div>
+  </aside>
+</article>

@@ -1,0 +1,10 @@
+{#
+  Region Footer bottom — mentions légales et liens bas de page.
+#}
+{% if content %}
+  <div{{ attributes.addClass('c-footer__bottom-inner') }}>
+    <div class="c-footer__col c-footer__col--legal">
+      {{ content }}
+    </div>
+  </div>
+{% endif %}

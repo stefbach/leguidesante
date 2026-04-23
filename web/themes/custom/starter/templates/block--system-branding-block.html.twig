@@ -1,0 +1,14 @@
+{#
+  Branding block — logo + nom du site, lien vers la home.
+#}
+<a class="c-header__brand-link" href="{{ path('<front>') }}" rel="home" aria-label="{{ site_name }} — accueil">
+  {% if site_logo %}
+    <img class="c-header__logo" src="{{ site_logo }}" alt="" width="40" height="40">
+  {% endif %}
+  {% if site_name %}
+    <span class="c-header__sitename">{{ site_name }}</span>
+  {% endif %}
+  {% if site_slogan %}
+    <span class="c-header__slogan">{{ site_slogan }}</span>
+  {% endif %}
+</a>

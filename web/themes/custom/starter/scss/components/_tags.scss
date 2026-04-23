@@ -1,0 +1,92 @@
+// =============================================================================
+// c-tag (pill par pilier) + c-chip (filtre cliquable)
+// =============================================================================
+
+// --- c-tag (pill) -----------------------------------------------------------
+.c-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-1);
+  height: 24px;
+  padding: 0 var(--sp-3);
+  font-family: var(--ff-sans);
+  font-size: 0.75rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--c-ink);
+  background: color-mix(in srgb, var(--tag-color, var(--c-accent)) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--tag-color, var(--c-accent)) 40%, transparent);
+  border-radius: var(--r-pill);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.c-tag::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--tag-color, var(--c-accent));
+}
+
+// Modifiers par pilier
+.c-tag--science-preuves { --tag-color: var(--c-pilier-science); }
+.c-tag--clinique-terrain { --tag-color: var(--c-pilier-clinique); }
+.c-tag--politique-sante  { --tag-color: var(--c-pilier-politique); }
+.c-tag--innovations      { --tag-color: var(--c-pilier-innovations); }
+.c-tag--warn             { --tag-color: var(--c-warn); }
+
+// Link state
+a.c-tag:hover {
+  background: color-mix(in srgb, var(--tag-color, var(--c-accent)) 28%, transparent);
+}
+
+// --- c-chip (filtre cliquable) ----------------------------------------------
+.c-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  height: 32px;
+  padding: 0 var(--sp-3);
+  font-family: var(--ff-sans);
+  font-size: 0.875rem;
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: var(--c-ink);
+  background: var(--c-paper-2);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-pill);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out),
+              border-color var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out);
+  white-space: nowrap;
+}
+
+.c-chip:hover {
+  border-color: var(--c-accent);
+  color: var(--c-ink-2);
+}
+
+.c-chip[aria-pressed="true"],
+.c-chip.is-active,
+.c-chip--active {
+  background: var(--c-ink);
+  border-color: var(--c-ink);
+  color: var(--c-paper);
+}
+
+.c-chip__count {
+  font-size: 0.75rem;
+  color: var(--c-muted);
+  font-weight: var(--fw-regular);
+}
+
+.c-chip[aria-pressed="true"] .c-chip__count,
+.c-chip.is-active .c-chip__count {
+  color: color-mix(in srgb, var(--c-paper) 70%, transparent);
+}

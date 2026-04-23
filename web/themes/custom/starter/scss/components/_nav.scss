@@ -1,0 +1,149 @@
+// =============================================================================
+// c-nav — Horizontal >= md, hamburger < md (.is-open sur .c-nav)
+// =============================================================================
+
+@use "../mixins" as m;
+
+.c-nav {
+  position: relative;
+}
+
+// --- Toggle (hamburger) ------------------------------------------------------
+.c-nav__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--c-ink);
+  cursor: pointer;
+
+  @include m.respond-above(md) {
+    display: none;
+  }
+}
+
+.c-nav__toggle-bar,
+.c-nav__toggle-bar::before,
+.c-nav__toggle-bar::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform var(--dur-med) var(--ease-out),
+              opacity var(--dur-fast) var(--ease-out);
+}
+
+.c-nav__toggle-bar {
+  position: relative;
+}
+
+.c-nav__toggle-bar::before { position: absolute; top: -7px; left: 0; }
+.c-nav__toggle-bar::after  { position: absolute; top:  7px; left: 0; }
+
+.c-nav.is-open .c-nav__toggle-bar {
+  background: transparent;
+}
+.c-nav.is-open .c-nav__toggle-bar::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.c-nav.is-open .c-nav__toggle-bar::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+// --- List --------------------------------------------------------------------
+.c-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Mobile : panneau overlay sous le header
+@media (max-width: 767.98px) {
+  .c-nav__list {
+    position: fixed;
+    inset: var(--header-h) 0 0 0;
+    background: var(--c-paper);
+    padding: var(--sp-6) var(--sp-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+    transform: translateX(100%);
+    transition: transform var(--dur-med) var(--ease-out);
+    border-top: 1px solid var(--c-line);
+    overflow-y: auto;
+  }
+
+  .c-nav.is-open .c-nav__list {
+    transform: translateX(0);
+  }
+}
+
+@include m.respond-above(md) {
+  .c-nav__list {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-5);
+  }
+}
+
+.c-nav__item {
+  margin: 0;
+}
+
+.c-nav__link {
+  display: inline-block;
+  padding: var(--sp-2) 0;
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-medium);
+  font-size: 1rem;
+  color: var(--c-ink);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.c-nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--c-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-med) var(--ease-out);
+}
+
+.c-nav__link:hover,
+.c-nav__link:focus-visible {
+  color: var(--c-ink-2);
+}
+
+.c-nav__link:hover::after,
+.c-nav__link--active::after {
+  transform: scaleX(1);
+}
+
+.c-nav__link--active {
+  color: var(--c-ink);
+  font-weight: var(--fw-semibold);
+}
+
+// Variante dark (header sur hero bleu nuit)
+.c-header--dark .c-nav__link,
+.c-nav--dark .c-nav__link {
+  color: var(--c-paper);
+}
+
+.c-header--dark .c-nav__toggle,
+.c-nav--dark .c-nav__toggle {
+  color: var(--c-paper);
+}

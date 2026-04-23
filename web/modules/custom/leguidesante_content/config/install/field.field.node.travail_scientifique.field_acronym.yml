@@ -1,0 +1,19 @@
+uuid: 33333333-3333-3333-3333-200000000001
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acronym
+    - node.type.travail_scientifique
+id: node.travail_scientifique.field_acronym
+field_name: field_acronym
+entity_type: node
+bundle: travail_scientifique
+label: Acronyme
+description: 'Code court de l’étude (ex. BSD, BMN, COMPASS).'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

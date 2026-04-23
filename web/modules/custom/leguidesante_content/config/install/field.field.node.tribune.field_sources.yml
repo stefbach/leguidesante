@@ -1,0 +1,23 @@
+uuid: 33333333-3333-3333-3333-100000000006
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sources
+    - node.type.tribune
+  module:
+    - text
+id: node.tribune.field_sources
+field_name: field_sources
+entity_type: node
+bundle: tribune
+label: Sources
+description: 'Références et citations bibliographiques (HTML filtré).'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - filtered_html
+field_type: text_long

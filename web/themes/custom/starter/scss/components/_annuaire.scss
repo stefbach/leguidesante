@@ -1,0 +1,158 @@
+// =============================================================================
+// c-annuaire — Version compacte : grid + chips filtres
+// =============================================================================
+
+@use "../mixins" as m;
+
+.c-annuaire {
+  @include m.container;
+  padding: var(--sp-7) var(--sp-4);
+}
+
+.c-annuaire__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-6);
+
+  @include m.respond-above(md) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.c-annuaire__title {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-h2);
+  margin: 0;
+}
+
+// --- Filtre par spécialité (chips) ------------------------------------------
+.c-annuaire__filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-5);
+  padding: var(--sp-3) 0;
+  border-top: 1px solid var(--c-line);
+  border-bottom: 1px solid var(--c-line);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.c-annuaire__filter-label {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  color: var(--c-muted);
+  align-self: center;
+  margin-right: var(--sp-2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+// --- Grid praticiens ---------------------------------------------------------
+.c-annuaire__grid {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: 1fr;
+
+  @include m.respond-above(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.respond-above(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// --- Row (un praticien) ------------------------------------------------------
+.c-annuaire__row {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: center;
+  padding: var(--sp-4);
+  background: var(--c-paper-2);
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-md);
+  transition: border-color var(--dur-med) var(--ease-out),
+              box-shadow var(--dur-med) var(--ease-out),
+              transform var(--dur-med) var(--ease-out);
+}
+
+.c-annuaire__row:hover {
+  border-color: var(--c-accent);
+  box-shadow: var(--sh-1);
+  transform: translateY(-1px);
+}
+
+.c-annuaire__photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--c-line);
+}
+
+.c-annuaire__info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.c-annuaire__name {
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-semibold);
+  font-size: 1rem;
+  color: var(--c-ink);
+  margin: 0 0 var(--sp-1);
+  line-height: 1.2;
+}
+
+.c-annuaire__speciality {
+  font-size: var(--fs-small);
+  color: var(--c-ink-2);
+  margin: 0;
+}
+
+.c-annuaire__city {
+  font-size: var(--fs-small);
+  color: var(--c-muted);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+}
+
+.c-annuaire__city::before {
+  content: "◉";
+  color: var(--c-accent);
+  font-size: 0.7em;
+}
+
+.c-annuaire__cta {
+  flex-shrink: 0;
+}
+
+// --- Variante table (desktop dense) -----------------------------------------
+.c-annuaire--table {
+  .c-annuaire__grid {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    grid-template-columns: none;
+  }
+
+  .c-annuaire__row {
+    display: table-row;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid var(--c-line);
+    background: transparent;
+
+    &:hover {
+      background: var(--c-paper-2);
+      transform: none;
+    }
+  }
+}

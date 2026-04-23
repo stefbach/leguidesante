@@ -1,0 +1,10 @@
+{#
+  Region Footer top — grille multi-colonnes.
+#}
+{% if content %}
+  <div{{ attributes.addClass('c-footer__top-inner') }}>
+    <div class="c-footer__col">
+      {{ content }}
+    </div>
+  </div>
+{% endif %}

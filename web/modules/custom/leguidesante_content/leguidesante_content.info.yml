@@ -1,0 +1,12 @@
+name: 'Le Guide Santé — Content'
+type: module
+description: 'Types de contenu, taxonomie et views de Le Guide Santé.'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:views
+  - drupal:field
+  - drupal:text
+  - drupal:image
